@@ -8,7 +8,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-  <title>Home CB Portfolio Intro</title>
+  <title>Christopher Batas | Video Editing, Motion Design & AV Portfolio</title>
 
   <meta name="description"
         content="Christopher Batas is a video editor, motion graphics designer and AV production specialist. Explore creative projects, broadcast production and live event experience.">
@@ -758,6 +758,25 @@
 
     }
 
+
+    /* FEATURED WORK — matched to the project-page interactions */
+    .featured-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+    .featured-card {overflow:hidden;border:1px solid var(--border);border-radius:var(--radius);background:#15181F;transition:transform .25s ease,border-color .25s ease}
+    .featured-card:hover {transform:translateY(-4px);border-color:var(--accent)}
+    .featured-image-link {position:relative;display:block;overflow:hidden;aspect-ratio:16/9;background:#13223A}
+    .featured-image-link img {width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease,filter .35s ease}
+    .featured-image-link:hover img {transform:scale(1.04);filter:brightness(1.12)}
+    .featured-image-link:focus-visible,.btn:focus-visible,.nav-links a:focus-visible,.text-link:focus-visible {outline:3px solid var(--accent-light);outline-offset:3px}
+    .featured-image-label {position:absolute;left:14px;bottom:14px;padding:6px 10px;border-radius:7px;background:rgba(11,13,18,.88);color:var(--accent-light);font-size:11px;font-weight:bold;letter-spacing:.8px}
+    .featured-content {padding:24px}
+    .featured-content h3 {margin:0 0 12px}
+    .featured-content p {margin:0 0 22px}
+    .text-link {color:var(--accent-light);font-weight:bold;align-self:center}
+    .text-link:hover {color:white}
+    @media(max-width:800px){.featured-grid{grid-template-columns:1fr}}
+    @media(max-width:550px){.nav-links{gap:10px 16px;font-size:12px}.logo{font-size:16px;text-align:center}.featured-content{padding:20px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.featured-card,.featured-image-link img,.btn{transition:none}}
+
   </style>
 
 </head>
@@ -776,7 +795,7 @@
     <div class="navbar">
 
       <!-- Clicking your name returns to the top/home -->
-      <a href="#top" class="logo">
+      <a href="#totop" class="logo">
 
         CHRISTOPHER <span>BATAS</span>
 
@@ -790,8 +809,8 @@
           Disciplines
         </a>
 
-        <a href="#mydemo">
-          Demo Reel
+        <a href="#featuredwork">
+          Featured Work
         </a>
 
         <a href="#about">
@@ -895,10 +914,10 @@
         </a>
 
 
-        <a href="#mydemo"
+        <a href="#featuredwork"
            class="btn">
 
-          Watch Demo Reel
+          View Featured Work
 
         </a>
 
@@ -1128,96 +1147,45 @@
 
 
 <!-- =========================================
-     CREATIVE DEMO REEL
+     FEATURED CREATIVE PROJECTS
 ========================================= -->
-<a id="mydemo"></a>
-<section id="reel">
-  
+<section id="featuredwork" aria-labelledby="featured-title">
   <div class="container">
-    
-    
     <div class="section-heading">
-      
-      <p class="section-label">
-        
-        FEATURED REEL
-        
-        </p>
-      
-      
-      <h2>
-        
-        Video Editing & Motion Design Reel
-        
-        </h2>
-      
-      
-      <p>
-        
-        A selection of my video editing, motion design,
-        broadcast graphics and visual storytelling work.
-        
-        </p>
-      
-      </div>
-    
-    
-    
-    <div class="reel-card">
-      
-      <div class="video-container">
-        
-        <!--
-          REPLACE VIDEO_ID WITH YOUR YOUTUBE VIDEO ID.
-
-          Example:
-
-          https://www.youtube.com/embed/VIDEO_ID
-
-          You can also use a Vimeo embed URL.
-        -->
-        
-        <iframe
-
-          src="https://www.youtube.com/embed/VIDEO_ID"
-
-          title="Christopher Batas Video Editing and Motion Design Reel"
-
-          loading="lazy"
-
-          allow="accelerometer; autoplay; clipboard-write;
-                 encrypted-media; gyroscope;
-                 picture-in-picture; web-share"
-
-          allowfullscreen>
-          
-          </iframe>
-        
-        </div>
-      
-      </div>
-    
-    
-    <!-- Gives visitors a direct path into the
-         full creative portfolio after watching the reel -->
-    
-    <div class="button-row">
-      
-      <a href="Video Production Portfolio Page with 2 box.html#totop"
-         class="btn btn-primary">
-        
-        Explore Creative Portfolio
-        
-        </a>
-      
-      </div>
-    
-    
+      <p class="section-label">SELECTED CREATIVE WORK</p>
+      <h2 id="featured-title">Featured Video Projects</h2>
+      <p>Explore two completed projects demonstrating cinematic editing, motion graphics, visual storytelling and broadcast design. Select a thumbnail or View Project to see the finished work and creative breakdown.</p>
     </div>
-  
+    <div class="featured-grid">
+      <article class="featured-card">
+        <a class="featured-image-link" href="Esports &amp; Broadcast Graphics Project Page2.html#totop" aria-label="Explore The Ascent Circuit project">
+          <img src="https://img.youtube.com/vi/oNfsTvMG0L8/maxresdefault.jpg" alt="The Ascent Circuit esports broadcast graphics project thumbnail" loading="lazy" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/oNfsTvMG0L8/hqdefault.jpg';">
+          <span class="featured-image-label">MOTION GRAPHICS / BROADCAST DESIGN</span>
+        </a>
+        <div class="featured-content">
+          <h3>The Ascent Circuit</h3>
+          <p>A fictional ARC Raiders tournament graphics package featuring lower thirds, animated transitions, HUD overlays and cinematic broadcast design.</p>
+          <a class="btn btn-primary" href="Esports &amp; Broadcast Graphics Project Page2.html#totop">View Project &rarr;</a>
+        </div>
+      </article>
+      <article class="featured-card">
+        <a class="featured-image-link" href="Video Editing and Story Telling Project Page NoRest2.html#totop" aria-label="Explore No Rest for the Wicked editing project">
+          <img src="NoRestEstablishingShotThumb.png" alt="No Rest for the Wicked cinematic video editing showcase thumbnail" loading="lazy">
+          <span class="featured-image-label">VIDEO EDITING / STORYTELLING</span>
+        </a>
+        <div class="featured-content">
+          <h3>No Rest for the Wicked</h3>
+          <p>A 59-second cinematic editing showcase focused on music-driven pacing, shot selection, sound layering and visual storytelling.</p>
+          <a class="btn btn-primary" href="Video Editing and Story Telling Project Page NoRest2.html#totop">View Project &rarr;</a>
+        </div>
+      </article>
+    </div>
+    <div class="button-row">
+      <a href="Video Production Portfolio Page with 2 box.html#totop" class="btn">Explore Full Creative Portfolio &rarr;</a>
+      <a href="#myspecialties" class="text-link">&uarr; Back to Disciplines</a>
+    </div>
+  </div>
 </section>
-
-
 
 <!-- =========================================
      ABOUT ME
@@ -1581,7 +1549,7 @@
 
         <!-- BACK TO TOP -->
 
-        <a href="#top"
+        <a href="#totop"
            class="btn">
 
           &uarr; Back to Top
