@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Video Main Portfolio</title>
+<title>Video Editing &amp; Motion Design Portfolio | Christopher Batas</title>
 
 <meta name="description"
 content="Explore Christopher Batas' video editing, motion graphics, broadcast design and animation portfolio.">
@@ -807,6 +807,44 @@ footer {
 
 }
 
+
+/* Matching project-card actions and responsive thumbnails */
+.project-thumbnail-link { text-decoration:none; isolation:isolate; }
+.project-thumbnail-link img { transition:transform .35s ease,filter .35s ease; }
+.project-thumbnail-link:hover img, .project-thumbnail-link:focus-visible img { transform:scale(1.055); filter:brightness(.75); }
+.project-thumbnail-link:focus-visible, .btn:focus-visible, .project-link:focus-visible { outline:2px solid var(--accent-light); outline-offset:3px; }
+.thumbnail-action { position:absolute; z-index:2; bottom:16px; right:16px; padding:9px 14px; border:1px solid rgba(255,255,255,.35); border-radius:9px; background:rgba(11,13,18,.82); color:#fff; font-size:13px; letter-spacing:0; opacity:0; transform:translateY(6px); transition:opacity .25s,transform .25s; }
+.project-thumbnail-link:hover .thumbnail-action, .project-thumbnail-link:focus-visible .thumbnail-action { opacity:1; transform:translateY(0); }
+.thumbnail-fallback-title { display:none; padding:18px; }
+.thumbnail-fallback .thumbnail-fallback-title { display:block; }
+@media (hover:none) { .thumbnail-action { opacity:1; transform:none; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .project-card,.project-thumbnail-link img,.thumbnail-action,.btn { transition:none; } }
+
+@media (prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  .project-card,.project-thumbnail-link img,
+  .thumbnail-action,.btn { transition:none; }
+}
+
+/* =========================================
+   COMPACT DEMO REEL COMING SOON
+========================================= */
+
+.video-frame:has(.reel-placeholder) {
+  aspect-ratio: auto;
+  height: 340px;
+}
+
+.reel-placeholder .play-icon {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .video-frame:has(.reel-placeholder) {
+    height: 260px;
+  }
+}
+
 </style>
 
 </head>
@@ -846,7 +884,7 @@ To Top
 
 
 <a href="#Demoreel">
-Demo Reel
+Featured Work
 </a>
 
 
@@ -959,10 +997,10 @@ Post-Production
 
 
 <a
-href="#watchreel"
+href="#esportsbroadcast"
 class="btn btn-primary">
 
-Watch My Reel
+See Featured Work
 
 </a>
 
@@ -1013,15 +1051,10 @@ FEATURED WORK
 
 
 <h2>
-Video Production Demo Reel <a id="watchreel"></a> </h2>
+Featured Work <a id="watchreel"></a> </h2>
 
 
-<p>
-
-A selection of my video editing,
-motion graphics and broadcast design work.
-
-</p>
+<p>A curated collection of my video editing, motion graphics, and broadcast design work is currently in development. In the meantime, explore my completed projects below.</p>
 
 
 </div>
@@ -1074,14 +1107,14 @@ Your browser does not support HTML video.
 
 
 <strong>
-Video Production Demo Reel
+VIDEO PRODUCTION DEMO REEL COMING SOON 
 </strong>
 
 
 <p>
 
-Demo reel coming soon.
-Explore the individual project case studies below.
+Explore my completed video editing and broadcast design case studies below.
+A combined demo reel is in development.
 
 </p>
 
@@ -1170,27 +1203,10 @@ class="project-card"
 id="esbroadcast">
 
 
-<div class="project-thumbnail">
-
-
-<!--
-
-WHEN YOU HAVE YOUR ARC RAIDERS THUMBNAIL:
-
-Replace the text below with:
-
-<img
-src="assets/images/arc-raiders-thumbnail.jpg"
-alt="ARC Raiders broadcast graphics portfolio project">
-
--->
-
-
-ARC RAIDERS /
-BROADCAST GRAPHICS
-
-
-</div>
+<a class="project-thumbnail project-thumbnail-link" href="Esports &amp; Broadcast Graphics Project Page2.html#totop" aria-label="View ARC Raiders broadcast graphics project">
+<img src="https://img.youtube.com/vi/oNfsTvMG0L8/maxresdefault.jpg" alt="ARC Raiders — The Ascent Circuit broadcast graphics project" loading="lazy" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/oNfsTvMG0L8/hqdefault.jpg';">
+<span class="thumbnail-action">View Project &rarr;</span>
+</a>
 
 
 <div class="project-content">
@@ -1248,27 +1264,11 @@ class="project-card"
 id="video-editing">
 
 
-<div class="project-thumbnail">
-
-
-<!--
-
-WHEN YOU HAVE YOUR THUMBNAIL:
-
-Replace the text below with:
-
-<img
-src="assets/images/no-rest-for-the-wicked-thumbnail.jpg"
-alt="No Rest for the Wicked video editing project">
-
--->
-
-
-NO REST FOR THE WICKED /
-VIDEO EDITING
-
-
-</div>
+<a class="project-thumbnail project-thumbnail-link" href="Video Editing and Story Telling Project Page NoRest2.html#totop" aria-label="View No Rest for the Wicked video editing project">
+<img src="NoRestEstablishingShotThumb.png" alt="No Rest for the Wicked cinematic video editing project" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('thumbnail-fallback');">
+<span class="thumbnail-fallback-title">NO REST FOR THE WICKED</span>
+<span class="thumbnail-action">View Project &rarr;</span>
+</a>
 
 
 <div class="project-content">
@@ -1301,7 +1301,7 @@ No Rest for the Wicked.
 
 
 <a
-href="Video Editing and Story Telling Project Page NoRest2.html"
+href="Video Editing and Story Telling Project Page NoRest2.html#totop"
 class="project-link">
 
 View No Rest for the Wicked Project &rarr;
