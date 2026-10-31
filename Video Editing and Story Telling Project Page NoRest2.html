@@ -6,8 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Video Story Telling No Rest CB</title>
-
+<title>No Rest for the Wicked | Video Editing Portfolio | Christopher Batas</title>
 <meta name="description"
 content="Video editing and storytelling portfolio project by Christopher Batas featuring editing, pacing, sound, visual storytelling and post-production.">
 
@@ -352,6 +351,20 @@ header {
   font-size: 13px;
 }
 
+.video-caption strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text);
+  font-size: 15px;
+}
+
+.video-caption p {
+  margin: 5px 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
 
 /* =========================================================
    06. PROJECT OVERVIEW
@@ -551,7 +564,12 @@ header {
 
   text-align: center;
 }
-
+.process-screenshot {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
 .process-image-content {
   padding: 18px;
 }
@@ -721,12 +739,30 @@ footer {
 .breakdown-header h3{margin-bottom:12px;font-size:26px}
 .story-grid,.comparison-grid{display:grid;gap:20px;margin-top:26px}
 .story-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+.story-frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 .comparison-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .story-frame,.comparison-item{overflow:hidden;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.03)}
 .story-image-placeholder{display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;padding:20px;background:linear-gradient(135deg,#13223A,#1E4E84);color:var(--accent-light);font-size:12px;font-weight:bold;letter-spacing:1px;text-align:center}
 .story-frame-content{padding:18px}.story-frame-content h4{margin:0 0 6px;color:white}.story-frame-content p{margin:0;font-size:14px}
 .comparison-label{padding:12px 16px;color:var(--accent-light);font-size:11px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase}
 .breakdown-video{display:block;width:100%;aspect-ratio:16/9;background:#05070C}
+
+.breakdown-screenshot {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 24px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
 .breakdown-note{margin-top:22px;padding:18px 20px;border-left:3px solid var(--accent);border-radius:0 10px 10px 0;background:rgba(59,130,246,.07)}
 .breakdown-note p{margin:0}
 @media(max-width:800px){.comparison-grid,.story-grid{grid-template-columns:1fr}.breakdown-example{padding:26px}}
@@ -895,64 +931,39 @@ behind the edit below.
 <div class="video-frame">
 
 
-<!-- ==================================================
-
-OPTION 1 — YOUTUBE
-
-Delete the placeholder below and replace with:
-
 <iframe
-src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-title="Video Editing Project"
-loading="lazy"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
+  src="https://www.youtube.com/embed/WQyvZc6IQkg"
+  title="No Rest for the Wicked - Cinematic Editing Showcase"
+  loading="lazy"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
 </iframe>
 
 
-OPTION 2 — LOCAL MP4
-
-<video controls preload="metadata">
-
-<source
-src="assets/videos/video-editing-project.mp4"
-type="video/mp4">
-
-Your browser does not support HTML video.
-
-</video>
-
-================================================== -->
-
-
-<div class="video-placeholder">
-
-<div class="play-icon">
-&#9654;
 </div>
 
-<strong>
-Featured Video Edit
-</strong>
-
-<p>
-
-Your finished video or editing reel
-will appear here.
-
-</p>
-
-</div>
-
-
-</div>
 
 
 <div class="video-caption">
 
-Video Editing /
-Post-Production /
-Visual Storytelling
+  <strong>
+    No Rest for the Wicked — Cinematic Editing Showcase
+  </strong>
+
+  <p>
+    Video editing, pacing, and audio balancing
+    by Christopher Batas.
+  </p>
+
+  <p>
+    Music: AI-generated with Suno under my
+    creative direction.
+  </p>
+
+  <p>
+    Gameplay footage from No Rest for the Wicked.
+    Game content belongs to its respective owners.
+  </p>
 
 </div>
 
@@ -982,12 +993,14 @@ PROJECT OVERVIEW
 The Project
 </h2>
 
+
 <p>
-
-A quick overview of the project,
-my contribution and the final deliverable.
-
+A cinematic editing showcase featuring
+storytelling, music-driven pacing, and
+audio layering using gameplay footage
+from No Rest for the Wicked.
 </p>
+
 
 </div>
 
@@ -995,30 +1008,43 @@ my contribution and the final deliverable.
 <div class="overview-grid">
 
 
+
 <div class="info-card">
 
-<h3>
-Project Overview
-</h3>
+  <h3>Project Overview</h3>
 
-<p>
+  <p>
+    No Rest for the Wicked is a personal cinematic
+    editing project created using in-game footage.
+    The goal was to transform selected cinematic
+    and gameplay moments into a cohesive,
+    music-driven showcase.
+  </p>
 
-This project focuses on shaping raw footage
-into a polished final edit through pacing,
-visual storytelling and sound.
+  <p>
+    The opening establishes the atmosphere through
+    edited cinematic footage. At approximately
+    14 seconds, the music-driven portion begins,
+    with cuts and transitions deliberately
+    synchronized to the soundtrack's beats
+    and changes in intensity.
+  </p>
 
-</p>
+  <p>
+    Selected in-game sound effects were retained
+    and adjusted using audio gain to blend
+    naturally beneath the music, preserving
+    atmosphere without overpowering the soundtrack.
+  </p>
 
-<p>
-
-The editing approach was built around
-maintaining viewer engagement while allowing
-the strongest visual and story moments
-to drive the final piece.
-
-</p>
+  <p>
+    The finished 59-second reel demonstrates
+    cinematic storytelling, rhythmic editing,
+    shot selection, and audio balance.
+  </p>
 
 </div>
+
 
 
 <div class="info-card">
@@ -1052,29 +1078,30 @@ Video Editor
 </div>
 
 
+
 <div class="detail-item">
 
-<span class="detail-label">
-TOOLS
-</span>
+  <span class="detail-label">
+    TOOLS
+  </span>
 
-<span class="detail-value">
-Premiere Pro / After Effects / Audition
-</span>
+  <span class="detail-value">
+    Adobe Premiere Pro / Photoshop / After Effects / Adobe Audition / Suno AI
+  </span>
 
 </div>
 
 
+
+
 <div class="detail-item">
+  <span class="detail-label">
+    DELIVERABLE
+  </span>
 
-<span class="detail-label">
-DELIVERABLE
-</span>
-
-<span class="detail-value">
-Final Edited Video
-</span>
-
+  <span class="detail-value">
+    59-Second Cinematic Showcase
+  </span>
 </div>
 
 
@@ -1121,92 +1148,69 @@ core areas of post-production.
 <div class="focus-grid">
 
 
+
 <div class="focus-card">
+  <span class="focus-number">01</span>
+  <h3>Cinematic Storytelling</h3>
+  <p>
+    I structured the opening around edited in-game
+    cinematic footage to establish atmosphere before
+    transitioning into a faster, music-driven sequence.
+    Shot selection helped create a clear progression
+    from the introduction to the final moments.
+  </p>
+  <a href="#story-example" class="example-link">
+    View Example &darr;
+  </a>
+</div>
 
-<span class="focus-number">
-01
-</span>
+<div class="focus-card">
+  <span class="focus-number">02</span>
+  <h3>Music-Driven Editing &amp; Pacing</h3>
+  <p>
+    Beginning at approximately 14 seconds, I
+    synchronized cuts and transitions to the
+    soundtrack's beats and changes in intensity.
+    This created momentum while preserving the
+    cinematic flow of the reel.
+  </p>
+  <a href="#pacing-example" class="example-link">
+    View Example &darr;
+  </a>
+</div>
 
-<h3>
-Story &amp; Structure
-</h3>
-
-<p>
-
-Organizing footage into a clear sequence
-that supports the intended story and
-keeps the viewer oriented.
-
-</p>
-<a href="#story-example" class="example-link">View Example &darr;</a>
-
+<div class="focus-card">
+  <span class="focus-number">03</span>
+  <h3>Audio Layering &amp; Balance</h3>
+  <p>
+    I retained selected in-game sound effects and
+    adjusted their audio gain to blend beneath
+    the Suno-generated soundtrack. This preserved
+    atmosphere without overpowering the music.
+  </p>
+  <a href="#sound-example" class="example-link">
+    View Example &darr;
+  </a>
 </div>
 
 
 <div class="focus-card">
+  <span class="focus-number">04</span>
+  <h3>Motion Graphics &amp; Final Polish</h3>
 
-<span class="focus-number">
-02
-</span>
+  <p>
+    I created an animated ending title in
+    Adobe After Effects using keyframes,
+    masks, and transform adjustments to
+    complete the cinematic presentation.
+  </p>
 
-<h3>
-Pacing
-</h3>
-
-<p>
-
-Refining timing and shot selection
-to create rhythm and maintain
-viewer engagement.
-
-</p>
-<a href="#pacing-example" class="example-link">View Example &darr;</a>
-
+  <a href="#polish-example" class="example-link">
+    View Example &darr;
+  </a>
 </div>
 
 
-<div class="focus-card">
-
-<span class="focus-number">
-03
-</span>
-
-<h3>
-Sound
-</h3>
-
-<p>
-
-Using dialogue, music and supporting
-audio to strengthen the final
-viewing experience.
-
-</p>
-<a href="#sound-example" class="example-link">View Example &darr;</a>
-
-</div>
-
-
-<div class="focus-card">
-
-<span class="focus-number">
-04
-</span>
-
-<h3>
-Visual Polish
-</h3>
-
-<p>
-
-Bringing the final edit together through
-graphics, compositing and finishing
-where appropriate.
-
-</p>
-<a href="#polish-example" class="example-link">View Example &darr;</a>
-
-</div>
 
 
 </div>
@@ -1230,42 +1234,205 @@ where appropriate.
 <div class="breakdown-header">
 <span class="breakdown-number">01 / STORY &amp; STRUCTURE</span>
 <h3>Building a Clear Sequence</h3>
-<p>Selected gameplay moments were organized to create a clear progression while maintaining the momentum of the original gameplay.</p>
+
+<p>
+  Selected cinematic and gameplay moments were
+  arranged to establish atmosphere, introduce
+  the character, and build toward a dramatic
+  confrontation.
+</p>
+
 </div>
 <div class="story-grid">
-<div class="story-frame"><div class="story-image-placeholder">ADD SETUP FRAME HERE</div><div class="story-frame-content"><h4>Setup</h4><p>Establish the environment, character and direction of the sequence.</p></div></div>
-<div class="story-frame"><div class="story-image-placeholder">ADD DEVELOPMENT FRAME HERE</div><div class="story-frame-content"><h4>Development</h4><p>Build momentum through selected gameplay and character moments.</p></div></div>
-<div class="story-frame"><div class="story-image-placeholder">ADD PAYOFF FRAME HERE</div><div class="story-frame-content"><h4>Payoff</h4><p>Bring the sequence toward its strongest visual or narrative moment.</p></div></div>
+
+<!-- 01 / SETUP -->
+<div class="story-frame">
+  <img
+    src="Assets/Images/Thumbnails/NoRestEstablishingShotThumb.png"
+    alt="Fleet of ships sailing across the ocean at sunset"
+    loading="lazy"
+  >
+  <div class="story-frame-content">
+    <h4>01 / Setup</h4>
+    <p>
+      Establishing the world and atmosphere
+      through a cinematic opening that introduces
+      the scale and tone of the story.
+    </p>
+  </div>
+</div>
+
+<!-- 02 / DEVELOPMENT -->
+<div class="story-frame">
+  <img
+    src="Assets/Images/Thumbnails/NoRestBuildUp.png"
+    alt="Heroic character in a blue-lit scene with a personal quote"
+    loading="lazy"
+  >
+  <div class="story-frame-content">
+    <h4>02 / Development</h4>
+    <p>
+      Shifting focus toward the character and
+      introducing a personal storytelling moment
+      before the action intensifies.
+    </p>
+  </div>
+</div>
+
+<!-- 03 / PAYOFF -->
+<div class="story-frame">
+  <img
+    src="Assets/Images/Thumbnails/NoRestFinisherThumb.png"
+    alt="Warrick the Torn boss fight with blue magical effects"
+    loading="lazy"
+  >
+  <div class="story-frame-content">
+    <h4>03 / Payoff</h4>
+    <p>
+      Building toward a high-intensity confrontation
+      that provides dramatic visual contrast
+      to the opening cinematic.
+    </p>
+  </div>
+</div>
+
 </div>
 <div class="breakdown-note"><p><strong>Editing Focus:</strong> Selecting and arranging gameplay moments so the viewer can follow the sequence while maintaining narrative momentum.</p></div>
 </div>
 
+
+<!-- 02 / MUSIC-DRIVEN EDITING & PACING -->
+
 <div class="breakdown-example" id="pacing-example">
-<div class="breakdown-header"><span class="breakdown-number">02 / PACING</span><h3>Creating Rhythm Through the Edit</h3><p>Compare the original gameplay with the finished edit to show how timing and shot selection created a more focused sequence.</p></div>
-<div class="comparison-grid">
-<div class="comparison-item"><div class="comparison-label">Original Gameplay</div><video class="breakdown-video" controls preload="metadata"><source src="assets/videos/nrfw-pacing-original.mp4" type="video/mp4">Your browser does not support HTML video.</video></div>
-<div class="comparison-item"><div class="comparison-label">Final Edit</div><video class="breakdown-video" controls preload="metadata"><source src="assets/videos/nrfw-pacing-final.mp4" type="video/mp4">Your browser does not support HTML video.</video></div>
+
+  <div class="breakdown-header">
+
+    <span class="breakdown-number">
+      02 / MUSIC-DRIVEN EDITING
+    </span>
+
+    <h3>Music-Driven Editing &amp; Pacing</h3>
+
+    <p>
+      Beginning at approximately 14 seconds,
+      the edit transitions into a music-driven
+      sequence. Cinematic and gameplay footage
+      were arranged around the Suno-generated
+      soundtrack, with cuts and transitions
+      synchronized to musical beats and
+      changes in intensity.
+    </p>
+
+  </div>
+
+  <img
+    src="Assets/Images/Thumbnails/NoRestAudioVideoThumb.png"
+    alt="Adobe Premiere Pro timeline showing video edits,
+    transitions and the Suno music waveform"
+    class="breakdown-screenshot"
+    loading="lazy"
+  >
+
+  <div class="breakdown-note">
+
+    <p>
+      <strong>Editing Focus:</strong>
+      Creating rhythm and momentum through
+      shot selection, transition timing,
+      and synchronization with the soundtrack
+      in Adobe Premiere Pro.
+    </p>
+
+  </div>
+
 </div>
-<div class="breakdown-note"><p><strong>Editing Focus:</strong> Removing unnecessary downtime, selecting stronger moments and adjusting timing to maintain momentum and viewer engagement.</p></div>
-</div>
+
+
+<!-- 03 / AUDIO LAYERING -->
 
 <div class="breakdown-example" id="sound-example">
-<div class="breakdown-header"><span class="breakdown-number">03 / SOUND</span><h3>Supporting the Edit With Sound</h3><p>Compare the source/game audio with the final sound treatment to demonstrate how audio supports pacing and the emotional direction of the edit.</p></div>
-<div class="comparison-grid">
-<div class="comparison-item"><div class="comparison-label">Original / Game Audio</div><video class="breakdown-video" controls preload="metadata"><source src="assets/videos/nrfw-sound-original.mp4" type="video/mp4">Your browser does not support HTML video.</video></div>
-<div class="comparison-item"><div class="comparison-label">Final Sound Treatment</div><video class="breakdown-video" controls preload="metadata"><source src="assets/videos/nrfw-sound-final.mp4" type="video/mp4">Your browser does not support HTML video.</video></div>
-</div>
-<div class="breakdown-note"><p><strong>Audio Focus:</strong> Balancing game audio, dialogue, music and supporting sound elements to strengthen the final viewing experience.</p></div>
+
+  <div class="breakdown-header">
+    <span class="breakdown-number">
+      03 / AUDIO LAYERING
+    </span>
+
+    <h3>Audio Layering &amp; Volume Automation</h3>
+
+    <p>
+      Selected gameplay sound effects were layered
+      beneath the Suno-generated soundtrack.
+      Volume keyframes and gain adjustments helped
+      preserve the atmosphere of the original footage
+      while supporting the music-driven pacing.
+    </p>
+  </div>
+
+  <img
+    src="Assets/Images/Thumbnails/NoRestAudioThumb.png"
+    alt="Premiere Pro timeline showing audio layering,
+    volume keyframes and the Suno soundtrack"
+    class="breakdown-screenshot"
+    loading="lazy"
+  >
+
+  <div class="breakdown-note">
+    <p>
+      <strong>Editing Focus:</strong>
+      Balancing soundtrack levels with gameplay
+      audio using volume adjustments and keyframing
+      in Adobe Premiere Pro.
+    </p>
+  </div>
+
 </div>
 
+
+
+<!-- 04 / MOTION GRAPHICS & FINAL POLISH -->
+
 <div class="breakdown-example" id="polish-example">
-<div class="breakdown-header"><span class="breakdown-number">04 / VISUAL POLISH</span><h3>Finishing the Sequence</h3><p>Compare the source image with the final presentation to show the visual finishing applied to the edit.</p></div>
-<div class="comparison-grid">
-<div class="comparison-item"><div class="comparison-label">Before</div><video class="breakdown-video" controls preload="metadata"><source src="assets/videos/nrfw-polish-before.mp4" type="video/mp4">Your browser does not support HTML video.</video></div>
-<div class="comparison-item"><div class="comparison-label">Final</div><video class="breakdown-video" controls preload="metadata"><source src="assets/videos/nrfw-polish-final.mp4" type="video/mp4">Your browser does not support HTML video.</video></div>
+
+  <div class="breakdown-header">
+
+    <span class="breakdown-number">
+      04 / MOTION GRAPHICS &amp; FINAL POLISH
+    </span>
+
+    <h3>Animating the Ending Title</h3>
+
+    <p>
+      The ending title, "Path of the Unspoken,"
+      was animated in Adobe After Effects.
+      Keyframes, masks, and transform adjustments
+      were used to develop the title reveal
+      and complete the cinematic presentation.
+    </p>
+
+  </div>
+
+  <img
+    src="Assets/Images/Thumbnails/NoRestforTheWickedAE.png"
+    alt="Adobe After Effects timeline and composition showing the animated ending title"
+    class="breakdown-screenshot"
+    loading="lazy"
+  >
+
+  <div class="breakdown-note">
+    <p>
+      <strong>Finishing Focus:</strong>
+      Creating a custom animated title sequence
+      that provides a deliberate ending to
+      the 59-second cinematic reel.
+    </p>
+  </div>
+
 </div>
-<div class="breakdown-note"><p><strong>Finishing Focus:</strong> Bringing together graphics, compositing, transitions and final visual adjustments where appropriate to support the finished edit.</p></div>
+
+
 </div>
+
+
 </div>
 </section>
 
@@ -1427,11 +1594,12 @@ detailed project settings or source files.
 
 <div class="process-image">
 
-<div class="process-placeholder">
-
-FOOTAGE / ORGANIZATION
-
-</div>
+<img
+  src="Assets/Images/Thumbnails/NoRestOrganization.png"
+  alt="Adobe Premiere Pro project panel showing organized footage and sequences"
+  class="process-screenshot"
+  loading="lazy"
+>
 
 <div class="process-image-content">
 
@@ -1455,11 +1623,14 @@ was prepared and organized for editing.
 
 <div class="process-image">
 
-<div class="process-placeholder">
 
-EDITING TIMELINE
+<img
+  src="Assets/Images/Thumbnails/NoRestTransitionlayers.png"
+  alt="Adobe Premiere Pro editing timeline showing the structure and pacing of the cinematic reel"
+  class="process-screenshot"
+  loading="lazy"
+>
 
-</div>
 
 <div class="process-image-content">
 
@@ -1467,11 +1638,12 @@ EDITING TIMELINE
 Building the Edit
 </strong>
 
+
 <p>
-
-A controlled look at the edit in progress,
-focused on structure and pacing.
-
+  Layering cinematic and gameplay footage
+  across multiple video tracks, with
+  transitions and audio adjustments
+  supporting the sequence's pacing.
 </p>
 
 </div>
@@ -1483,11 +1655,14 @@ focused on structure and pacing.
 
 <div class="process-image">
 
-<div class="process-placeholder">
 
-FINISHING / FINAL FRAME
+<img
+  src="Assets/Images/Thumbnails/NoRestforTheWickedAE.png"
+  alt="Adobe After Effects composition showing the ending title animation"
+  class="process-screenshot"
+  loading="lazy"
+>
 
-</div>
 
 <div class="process-image-content">
 
@@ -1495,12 +1670,14 @@ FINISHING / FINAL FRAME
 Final Polish
 </strong>
 
+
 <p>
-
-A selected finishing view showing the
-project approaching final delivery.
-
+  Creating the ending title animation in
+  Adobe After Effects using keyframes,
+  masks, and transform adjustments to
+  complete the cinematic presentation.
 </p>
+
 
 </div>
 
@@ -1551,8 +1728,6 @@ class="btn btn-primary">
 </a>
 
 
-
-</a>
 
 </div>
 
