@@ -1,0 +1,612 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CHANGE THIS TITLE FOR THE AV RESUME PAGE -->
+  <title>Video Editing Resume CB</title>
+
+  <meta name="description"
+        content="View and download Christopher Batas' professional resume.">
+
+  <style>
+
+    /* =========================================
+       1. COLORS — MATCHES YOUR HOMEPAGE
+    ========================================= */
+
+    :root {
+      --bg: #0B0D12;
+      --bg-secondary: #111827;
+      --panel: rgba(255,255,255,0.05);
+      --text: #F2F6FF;
+      --muted: #A8B5C9;
+      --accent: #3B82F6;
+      --accent-light: #74ADFF;
+      --border: rgba(116,173,255,0.18);
+      --radius: 18px;
+      --max-width: 1150px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+
+      background:
+        radial-gradient(
+          900px 500px at 15% 10%,
+          rgba(59,130,246,0.18),
+          transparent 60%
+        ),
+        radial-gradient(
+          800px 500px at 85% 20%,
+          rgba(0,194,255,0.10),
+          transparent 55%
+        ),
+        var(--bg);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-light);
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+
+    /* =========================================
+       2. SAME HEADER AS YOUR HOMEPAGE
+    ========================================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,13,18,0.90);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--accent-light);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-light);
+    }
+
+
+    /* =========================================
+       3. PAGE INTRODUCTION
+    ========================================= */
+
+    main {
+      padding: 75px 0 85px;
+    }
+
+    .resume-intro {
+      max-width: 850px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    .section-label {
+      color: var(--accent-light);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 12px 0 18px;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.15;
+    }
+
+    h1 span {
+      color: var(--accent-light);
+    }
+
+    .description {
+      max-width: 650px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+
+  /* =========================================
+   4. BUTTONS
+========================================= */
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+
+  transition: 0.25s ease;
+}
+
+/* Makes <button> elements match the other .btn links */
+button.btn {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: rgba(59,130,246,0.15);
+  border-color: var(--accent);
+  color: white;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #2563EB, #3B82F6);
+  border-color: var(--accent);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #3B82F6, #60A5FA);
+}
+
+
+    /* =========================================
+       5. PDF PREVIEW CARD
+    ========================================= */
+
+    .resume-card {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+    }
+
+    .resume-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 2px 5px 18px;
+    }
+
+    .file-name {
+      color: var(--muted);
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .open-pdf {
+      color: var(--accent-light);
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .open-pdf:hover {
+      text-decoration: underline;
+    }
+
+    .pdf-viewer {
+      display: block;
+      width: 100%;
+      height: 1050px;
+
+      border: 0;
+      border-radius: 10px;
+      background: white;
+    }
+
+    .pdf-fallback {
+      margin: 16px 5px 2px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .pdf-fallback a {
+      color: var(--accent-light);
+      text-decoration: underline;
+    }
+
+
+    /* =========================================
+       6. FOOTER
+    ========================================= */
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+
+    /* =========================================
+       7. MOBILE LAYOUT
+    ========================================= */
+
+    @media (max-width: 900px) {
+
+      .navbar {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 14px;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: calc(100% - 28px);
+      }
+
+      main {
+        padding: 50px 0 60px;
+      }
+
+      .resume-card {
+        padding: 10px;
+      }
+
+      .pdf-viewer {
+        height: 650px;
+      }
+
+      .button-row {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .resume-toolbar {
+        padding: 8px 5px 15px;
+      }
+
+      .footer-content {
+        justify-content: center;
+        text-align: center;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+<!-- =========================================
+     HEADER — SAME NAVIGATION AS INDEX
+========================================= -->
+
+<header>
+
+<div class="container">
+
+<div class="navbar">
+
+
+<a href="index.html#top"
+class="logo">
+
+CHRISTOPHER
+<span>BATAS</span>
+
+</a>
+
+
+<nav
+class="nav-links"
+aria-label="Main navigation">
+
+
+<a href="#totop">
+To Top
+</a>
+
+
+<a href="#Demoreel">
+Demo Reel
+</a>
+
+
+<a href="#esportsbroadcast">
+Projects
+</a>
+
+
+<a href="#Creativeprocess">
+Process
+</a>
+
+
+<a href="#toolsskills">
+Skills
+</a>
+
+
+<a href="#contactme">
+Contact
+</a>
+
+
+</nav>
+
+
+</div>
+
+</div>
+
+</header>
+
+
+<main>
+
+  <div class="container">
+
+    <!-- =====================================
+         RESUME INTRODUCTION
+
+         CHANGE THIS SECTION FOR AV PAGE
+    ====================================== -->
+    
+<section class="resume-intro">
+
+      <p class="section-label">
+        VIDEO EDITING • MOTION DESIGN • POST-PRODUCTION
+      </p>
+
+      <h1>
+        Video Production <span>Resume.</span>
+      </h1>
+
+      <p class="description">
+
+        Explore my professional experience in video editing,
+        motion graphics, animation and creative production.
+
+        Preview my resume below or download a PDF copy.
+
+      </p>
+
+
+      <!-- =====================================
+           PAGE BUTTONS
+      ====================================== -->
+
+      <div class="button-row">
+
+<button type="button" class="btn" onclick="history.back()">
+    ← Back
+</button>
+        <!--
+          CHANGE THIS PDF PATH FOR THE AV PAGE.
+          All PDF links on this page must match.
+        -->
+
+        <a href="Assets/Resumes 20260928/Christopher Batas Video Editor Resume 20260628C.pdf" target="_blank"
+           class="btn btn-primary"
+           download="Christopher-Batas-Video-Resume.pdf">
+
+          &#8595; Download Resume
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         PDF RESUME VIEWER
+    ====================================== -->
+
+    <section class="resume-card"
+             aria-label="Resume PDF preview">
+
+
+      <div class="resume-toolbar">
+
+        <span class="file-name">
+          Christopher Batas — Video Production Resume.pdf
+        </span>
+
+
+        <!--
+          This opens the PDF directly.
+          No target="_blank" means the SAME tab.
+        -->
+
+        <a
+           href="Assets/Resumes 20260928/Christopher Batas Video Editor Resume 20260628C.pdf" target="_blank" class="open-pdf">
+
+          Open PDF &#8599;
+
+        </a>
+
+      </div>
+
+
+
+      <!--
+        IMPORTANT:
+        This is the PDF preview window.
+
+        The PDF file must exist at the path below.
+
+        For this page:
+        resumes/video-resume.pdf
+
+        For the AV page:
+        resumes/av-resume.pdf
+      -->
+
+      <a href="Assets/Resumes 20260928/Christopher Batas Video Editor Resume 20260628C.pdf">
+      <iframe
+        class="pdf-viewer"
+        src="Assets/Resumes 20260928/Christopher Batas Video Editor Resume 20260628C.pdf"
+        title="Christopher Batas Video Production Resume">
+
+      </iframe>
+      </a>
+
+
+      <!-- Fallback if a browser cannot display PDFs -->
+
+      <p class="pdf-fallback">
+
+        Having trouble viewing the resume?
+
+        <a href="Assets/Resumes 20260928/Christopher Batas Video Editor Resume 20260628C.pdf">
+          Open the PDF directly.
+        </a>
+
+      </p>
+
+
+    </section>
+
+
+  </div>
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-content">
+
+      <span>
+        &copy;
+        <span id="year"></span>
+        Christopher Batas.
+        All rights reserved.
+      </span>
+
+      <span>
+
+        <a href="index.html#top">
+          Home
+        </a>
+
+        &nbsp;|&nbsp;
+
+        <a href="Video Production Portfolio Page with 2 box.html#totop">
+          Creative Portfolio
+        </a>
+
+        
+        &nbsp;|&nbsp;
+
+        <a href="Video Production Portfolio Page with 2 box.html#contact">
+          Contact
+        </a>
+
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+
+</body>
+</html>

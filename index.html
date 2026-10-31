@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Home CB Portfolio Intro</title>
+
+  <meta name="description"
+        content="Christopher Batas is a video editor, motion graphics designer and AV production specialist. Explore creative projects, broadcast production and live event experience.">
+
+
+  <style>
+
+    /* =========================================
+       1. WEBSITE COLORS
+    ========================================= */
+
+    :root {
+
+      --bg: #0B0D12;
+
+      --bg-secondary: #111827;
+
+      --panel: rgba(255,255,255,0.05);
+
+      --panel-hover: rgba(255,255,255,0.08);
+
+      --text: #F2F6FF;
+
+      --muted: #A8B5C9;
+
+      --accent: #3B82F6;
+
+      --accent-light: #74ADFF;
+
+      --border: rgba(116,173,255,0.18);
+
+      --shadow: 0 18px 50px rgba(0,0,0,0.35);
+
+      --radius: 18px;
+
+      --max-width: 1150px;
+
+    }
+
+
+    /* =========================================
+       2. GENERAL WEBSITE STYLING
+    ========================================= */
+
+    * {
+
+      box-sizing: border-box;
+
+    }
+
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+
+    body {
+
+      margin: 0;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      color: var(--text);
+
+      line-height: 1.6;
+
+      background:
+
+        radial-gradient(
+          900px 500px at 15% 10%,
+          rgba(59,130,246,0.18),
+          transparent 60%
+        ),
+
+        radial-gradient(
+          800px 500px at 85% 20%,
+          rgba(0,194,255,0.10),
+          transparent 55%
+        ),
+
+        var(--bg);
+
+    }
+
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+
+    a:hover {
+
+      color: var(--accent-light);
+
+    }
+
+
+    .container {
+
+      width: min(
+        var(--max-width),
+        calc(100% - 40px)
+      );
+
+      margin: auto;
+
+    }
+
+
+    section {
+
+      padding: 65px 0;
+
+      scroll-margin-top: 90px;
+
+    }
+
+
+    h1,
+    h2,
+    h3 {
+
+      line-height: 1.2;
+
+    }
+
+
+    h1 {
+
+      font-size: clamp(34px, 5vw, 56px);
+
+      margin-bottom: 20px;
+
+    }
+
+
+    h2 {
+
+      font-size: clamp(26px, 3vw, 36px);
+
+      margin-bottom: 15px;
+
+    }
+
+
+    h3 {
+
+      font-size: 20px;
+
+    }
+
+
+    p {
+
+      color: var(--muted);
+
+    }
+
+
+    .section-label {
+
+      color: var(--accent-light);
+
+      text-transform: uppercase;
+
+      letter-spacing: 2px;
+
+      font-size: 12px;
+
+      font-weight: bold;
+
+    }
+
+
+    .section-heading {
+
+      max-width: 750px;
+
+      margin-bottom: 35px;
+
+    }
+
+
+    /* =========================================
+       3. NAVIGATION
+    ========================================= */
+
+    header {
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 100;
+
+      background: rgba(11,13,18,0.90);
+
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+
+    .navbar {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      padding: 18px 0;
+
+    }
+
+
+    .logo {
+
+      font-size: 18px;
+
+      font-weight: bold;
+
+      letter-spacing: 1px;
+
+    }
+
+
+    .logo span {
+
+      color: var(--accent-light);
+
+    }
+
+
+    .nav-links {
+
+      display: flex;
+
+      gap: 25px;
+
+      align-items: center;
+
+      font-size: 14px;
+
+    }
+
+
+    .nav-links a {
+
+      color: var(--muted);
+
+    }
+
+
+    .nav-links a:hover {
+
+      color: var(--accent-light);
+
+    }
+
+
+    /* =========================================
+       4. BUTTONS
+    ========================================= */
+
+    .btn {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 12px 20px;
+
+      border-radius: 10px;
+
+      border: 1px solid var(--border);
+
+      background: rgba(255,255,255,0.05);
+
+      color: white;
+
+      font-size: 14px;
+
+      font-weight: bold;
+
+      transition: 0.25s ease;
+
+    }
+
+
+    .btn:hover {
+
+      background: rgba(59,130,246,0.15);
+
+      border-color: var(--accent);
+
+      color: white;
+
+      transform: translateY(-2px);
+
+    }
+
+
+    .btn-primary {
+
+      background: linear-gradient(
+        135deg,
+        #2563EB,
+        #3B82F6
+      );
+
+      border-color: #3B82F6;
+
+    }
+
+
+    .btn-primary:hover {
+
+      background: linear-gradient(
+        135deg,
+        #3B82F6,
+        #60A5FA
+      );
+
+    }
+
+
+    .button-row {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 25px;
+
+    }
+
+
+    /* =========================================
+       5. HERO SECTION
+    ========================================= */
+
+    .hero {
+
+      padding: 90px 0 65px;
+
+    }
+
+
+    .hero-content {
+
+      max-width: 850px;
+
+    }
+
+
+    .hero h1 span {
+
+      color: var(--accent-light);
+
+    }
+
+
+    .hero-description {
+
+      font-size: 18px;
+
+      max-width: 750px;
+
+    }
+
+
+    .hero-tags {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 25px;
+
+    }
+
+
+    .tag {
+
+      display: inline-block;
+
+      padding: 6px 12px;
+
+      border-radius: 30px;
+
+      border: 1px solid var(--border);
+
+      background: rgba(59,130,246,0.06);
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+    }
+
+
+    /* =========================================
+       6. DISCIPLINE CARDS
+    ========================================= */
+
+    .career-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 25px;
+
+    }
+
+
+    .career-card {
+
+      padding: 32px;
+
+      border-radius: var(--radius);
+
+      background: linear-gradient(
+        145deg,
+        rgba(59,130,246,0.12),
+        rgba(255,255,255,0.03)
+      );
+
+      border: 1px solid var(--border);
+
+      box-shadow: var(--shadow);
+
+      transition: 0.3s ease;
+
+    }
+
+
+    .career-card:hover {
+
+      transform: translateY(-5px);
+
+      border-color: var(--accent);
+
+    }
+
+
+    .career-icon {
+
+      font-size: 34px;
+
+      color: var(--accent-light);
+
+      margin-bottom: 15px;
+
+    }
+
+
+    .career-card ul {
+
+      color: var(--muted);
+
+      padding-left: 20px;
+
+      margin: 20px 0;
+
+    }
+
+
+    .career-card li {
+
+      margin-bottom: 8px;
+
+    }
+
+
+    /* =========================================
+       7. DEMO REEL
+    ========================================= */
+
+    .reel-card {
+
+      padding: 20px;
+
+      background: var(--panel);
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius);
+
+    }
+
+
+    .video-container {
+
+      position: relative;
+
+      width: 100%;
+
+      padding-top: 56.25%;
+
+      background: #05070C;
+
+      border-radius: 12px;
+
+      overflow: hidden;
+
+    }
+
+
+    .video-container iframe {
+
+      position: absolute;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      border: none;
+
+    }
+
+
+    /* =========================================
+       8. ABOUT SECTION
+    ========================================= */
+
+    .about-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 25px;
+
+    }
+
+
+    .about-card {
+
+      padding: 30px;
+
+      background: var(--panel);
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius);
+
+    }
+
+
+    .about-card ul {
+
+      color: var(--muted);
+
+      padding-left: 20px;
+
+    }
+
+
+    .about-card li {
+
+      margin-bottom: 10px;
+
+    }
+
+
+    /* =========================================
+       9. RESUME SECTION
+    ========================================= */
+
+    .resume-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 20px;
+
+    }
+
+
+    .resume-card {
+
+      padding: 30px;
+
+
+      background: var(--panel);
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius);
+
+    }
+
+
+    .resume-card h3 {
+
+      color: var(--accent-light);
+
+    }
+
+
+    /* =========================================
+       10. CONTACT
+    ========================================= */
+
+    .contact-card {
+
+      padding: 35px;
+
+      background: linear-gradient(
+        135deg,
+        rgba(59,130,246,0.14),
+        rgba(255,255,255,0.03)
+      );
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius);
+
+    }
+
+
+    /* =========================================
+       11. FOOTER
+    ========================================= */
+
+    footer {
+
+      padding: 30px 0;
+
+      border-top: 1px solid var(--border);
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+    }
+
+
+    .footer-content {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      flex-wrap: wrap;
+
+      gap: 20px;
+
+    }
+
+
+    /* =========================================
+       12. MOBILE RESPONSIVE
+    ========================================= */
+
+    @media (max-width: 900px) {
+
+      .career-grid,
+      .about-grid,
+      .resume-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .nav-links {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+
+      }
+
+
+      .navbar {
+
+        flex-direction: column;
+
+      }
+
+
+      .hero {
+
+        padding-top: 60px;
+
+      }
+
+    }
+
+
+    @media (max-width: 500px) {
+
+      .container {
+
+        width: calc(100% - 28px);
+
+      }
+
+
+      .career-card,
+      .about-card,
+      .resume-card,
+      .contact-card {
+
+        padding: 22px;
+
+      }
+
+
+      .btn {
+
+        width: 100%;
+
+      }
+
+
+      .button-row {
+
+        flex-direction: column;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body id="totop">
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<header>
+
+  <div class="container">
+
+    <div class="navbar">
+
+      <!-- Clicking your name returns to the top/home -->
+      <a href="#top" class="logo">
+
+        CHRISTOPHER <span>BATAS</span>
+
+      </a>
+
+
+      <nav class="nav-links"
+           aria-label="Main navigation">
+
+        <a href="#myspecialties">
+          Disciplines
+        </a>
+
+        <a href="#mydemo">
+          Demo Reel
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#prores">
+          Resumes
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+<a id="top"></a>
+<!-- =========================================
+     HERO SECTION
+========================================= -->
+
+<section class="hero"
+         id="home">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+
+      <p class="section-label">
+
+        VIDEO PRODUCTION • MOTION DESIGN • BROADCAST AV
+
+      </p>
+
+
+      <h1>
+
+        Creative storytelling meets
+        <span>technical production.</span>
+
+      </h1>
+
+
+      <p class="hero-description">
+
+        I'm Christopher Batas, a video production and
+        audiovisual professional with experience in
+        motion graphics, video editing, corporate AV
+        and live event production.
+
+        I bring creative storytelling and technical
+        production together to deliver engaging,
+        reliable visual experiences.
+
+      </p>
+
+
+      <div class="hero-tags">
+
+        <span class="tag">
+          Video Editing
+        </span>
+
+        <span class="tag">
+          Motion Graphics
+        </span>
+
+        <span class="tag">
+          Live Event Production
+        </span>
+
+        <span class="tag">
+          Broadcast AV
+        </span>
+
+        <span class="tag">
+          Technical Production
+        </span>
+
+      </div>
+
+
+      <div class="button-row">
+
+        <a href="#myspecialties"
+           class="btn btn-primary">
+
+          Explore My Work
+
+        </a>
+
+
+        <a href="#mydemo"
+           class="btn">
+
+          Watch Demo Reel
+
+        </a>
+
+
+        <a href="#prores"
+           class="btn">
+
+          View Resumes
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     TWO DISCIPLINES
+========================================= -->
+<a id="myspecialties"></a>
+<section id="specialties">
+
+  <div class="container">
+
+
+    <div class="section-heading">
+
+      <p class="section-label">
+
+        MY SPECIALTIES
+
+      </p>
+
+
+      <h2>
+
+        Two disciplines. One production mindset.
+
+      </h2>
+
+
+      <p>
+
+        Explore my creative portfolio or my technical
+        production experience, depending on the work
+        you're interested in.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="career-grid">
+
+
+      <!-- =====================================
+           DISCIPLINE 1:
+           VIDEO EDITING & MOTION DESIGN
+      ====================================== -->
+
+      <div class="career-card">
+
+
+        <div class="career-icon">
+
+          &#9654;
+
+        </div>
+
+
+        <h3>
+
+          Video Editing & Motion Design
+
+        </h3>
+
+
+        <p>
+
+          Creative storytelling through video editing,
+          motion graphics, animation and broadcast-ready
+          visual design.
+
+        </p>
+
+
+        <ul>
+
+          <li>
+            Video editing and post-production
+          </li>
+
+          <li>
+            Motion graphics and animation
+          </li>
+
+          <li>
+            Esports and broadcast graphics
+          </li>
+
+          <li>
+            Compositing and visual storytelling
+          </li>
+
+          <li>
+            Social media and promotional content
+          </li>
+
+        </ul>
+
+
+        <div class="button-row">
+
+          <a href="Video Production Portfolio Page with 2 box.html#totop"
+             class="btn btn-primary">
+
+            View Creative Portfolio
+
+          </a>
+
+
+          <a href="Video Editing Resume Page_B.html#totop"
+             class="btn"
+             rel="noopener">
+
+            Video Editor Resume
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================
+           DISCIPLINE 2:
+           AV & LIVE PRODUCTION
+      ====================================== -->
+
+      <div class="career-card">
+
+
+        <div class="career-icon">
+
+          &#9673;
+
+        </div>
+
+
+        <h3>
+
+          AV & Live Production
+
+        </h3>
+
+
+        <p>
+
+          Technical production experience supporting
+          corporate events, livestreams, broadcast
+          systems and professional audiovisual
+          environments.
+
+        </p>
+
+
+        <ul>
+
+          <li>
+            Corporate AV and event support
+          </li>
+
+          <li>
+            Livestream and broadcast operations
+          </li>
+
+          <li>
+            TriCaster, OBS and vMix workflows
+          </li>
+
+          <li>
+            Audio, lighting and video systems
+          </li>
+
+          <li>
+            Technical troubleshooting and support
+          </li>
+
+        </ul>
+
+
+        <div class="button-row">
+
+          <a href="AV Technician Portfolio Page2.html#totop"
+             class="btn btn-primary">
+
+            View AV Experience
+
+          </a>
+
+
+          <a href="AV Technician Resume Page_B.html#totop"
+             class="btn"
+             rel="noopener">
+
+            AV Resume
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CREATIVE DEMO REEL
+========================================= -->
+<a id="mydemo"></a>
+<section id="reel">
+  
+  <div class="container">
+    
+    
+    <div class="section-heading">
+      
+      <p class="section-label">
+        
+        FEATURED REEL
+        
+        </p>
+      
+      
+      <h2>
+        
+        Video Editing & Motion Design Reel
+        
+        </h2>
+      
+      
+      <p>
+        
+        A selection of my video editing, motion design,
+        broadcast graphics and visual storytelling work.
+        
+        </p>
+      
+      </div>
+    
+    
+    
+    <div class="reel-card">
+      
+      <div class="video-container">
+        
+        <!--
+          REPLACE VIDEO_ID WITH YOUR YOUTUBE VIDEO ID.
+
+          Example:
+
+          https://www.youtube.com/embed/VIDEO_ID
+
+          You can also use a Vimeo embed URL.
+        -->
+        
+        <iframe
+
+          src="https://www.youtube.com/embed/VIDEO_ID"
+
+          title="Christopher Batas Video Editing and Motion Design Reel"
+
+          loading="lazy"
+
+          allow="accelerometer; autoplay; clipboard-write;
+                 encrypted-media; gyroscope;
+                 picture-in-picture; web-share"
+
+          allowfullscreen>
+          
+          </iframe>
+        
+        </div>
+      
+      </div>
+    
+    
+    <!-- Gives visitors a direct path into the
+         full creative portfolio after watching the reel -->
+    
+    <div class="button-row">
+      
+      <a href="Video Production Portfolio Page with 2 box.html#totop"
+         class="btn btn-primary">
+        
+        Explore Creative Portfolio
+        
+        </a>
+      
+      </div>
+    
+    
+    </div>
+  
+</section>
+
+
+
+<!-- =========================================
+     ABOUT ME
+========================================= -->
+<a id="about"></a>
+<section id="aboutme">
+  
+  <div class="container">
+    
+    
+    <div class="section-heading">
+      
+      <p class="section-label">
+        
+        ABOUT ME
+        
+        </p>
+      
+      
+      <h2>
+        
+        Creative skills backed by technical experience.
+        
+        </h2>
+      
+      
+      <p>
+        
+        My background combines visual storytelling
+        with hands-on experience in professional
+        production environments.
+        
+        </p>
+      
+      </div>
+    
+    
+    
+    <div class="about-grid">
+      
+      
+      <!-- CREATIVE SIDE -->
+      
+      <div class="about-card">
+        
+        
+        <h3>
+          
+          Creative Production
+          
+          </h3>
+        
+        
+        <p>
+          
+          I work across video editing, motion
+          graphics and animation, with an emphasis
+          on clear storytelling, strong visual
+          communication and reliable delivery.
+          
+          </p>
+        
+        
+        <ul>
+          
+          <li>
+            Adobe Premiere Pro
+            </li>
+          
+          <li>
+            Adobe After Effects
+            </li>
+          
+          <li>
+            Adobe Photoshop & Illustrator
+            </li>
+          
+          <li>
+            Adobe Audition
+            </li>
+          
+          <li>
+            Moho Pro
+            </li>
+          
+          <li>
+            Blender
+            </li>
+          
+          </ul>
+        
+        </div>
+      
+      
+      
+      <!-- TECHNICAL SIDE -->
+      
+      <div class="about-card">
+        
+        
+        <h3>
+          
+          Technical Production
+          
+          </h3>
+        
+        
+        <p>
+          
+          My AV experience includes live event
+          production, corporate audiovisual
+          support and broadcast workflows.
+          
+          </p>
+        
+        
+        <ul>
+          
+          <li>
+            TriCaster
+            </li>
+          
+          <li>
+            OBS & vMix
+            </li>
+          
+          <li>
+            NDI & SDI workflows
+            </li>
+          
+          <li>
+            Audio mixing
+            </li>
+          
+          <li>
+            Lighting and DMX systems
+            </li>
+          
+          <li>
+            Zoom, Microsoft Teams & Webex
+            </li>
+          
+          </ul>
+        
+        </div>
+      
+      
+      </div>
+    
+    </div>
+  
+</section>
+
+
+
+<!-- =========================================
+     RESUMES
+========================================= -->
+<a id="prores"></a>
+<section id="resumes">
+  
+  <div class="container">
+    
+    
+    <div class="section-heading">
+      
+      <p class="section-label">
+        
+        PROFESSIONAL RESUMES
+        
+        </p>
+      
+      
+      <h2>
+        
+        Find the right resume.
+        
+        </h2>
+      
+      
+      <p>
+        
+        My experience spans both creative production
+        and technical AV. Select the resume that
+        best matches your hiring needs.
+        
+        </p>
+      
+      </div>
+    
+    
+    
+    <div class="resume-grid">
+      
+      
+      <!-- =====================================
+           VIDEO RESUME
+      ====================================== -->
+      
+      <div class="resume-card">
+        
+        
+        <h3>
+          
+          Video Editing & Motion Design
+          
+          </h3>
+        
+        
+        <p>
+          
+          Focused on video editing, motion graphics,
+          post-production, animation and creative
+          production workflows.
+          
+          </p>
+        
+        
+        <div class="button-row">
+          
+          <a href="Video Editing Resume Page_B.html#totop"
+             class="btn btn-primary"
+             target="_self">
+            
+            View Resume
+            
+            </a>
+          
+          
+          <a href="Assets/Resumes 20260928/Christopher Batas Video Editor Resume 20260628C.pdf"
+             target="_blank"
+             class="btn"
+             download>
+            
+            Download PDF
+            
+            </a>
+          
+          </div>
+        
+        </div>
+      
+      
+      
+      <!-- =====================================
+           AV RESUME
+      ====================================== -->
+      
+      <div class="resume-card">
+        
+        
+        <h3>
+          
+          AV Technician & Live Production
+          
+          </h3>
+        
+        
+        <p>
+          
+          Focused on corporate audiovisual support,
+          live event production, broadcast systems
+          and technical operations.
+          
+          </p>
+        
+        
+        <div class="button-row">
+          
+          <a href="AV Technician Resume Page_B.html#totop"
+             class="btn btn-primary"
+             target="_self">
+            
+            View Resume
+            
+            </a>
+          
+          
+          <a href="Assets/Resumes 20260928/ChrisResume2026 AV TechC.pdf"
+             target="_blank"
+             class="btn"
+             download>
+            
+            Download PDF
+            
+            </a>
+          
+          </div>
+        
+        </div>
+      
+      
+      </div>
+    
+    </div>
+  
+</section>
+
+
+
+<!-- =========================================
+     CONTACT
+========================================= -->
+
+<section id="contact">
+
+  <div class="container">
+
+
+    <div class="contact-card">
+
+
+      <p class="section-label">
+
+        GET IN TOUCH
+
+      </p>
+
+
+      <h2>
+
+        Let's build something great.
+
+      </h2>
+
+
+      <p>
+
+        Interested in working together or discussing
+        a video production, motion design or AV
+        opportunity? I'd love to connect.
+
+      </p>
+
+
+      <div class="button-row">
+
+
+        <!-- EMAIL -->
+
+        <a href="mailto:chris.batas.manglapus@gmail.com"
+           target="_blank"
+           class="btn btn-primary">
+
+          Email Me
+
+        </a>
+
+
+        <!-- LINKEDIN -->
+
+        <a href="https://www.linkedin.com/in/christopherbatas/"
+           class="btn"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          LinkedIn
+
+        </a>
+
+
+        <!-- BACK TO TOP -->
+
+        <a href="#top"
+           class="btn">
+
+          &uarr; Back to Top
+
+        </a>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-content">
+
+      <span>
+        &copy;
+        <span id="year"></span>
+        Christopher Batas.
+        All rights reserved.
+      </span>
+
+      <span>
+
+        <a href="index.html#top">
+          Home
+        </a>
+
+        &nbsp;|&nbsp;
+
+        <a href="Video Production Portfolio Page with 2 box.html#totop">
+          Creative Portfolio
+        </a>
+
+        &nbsp;|&nbsp;
+
+        <a href="AV Technician Portfolio Page2.html#totop">
+          AV Portfolio
+        </a>
+        
+        &nbsp;|&nbsp;
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+  // Automatically updates the copyright year.
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,2600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+  The Ascent Circuit | Esports Broadcast Design | Christopher Batas
+</title>
+
+
+<meta name="description"
+content="Esports and broadcast graphics project by Christopher Batas featuring motion graphics, broadcast design, lower thirds, slates and visual packages.">
+
+<style>
+
+/* =========================================================
+   01. GLOBAL COLORS / SETTINGS
+========================================================= */
+
+:root {
+  --bg: #0B0D12;
+  --panel: #15181F;
+  --panel-light: #1B2029;
+
+  --text: #F2F6FF;
+  --muted: #A8B5C9;
+
+  --accent: #3B82F6;
+  --accent-light: #74ADFF;
+
+  --border: rgba(116,173,255,0.18);
+
+  --radius: 18px;
+  --max-width: 1150px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  font-family:
+  Arial,
+  Helvetica,
+  sans-serif;
+
+  color: var(--text);
+
+  line-height: 1.6;
+
+  background:
+  radial-gradient(
+    900px 500px at 15% 5%,
+    rgba(59,130,246,0.16),
+    transparent 60%
+  ),
+  var(--bg);
+}
+
+body {
+  scroll-margin-top: 90px;
+}
+
+section {
+  padding: 70px 0;
+  scroll-margin-top: 90px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  width: min(
+    var(--max-width),
+    calc(100% - 40px)
+  );
+
+  margin: 0 auto;
+}
+
+p {
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 12px 0 20px;
+
+  font-size:
+  clamp(38px, 6vw, 64px);
+}
+
+h2 {
+  margin: 10px 0 18px;
+
+  font-size:
+  clamp(27px, 4vw, 38px);
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 21px;
+}
+
+.section-label {
+  margin-bottom: 8px;
+
+  color: var(--accent-light);
+
+  font-size: 12px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   02. NAVIGATION
+========================================================= */
+
+header {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+
+  background:
+  rgba(11,13,18,0.92);
+
+  backdrop-filter:
+  blur(12px);
+
+  border-bottom:
+  1px solid var(--border);
+}
+
+.navbar {
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+  space-between;
+
+  gap: 20px;
+
+  padding: 17px 0;
+}
+
+.logo {
+  font-size: 18px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--accent-light);
+}
+
+.nav-links {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 25px;
+
+  font-size: 14px;
+}
+
+.nav-links a {
+  color: var(--muted);
+
+  transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-light);
+}
+
+
+/* =========================================================
+   03. BUTTONS
+========================================================= */
+
+.button-row {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 27px;
+}
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 12px 20px;
+
+  border:
+  1px solid var(--border);
+
+  border-radius: 10px;
+
+  background:
+  rgba(255,255,255,0.04);
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  transform:
+  translateY(-2px);
+
+  border-color:
+  var(--accent);
+
+  background:
+  rgba(59,130,246,0.12);
+}
+
+.btn-primary {
+  border-color:
+  var(--accent);
+
+  background:
+  linear-gradient(
+    135deg,
+    #2563EB,
+    #3B82F6
+  );
+}
+
+
+/* =========================================================
+   04. PROJECT HERO
+========================================================= */
+
+.project-hero {
+  padding:
+  90px 0 65px;
+}
+
+.project-hero-content {
+  max-width: 850px;
+}
+
+.project-hero h1 span {
+  color:
+  var(--accent-light);
+}
+
+.hero-description {
+  max-width: 760px;
+
+  font-size: 18px;
+}
+
+.tag-row {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.tag {
+  padding:
+  6px 12px;
+
+  border:
+  1px solid var(--border);
+
+  border-radius: 30px;
+
+  background:
+  rgba(59,130,246,0.06);
+
+  color:
+  var(--muted);
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   05. VIDEO / SIZZLE REEL
+========================================================= */
+
+.video-card {
+  padding: 18px;
+
+  border:
+  1px solid var(--border);
+
+  border-radius:
+  var(--radius);
+
+  background:
+  rgba(255,255,255,0.04);
+}
+
+.video-frame {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+
+  aspect-ratio:
+  16 / 9;
+
+  border-radius: 12px;
+
+  background:
+  #05070C;
+}
+
+.video-frame iframe,
+.video-frame video {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  border: 0;
+}
+
+.video-placeholder {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+
+  height: 100%;
+
+  padding: 40px;
+
+  text-align: center;
+
+  background:
+  linear-gradient(
+    135deg,
+    #13223A,
+    #1E4E84
+  );
+}
+
+.play-icon {
+  margin-bottom: 12px;
+
+  color:
+  var(--accent-light);
+
+  font-size: 48px;
+}
+
+.video-placeholder strong {
+  font-size: 22px;
+}
+
+.video-placeholder p {
+  max-width: 500px;
+  margin-bottom: 0;
+}
+
+.video-caption {
+  padding:
+  15px 4px 2px;
+
+  color:
+  var(--muted);
+
+  font-size: 13px;
+}
+/* HD VIDEO VIEWING REMINDER */
+
+.video-quality-note {
+  margin: 12px 4px 4px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.video-quality-note strong {
+  color: var(--accent-light);
+}
+
+/* =========================================================
+   06. PROJECT OVERVIEW
+========================================================= */
+
+.overview-grid {
+  display: grid;
+
+  grid-template-columns:
+  1.4fr 0.6fr;
+
+  gap: 25px;
+}
+
+.info-card {
+  padding: 30px;
+
+  border:
+  1px solid var(--border);
+
+  border-radius:
+  var(--radius);
+
+  background:
+  rgba(255,255,255,0.04);
+}
+
+.info-card p:last-child {
+  margin-bottom: 0;
+}
+
+.project-details {
+  display: grid;
+
+  gap: 20px;
+}
+
+.detail-item {
+  padding-bottom: 18px;
+
+  border-bottom:
+  1px solid var(--border);
+}
+
+.detail-item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.detail-label {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color:
+  var(--accent-light);
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+.detail-value {
+  color:
+  var(--text);
+}
+
+
+/* =========================================================
+   07. GRAPHICS PACKAGE
+========================================================= */
+
+.graphics-grid {
+  display: grid;
+
+  grid-template-columns:
+  repeat(2, minmax(0,1fr));
+
+  gap: 24px;
+}
+
+.graphic-card {
+  overflow: hidden;
+
+  border:
+  1px solid var(--border);
+
+  border-radius:
+  var(--radius);
+
+  background:
+  var(--panel);
+
+  transition:
+  0.25s ease;
+}
+
+.graphic-card:hover {
+  transform:
+  translateY(-4px);
+
+  border-color:
+  var(--accent);
+}
+
+.graphic-placeholder {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+
+  aspect-ratio:
+  16 / 9;
+
+  padding: 30px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #182C49,
+    #214F84
+  );
+
+  color:
+  var(--accent-light);
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+
+  text-align: center;
+}
+
+/* GRAPHICS PACKAGE THUMBNAIL FIX */
+
+.graphic-placeholder:has(img) {
+  padding: 0;
+  overflow: hidden;
+}
+
+.graphic-placeholder img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+/* GRAPHICS PACKAGE - THUMBNAIL INTERACTION */
+
+.graphic-thumbnail-link {
+  overflow: hidden;
+  padding: 0;
+  cursor: pointer;
+}
+
+.graphic-thumbnail-link img {
+  transition: transform 0.35s ease,
+              filter 0.35s ease;
+}
+
+.graphic-thumbnail-link:hover img {
+  transform: scale(1.04);
+  filter: brightness(1.12);
+}
+
+.graphic-thumbnail-link:focus-visible {
+  outline: 3px solid #74ADFF;
+  outline-offset: -3px;
+}
+.graphic-card-content {
+  padding: 23px;
+}
+
+.graphic-card-content p {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   08. CREATIVE APPROACH
+========================================================= */
+
+.process-grid {
+  display: grid;
+
+  grid-template-columns:
+  repeat(4, minmax(0,1fr));
+
+  gap: 18px;
+}
+
+.process-card {
+  position: relative;
+
+  padding: 27px 23px;
+
+  border:
+  1px solid var(--border);
+
+  border-radius:
+  var(--radius);
+
+  background:
+  rgba(255,255,255,0.04);
+}
+
+.process-number {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color:
+  var(--accent-light);
+
+  font-size: 28px;
+
+  font-weight: bold;
+}
+
+.process-card p {
+  margin-bottom: 0;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   09. SELECTED PROCESS / BTS
+========================================================= */
+
+.process-images {
+  display: grid;
+
+  grid-template-columns:
+  repeat(3, minmax(0,1fr));
+
+  gap: 20px;
+}
+
+.process-image {
+  overflow: hidden;
+
+  border:
+  1px solid var(--border);
+
+  border-radius:
+  var(--radius);
+
+  background:
+  var(--panel);
+}
+
+.process-placeholder {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+
+  aspect-ratio:
+  4 / 3;
+
+  padding: 25px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #151D2A,
+    #1D3454
+  );
+
+  color:
+  var(--accent-light);
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  text-align: center;
+}
+
+.process-image-content {
+  padding: 18px;
+}
+
+.process-image-content strong {
+  display: block;
+
+  margin-bottom: 5px;
+}
+
+.process-image-content p {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   10. FINAL RESULT
+========================================================= */
+
+.final-card {
+  padding: 40px;
+
+  border:
+  1px solid var(--border);
+
+  border-radius:
+  var(--radius);
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(59,130,246,0.14),
+    rgba(255,255,255,0.03)
+  );
+}
+
+.final-card p {
+  max-width: 750px;
+}
+
+
+/* =========================================================
+   11. PROJECT NAVIGATION
+========================================================= */
+
+.project-navigation {
+  padding:
+  35px 0 70px;
+}
+
+.project-nav-inner {
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+  space-between;
+
+  gap: 20px;
+
+  padding-top: 30px;
+
+  border-top:
+  1px solid var(--border);
+}
+
+.text-link {
+  color:
+  var(--accent-light);
+
+  font-weight: bold;
+}
+
+.text-link:hover {
+  color: white;
+}
+
+
+/* =========================================================
+   12. FOOTER
+========================================================= */
+
+footer {
+  padding: 28px 0;
+
+  border-top:
+  1px solid var(--border);
+
+  color:
+  var(--muted);
+
+  font-size: 13px;
+}
+
+.footer-content {
+  display: flex;
+
+  justify-content:
+  space-between;
+
+  flex-wrap: wrap;
+
+  gap: 16px;
+}
+
+
+/* =========================================================
+   13. RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    flex-direction:
+    column;
+  }
+
+  .nav-links {
+    justify-content:
+    center;
+
+    gap: 15px;
+  }
+
+  .overview-grid,
+  .graphics-grid {
+    grid-template-columns:
+    1fr;
+  }
+
+  .process-grid {
+    grid-template-columns:
+    repeat(2,1fr);
+  }
+
+  .process-images {
+    grid-template-columns:
+    1fr;
+  }
+
+}
+
+
+@media (max-width: 550px) {
+  /* MOBILE NAVIGATION */
+
+  .navbar {
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 10px 16px;
+    font-size: 12px;
+  }
+
+  .nav-links a {
+    padding: 5px 0;
+  }
+  .container {
+    width:
+    calc(100% - 28px);
+  }
+
+  .project-hero {
+    padding-top: 55px;
+  }
+
+  .process-grid {
+    grid-template-columns:
+    1fr;
+  }
+
+  .button-row {
+    flex-direction:
+    column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+   .project-nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+
+}
+/* =========================================================
+   GRAPHICS PACKAGE EXAMPLES / BREAKDOWN
+========================================================= */
+
+.example-link {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--accent-light);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.25s ease;
+}
+
+.example-link:hover {
+  color: white;
+  transform: translateY(2px);
+}
+
+.breakdown-example {
+  padding: 38px;
+  margin-bottom: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--panel);
+  scroll-margin-top: 110px;
+}
+
+.breakdown-header {
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+.breakdown-number {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-light);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.breakdown-header h3 {
+  margin-bottom: 12px;
+  font-size: 26px;
+}
+
+.asset-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 26px;
+}
+
+.asset-item {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.03);
+}
+
+.asset-label {
+  padding: 12px 16px;
+  color: var(--accent-light);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.asset-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  padding: 24px;
+  background: linear-gradient(135deg, #13223A, #1E4E84);
+  color: var(--accent-light);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.breakdown-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #05070C;
+}
+
+.breakdown-note {
+  margin-top: 22px;
+  padding: 18px 20px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: rgba(59,130,246,0.07);
+}
+
+/* BACK TO GRAPHICS PACKAGE NAVIGATION */
+
+.breakdown-back {
+  display: inline-block;
+  margin-top: 20px;
+  color: #74ADFF;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+.breakdown-back:hover {
+  color: #FFFFFF;
+}
+
+.breakdown-back:focus {
+  outline: 2px solid #74ADFF;
+  outline-offset: 5px;
+}
+
+.breakdown-note p {
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .asset-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .breakdown-example {
+    padding: 26px;
+  }
+}
+/* =========================================================
+   MOBILE GRAPHICS BREAKDOWN - FINAL OVERRIDES
+========================================================= */
+
+@media (max-width: 550px) {
+
+  .breakdown-example {
+    padding: 20px;
+  }
+
+  .breakdown-header h3 {
+    font-size: 22px;
+  }
+
+  .asset-grid {
+    gap: 14px;
+  }
+
+  .asset-label {
+    font-size: 10px;
+  }
+
+  .breakdown-back {
+    line-height: 1.6;
+  }
+
+}
+/* =========================================================
+   IMAGE LIGHTBOX
+========================================================= */
+
+.image-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.92);
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  cursor: zoom-out;
+}
+
+.image-lightbox.active {
+  display: flex;
+}
+
+
+.image-lightbox img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 95%;
+  max-height: 88vh;
+  object-fit: contain;
+  border: 1px solid rgba(116,173,255,0.35);
+  border-radius: 10px;
+  box-shadow: 0 20px 70px rgba(0,0,0,0.7);
+  cursor: zoom-out;
+}
+
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+/* =========================================================
+   BEHIND THE WORK - IMAGE HOVER
+========================================================= */
+
+.process-placeholder .lightbox-trigger {
+  display: block;
+  overflow: hidden;
+}
+
+.process-placeholder .lightbox-trigger img {
+  transition: transform 0.3s ease,
+              filter 0.3s ease;
+}
+
+.process-placeholder .lightbox-trigger:hover img {
+  transform: scale(1.04);
+  filter: brightness(1.12);
+}
+
+.process-placeholder .lightbox-trigger:focus-visible {
+  outline: 3px solid #74ADFF;
+  outline-offset: -3px;
+}
+
+</style>
+
+</head>
+
+
+<body id="top">
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header>
+
+<div class="container">
+
+<div class="navbar">
+
+<a href="index.html" class="logo">
+CHRISTOPHER <span>BATAS</span>
+</a>
+
+<nav class="nav-links">
+
+  <a href="#totop">
+    To Top
+  </a>
+
+  <a href="#demoreel">
+    Sizzle Reel
+  </a>
+  
+<a href="#projectoverview">
+    Overview
+  </a>
+  <a href="#graphicspackage">
+    Graphics
+  </a>
+
+  <a href="#breakdown">
+    Breakdown
+  </a>
+
+  <a href="Video Production Portfolio Page with 2 box.html#contactme">
+    Contact
+  </a>
+
+</nav>
+
+</div>
+
+</div>
+
+</header>
+
+
+<main>
+
+
+<!-- =====================================================
+     PROJECT HERO
+===================================================== -->
+<a id="totop"></a>
+<section class="project-hero">
+
+<div class="container">
+
+<div class="project-hero-content">
+
+<p class="section-label">
+FEATURED PROJECT / BROADCAST DESIGN
+</p>
+
+<h1>
+Esports &amp;
+<span>Broadcast Graphics.</span>
+</h1>
+
+
+<p class="hero-description">
+  A custom esports broadcast graphics package created
+  for a fictional ARC Raiders tournament, featuring
+  cinematic editing, motion graphics, 3D animation,
+  and tournament overlays.
+</p>
+
+
+<div class="tag-row">
+
+<span class="tag">
+Motion Graphics
+</span>
+
+<span class="tag">
+Broadcast Design
+</span>
+
+<span class="tag">
+Video Editing
+</span>
+
+<span class="tag">
+Animation
+</span>
+
+</div>
+
+<div class="button-row">
+
+<a href="#demoreel"
+class="btn btn-primary">
+
+Watch Project
+
+</a>
+
+<a href="Video Production Portfolio Page with 2 box.html#totop"
+class="btn">
+
+&larr; Back
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<a id="demoreel"></a><!-- =====================================================
+     SIZZLE REEL / FINISHED WORK
+===================================================== -->
+
+<section id="sizzle">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="section-label">
+FINAL WORK
+</p>
+
+<h2>
+Broadcast Graphics Sizzle
+</h2>
+
+<p>
+
+The finished work comes first.
+This section gives viewers a quick look
+at the complete graphics package in motion.
+
+</p>
+
+</div>
+
+
+<div class="video-card">
+
+<div class="video-frame">
+
+
+<!-- ARC RAIDERS SIZZLE REEL - YOUTUBE EMBED -->
+
+<iframe
+  src="https://www.youtube.com/embed/oNfsTvMG0L8"
+  title="ARC Raiders Esports Broadcast Graphics Sizzle Reel"
+  loading="lazy"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="video-caption">
+
+Esports &amp; Broadcast Graphics /
+Motion Design / Video Editing
+
+</div>
+<!-- HD VIEWING REMINDER -->
+
+<p class="video-quality-note">
+  &#9881; For the best viewing experience,
+  select <strong>1080p HD</strong> under
+  Settings &rarr; Quality in the video player.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<a id="projectoverview"></a><!-- =====================================================
+     PROJECT OVERVIEW
+===================================================== -->
+
+<section id="project">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="section-label">
+PROJECT OVERVIEW
+</p>
+
+<h2>
+The Project
+</h2>
+
+<p>
+A behind-the-scenes look at the creative process, from gameplay editing and cinematic storytelling to motion graphics, 3D animation, and broadcast design.</p>
+
+</div>
+
+
+<div class="overview-grid">
+
+
+<div class="info-card">
+
+<h3>
+Project Overview
+</h3>
+<p>This personal project explores the creation of a complete broadcast graphics and video production package for a fictional <em>ARC Raiders</em> esports tournament. The goal was to develop a cohesive visual identity while combining motion graphics, gameplay editing, 3D animation, and visual effects into a cinematic broadcast presentation.</p>
+<p>For the opening sequence, I edited footage from three separate gameplay recordings, using carefully timed cuts, color and saturation adjustments, and animated graphics to create the illusion of three players entering the environment and preparing for the tournament together.</p>
+<p>I also created animated electronic doors in Blender, incorporating smoke effects to enhance the transitions and overall cinematic presentation.</p>
+<p>Additional work included lower thirds, scoreboard and HUD elements, tournament graphics, and animated transitions, with an emphasis on visual consistency, readable information, and broadcast-style presentation.</p>
+<p>&nbsp;</p></div>
+
+
+<div class="info-card">
+
+<div class="project-details">
+
+
+<div class="detail-item">
+
+<span class="detail-label">
+PROJECT TYPE
+</span>Personal Project / Esports Broadcast &amp; Cinematic Production</div>
+
+
+<div class="detail-item">
+
+<span class="detail-label">
+MY ROLE
+</span>Video Editing / Motion Design / 3D Animation / VFX</div>
+
+
+<div class="detail-item">
+
+<span class="detail-label">
+TOOLS
+</span>
+
+<p>
+  <strong>Creative Tools:</strong>
+  After Effects / Premiere Pro / Photoshop /
+  Illustrator / Blender / Audition
+</p>
+
+<p>
+  <strong>Broadcast Testing:</strong>
+  OBS Studio / vMix
+</p>
+
+</div>
+
+
+<div class="detail-item">
+
+<span class="detail-label">
+DELIVERABLES
+</span>Cinematic Intro / Broadcast Graphics / Lower Thirds / HUD / 3D Door Animation / VFX / Sizzle Reel</div>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+<a id="graphicspackage"></a><!-- =====================================================
+     GRAPHICS PACKAGE
+===================================================== -->
+
+<section id="graphics">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="section-label">
+SELECTED WORK
+</p>
+
+<h2>
+Graphics Package
+</h2>
+
+<p>A collection of custom motion graphics, cinematic transitions, and broadcast overlays designed for a fictional ARC Raiders esports tournament. Each element contributes to a cohesive visual identity, combining clear on-screen information with engaging animation and cinematic presentation.</p>
+
+</div>
+
+
+<div class="graphics-grid">
+
+
+<!-- GRAPHIC 1 -->
+
+<article class="graphic-card">
+
+
+<!-- LOWER THIRD THUMBNAIL -->
+
+
+<a href="#lower-third-example"
+   class="graphic-placeholder graphic-thumbnail-link"
+   aria-label="View Lower Third breakdown">
+
+  <img
+    src="Assets/Images/Thumbnails/LowerThirds-Thumb.png"
+    alt="ARC Raiders custom animated lower thirds featuring three players"
+    loading="lazy">
+
+</a>
+
+
+
+
+<div class="graphic-card-content">
+
+<h3>
+Lower Third
+</h3>
+
+<p>
+
+On-screen identification graphics designed
+to remain readable while complementing
+the overall visual package.
+
+</p>
+
+<a href="#lower-third-example" class="example-link">
+View Example &darr;
+</a>
+
+</div>
+
+</article>
+
+
+<!-- GRAPHIC 2 -->
+
+<article class="graphic-card">
+
+
+<!-- TITLE & INTRO GRAPHICS THUMBNAIL -->
+
+
+<a href="#title-example"
+   class="graphic-placeholder graphic-thumbnail-link"
+   aria-label="View Title and Intro Graphics breakdown">
+
+  <img
+    src="Assets/Images/Thumbnails/intro-Slate.png"
+    alt="ARC Raiders esports tournament title and intro graphics"
+    loading="lazy">
+
+</a>
+
+
+
+<div class="graphic-card-content">
+
+<h3>
+Title &amp; Intro Graphics
+</h3>
+
+<p>
+
+Opening visual elements used to establish
+the identity and tone of the production.
+
+</p>
+
+<a href="#title-example" class="example-link">
+View Example &darr;
+</a>
+
+</div>
+
+</article>
+
+
+<!-- GRAPHIC 3 -->
+
+<article class="graphic-card">
+
+
+<!-- MECHANICAL DOOR TRANSITION THUMBNAIL -->
+
+
+<a href="#transition-example"
+   class="graphic-placeholder graphic-thumbnail-link"
+   aria-label="View Mechanical Door Transition breakdown">
+
+  <img
+    src="Assets/Images/Thumbnails/Stinger-Transition.png"
+    alt="Custom 3D mechanical door cinematic transition created in Blender"
+    loading="lazy">
+
+</a>
+
+
+<div class="graphic-card-content">
+
+<h3>Mechanical Door Transition</h3>
+
+<p>A custom 3D mechanical door animation created in Blender and integrated with smoke effects and sound to deliver a cinematic transition between scenes.</p>
+
+<a href="#transition-example" class="example-link">
+View Example &darr;
+</a>
+
+</div>
+
+</article>
+
+
+<!-- GRAPHIC 4 -->
+
+<article class="graphic-card">
+
+
+<!-- SCOREBOARD & HUD THUMBNAIL -->
+
+
+<a href="#supporting-example"
+   class="graphic-placeholder graphic-thumbnail-link"
+   aria-label="View Supporting Graphics breakdown">
+
+  <img
+    src="Assets/Images/Thumbnails/other-assets.png"
+    alt="ARC Raiders esports tournament scoreboard and HUD overlay graphics"
+    loading="lazy">
+
+</a>
+
+
+
+<div class="graphic-card-content">
+
+<h3>
+Supporting Graphics
+</h3>
+
+
+<p>
+  A collection of custom tournament graphics including
+  scoreboards, countdown timers, player identification,
+  and HUD overlays designed to create a cohesive
+  esports broadcast presentation.
+</p>
+
+<a href="#supporting-example" class="example-link">
+View Example &darr;
+</a>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+<a id="breakdown"></a><!-- =====================================================
+     SELECTED BROADCAST GRAPHICS BREAKDOWN
+===================================================== -->
+
+<section id="graphics-breakdown">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="section-label">
+SELECTED BROADCAST BREAKDOWN
+</p>
+
+<h2>
+The Graphics Package in Action
+</h2>
+
+<p>
+A closer look at selected elements from the mock esports
+tournament package and how each asset supports a consistent,
+broadcast-ready visual system.
+</p>
+
+</div>
+
+
+<!-- 01 LOWER THIRD -->
+
+<div class="breakdown-example" id="lower-third-example">
+
+<div class="breakdown-header">
+
+<span class="breakdown-number">
+01 / LOWER THIRD
+</span>
+
+<h3>
+Clear On-Screen Identification
+</h3>
+
+
+<p>
+  Custom animated lower thirds introduce tournament
+  players through coordinated motion, character portraits,
+  and role identification. Each graphic maintains a
+  consistent visual identity while remaining readable
+  against gameplay footage.
+</p>
+
+
+</div>
+
+<div class="asset-grid">
+
+<div class="asset-item">
+
+<div class="asset-label">
+Design / Style Frame
+</div>
+
+
+<div class="asset-placeholder" style="padding: 0; overflow: hidden;">
+
+  <a href="Assets/Images/Thumbnails/lower-third-thumb.png"
+     class="lightbox-trigger"
+     aria-label="Enlarge Lower Third design"
+     style="display: block; width: 100%; height: 100%;">
+
+    <img
+      src="Assets/Images/Thumbnails/lower-third-thumb.png"
+      alt="ARC Raiders AMALGAM squad leader lower-third design"
+      style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;"
+      loading="lazy">
+
+  </a>
+
+</div>
+
+</div>
+
+
+<div class="asset-item">
+
+<div class="asset-label">
+In Broadcast
+</div>
+
+
+<!-- LOWER THIRD ANIMATION VIDEO -->
+
+<video
+  class="breakdown-video"
+  controls
+  preload="metadata"
+  playsinline
+  poster="Assets/Images/Thumbnails/lower-third-thumb.png">
+
+  <source
+    src="Assets/Videos/Lower thirdsfinal.mp4"
+    type="video/mp4">
+
+  Your browser does not support HTML5 video.
+
+</video>
+
+
+</div>
+
+</div>
+
+
+<div class="breakdown-note">
+
+  <p>
+    <strong>Broadcast Focus:</strong>
+    Keeping player or participant information readable at a glance
+    while maintaining the visual identity of the tournament package.
+  </p>
+
+</div>
+
+<a href="#graphicspackage" class="breakdown-back">
+  &uarr; Back to Graphics Package
+</a>
+
+</div>
+
+<!-- 02 TITLE / INTRO -->
+
+<div class="breakdown-example" id="title-example">
+
+<div class="breakdown-header">
+
+<span class="breakdown-number">
+02 / TITLE &amp; INTRO GRAPHICS
+</span>
+
+<h3>
+Establishing the Tournament Identity
+</h3>
+
+
+<p>
+  The tournament title and opening graphics establish
+  the visual identity of The Ascent Circuit.
+  Cinematic motion, typography, and coordinated
+  transitions introduce the event while setting
+  the tone for the broadcast presentation.
+</p>
+
+
+</div>
+
+<div class="asset-grid">
+
+<div class="asset-item">
+
+<div class="asset-label">
+Title / Event Slate
+</div>
+
+
+<!-- TITLE / EVENT SLATE IMAGE -->
+
+<div class="asset-placeholder"
+     style="padding: 0; overflow: hidden;">
+
+  <a href="Assets/Images/Thumbnails/intro-Slate.png"
+     class="lightbox-trigger"
+     aria-label="Enlarge Title and Intro design"
+     style="display: block; width: 100%; height: 100%;">
+
+    <img
+      src="Assets/Images/Thumbnails/intro-Slate.png"
+      alt="ARC Raiders The Ascent Circuit tournament title design"
+      style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;"
+      loading="lazy">
+
+  </a>
+
+</div>
+
+</div>
+
+
+<div class="asset-item">
+
+<div class="asset-label">
+Final Intro Animation
+</div>
+
+
+<!-- TITLE & INTRO ANIMATION -->
+
+<video
+  class="breakdown-video"
+  controls
+  preload="metadata"
+  playsinline
+  poster="Assets/Images/Thumbnails/intro-Slate.png">
+
+  <source
+    src="Assets/Videos/Intro.mp4"
+    type="video/mp4">
+
+  Your browser does not support HTML5 video.
+
+</video>
+
+
+</div>
+
+</div>
+
+<div class="breakdown-note">
+
+<p>
+<strong>Design Focus:</strong>
+Using typography, hierarchy and motion to establish the event
+identity quickly and create a strong opening for the broadcast.
+</p>
+
+</div>
+<a href="#graphicspackage" class="breakdown-back">
+  &uarr; Back to Graphics Package
+</a>
+</div>
+
+
+<!-- 03 TRANSITIONS -->
+
+<div class="breakdown-example" id="transition-example">
+
+<div class="breakdown-header">
+
+<span class="breakdown-number">
+03 / TRANSITIONS
+</span>
+
+<h3>
+Moving Between Broadcast Moments
+</h3>
+
+
+<p>
+  A custom mechanical door transition modeled and
+  animated in Blender, enhanced with atmospheric
+  smoke effects and sound design. The animation
+  creates a cinematic connection between scenes
+  while maintaining the tournament's visual identity.
+</p>
+
+
+</div>
+
+<div class="asset-grid">
+
+<div class="asset-item">
+
+<div class="asset-label">
+Transition Design
+</div>
+
+
+<!-- MECHANICAL DOOR TRANSITION IMAGE -->
+
+<div class="asset-placeholder"
+     style="padding: 0; overflow: hidden;">
+
+  <a href="Assets/Images/Thumbnails/Stinger-Transition.png"
+     class="lightbox-trigger"
+     aria-label="Enlarge Mechanical Door Transition design"
+     style="display: block; width: 100%; height: 100%;">
+
+    <img
+      src="Assets/Images/Thumbnails/Stinger-Transition.png"
+      alt="ARC Raiders mechanical door transition created in Blender"
+      style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;"
+      loading="lazy">
+
+  </a>
+
+</div>
+
+</div>
+
+
+<div class="asset-item">
+
+<div class="asset-label">
+Transition in Motion
+</div>
+
+
+<!-- MECHANICAL DOOR TRANSITION VIDEO -->
+
+<video
+  class="breakdown-video"
+  controls
+  preload="metadata"
+  playsinline
+  poster="Assets/Images/Thumbnails/Stinger-Transition.png">
+
+  <source
+    src="Assets/Videos/Stinger.mp4"
+    type="video/mp4">
+
+  Your browser does not support HTML5 video.
+
+</video>
+
+
+</div>
+
+</div>
+
+<div class="breakdown-note">
+
+  <p>
+    <strong>Motion Focus:</strong>
+    Using short, purposeful movement to connect segments without
+    interrupting the pace of the broadcast.
+  </p>
+
+</div>
+
+<a href="#graphicspackage" class="breakdown-back">
+  &uarr; Back to Graphics Package
+</a>
+
+</div>
+
+<!-- 04 SUPPORTING GRAPHICS -->
+
+<div class="breakdown-example" id="supporting-example">
+
+  <div class="breakdown-header">
+
+    <span class="breakdown-number">
+      04 / SUPPORTING GRAPHICS
+    </span>
+
+<h3>
+Extending the Broadcast System
+</h3>
+
+
+<p>
+  Custom tournament overlays integrated with gameplay
+  footage, featuring animated scoreboard updates and
+  player-specific HUD graphics. As the presentation
+  switches between players, the on-screen information
+  changes to match the active player while maintaining
+  a consistent broadcast-style visual identity.
+</p>
+
+
+</div>
+
+<div class="asset-grid">
+
+<div class="asset-item">
+
+<div class="asset-label">
+Selected Supporting Asset
+</div>
+
+
+<!-- SUPPORTING GRAPHICS IMAGE -->
+
+<div class="asset-placeholder"
+     style="padding: 0; overflow: hidden;">
+
+  <a href="Assets/Images/Thumbnails/other-assets.png"
+     class="lightbox-trigger"
+     aria-label="Enlarge Supporting Graphics design"
+     style="display: block; width: 100%; height: 100%;">
+
+    <img
+      src="Assets/Images/Thumbnails/other-assets.png"
+      alt="ARC Raiders tournament scoreboard and supporting HUD graphics"
+      style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;"
+      loading="lazy">
+
+  </a>
+
+</div>
+
+</div>
+
+
+<div class="asset-item">
+
+<div class="asset-label">
+Asset in Broadcast
+</div>
+
+
+<!-- SUPPORTING GRAPHICS VIDEO -->
+
+<video
+  class="breakdown-video"
+  controls
+  preload="metadata"
+  playsinline
+  poster="Assets/Images/Thumbnails/other-assets.png">
+
+  <source
+    src="Assets/Videos/overlaysample.mp4"
+    type="video/mp4">
+
+  Your browser does not support HTML5 video.
+
+</video>
+
+
+</div>
+
+</div>
+
+<div class="breakdown-note">
+
+  <p>
+    <strong>Package Focus:</strong>
+    Maintaining consistent typography, layout and visual hierarchy
+    across multiple tournament assets so the package feels unified.
+  </p>
+
+</div>
+
+<a href="#graphicspackage" class="breakdown-back">
+  &uarr; Back to Graphics Package
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<a id="creativeprocess"></a><!-- =====================================================
+     CREATIVE APPROACH
+===================================================== -->
+
+<section id="approach">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="section-label">
+CREATIVE PROCESS
+</p>
+
+<h2>
+Project Approach
+</h2>
+
+
+<p>
+  From developing the tournament's visual identity
+  to creating motion graphics, 3D animations,
+  and broadcast overlays, each production stage
+  contributed to a cohesive esports presentation.
+</p>
+
+
+</div>
+
+
+<div class="process-grid">
+
+
+<div class="process-card">
+
+<span class="process-number">
+01
+</span>
+
+<h3>
+Concept
+</h3>
+
+<p>
+
+Establishing the visual direction,
+purpose and overall tone of
+the graphics package.
+
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<span class="process-number">
+02
+</span>
+
+<h3>
+Design
+</h3>
+
+<p>
+
+Developing a consistent visual system
+that can work across multiple
+broadcast elements.
+
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<span class="process-number">
+03
+</span>
+
+<h3>
+Motion
+</h3>
+
+<p>
+
+Bringing the visual language into motion
+with an emphasis on pacing,
+clarity and continuity.
+
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<span class="process-number">
+04
+</span>
+
+<h3>
+Delivery
+</h3>
+
+<p>
+
+Reviewing and preparing the completed
+visual elements for their
+intended presentation.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SELECTED PROCESS
+===================================================== -->
+
+<section id="process">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="section-label">
+BEHIND THE WORK
+</p>
+
+<h2>
+Selected Process
+</h2>
+
+
+<p>
+  A behind-the-scenes look at the production
+  workflow, highlighting motion graphics,
+  3D modeling, and multi-track video editing
+  used to bring The Ascent Circuit to life.
+</p>
+
+
+</div>
+
+
+
+<!-- BEHIND THE WORK / SELECTED PROCESS -->
+
+
+<div class="process-images">
+
+  <!-- 01 AFTER EFFECTS -->
+  <div class="process-image">
+
+    <div class="process-placeholder"
+         style="padding:0; overflow:hidden;">
+
+
+
+<a href="Assets/Images/Thumbnails/AfterEffectsThumb.png"
+   class="lightbox-trigger"
+   aria-label="Enlarge After Effects screenshot"
+   style="display:block; width:100%; height:100%;">
+
+  <img
+    src="Assets/Images/Thumbnails/AfterEffectsThumb.png"
+    alt="After Effects character composition with animated masks and keyframes"
+    style="width:100%; height:100%; object-fit:contain; cursor:zoom-in;"
+    loading="lazy">
+
+</a>
+
+
+
+    </div>
+
+    <div class="process-image-content">
+      <strong>Motion Design / After Effects</strong>
+      <p>
+        Compositing character footage with animated
+        masks, keyframes, and coordinated movement
+        to create the cinematic tournament intro.
+      </p>
+    </div>
+
+  </div>
+
+
+  <!-- 02 BLENDER -->
+  <div class="process-image">
+
+    <div class="process-placeholder"
+         style="padding:0; overflow:hidden;">
+
+     
+<a href="Assets/Images/Thumbnails/blenderthumb.png"
+   class="lightbox-trigger"
+   aria-label="Enlarge Blender screenshot"
+   style="display:block; width:100%; height:100%;">
+
+  <img
+    src="Assets/Images/Thumbnails/blenderthumb.png"
+    alt="Blender mechanical door model with material nodes and animation timeline"
+    style="width:100%; height:100%; object-fit:contain; cursor:zoom-in;"
+    loading="lazy">
+
+</a>
+
+
+    </div>
+
+    <div class="process-image-content">
+      <strong>3D Modeling / Blender</strong>
+      <p>
+        Building the mechanical door transition
+        using 3D modeling, material development,
+        and animation for integration into
+        the cinematic sequence.
+      </p>
+    </div>
+
+  </div>
+
+
+  <!-- 03 PREMIERE PRO -->
+  <div class="process-image">
+
+    <div class="process-placeholder"
+         style="padding:0; overflow:hidden;">
+
+    
+<a href="Assets/Images/Thumbnails/PremiereThumb.png"
+   class="lightbox-trigger"
+   aria-label="Enlarge Premiere Pro screenshot"
+   style="display:block; width:100%; height:100%;">
+
+  <img
+    src="Assets/Images/Thumbnails/PremiereThumb.png"
+    alt="Premiere Pro gameplay editing timeline with scoreboard and HUD graphics"
+    style="width:100%; height:100%; object-fit:contain; cursor:zoom-in;"
+    loading="lazy">
+
+</a>
+
+
+    </div>
+
+    <div class="process-image-content">
+      <strong>Broadcast Editing / Premiere Pro</strong>
+      <p>
+        Editing multiple gameplay recordings
+        while integrating player-specific HUD
+        graphics, scoreboard updates, and
+        synchronized audio across the sequence.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- END BEHIND THE WORK GRID -->
+
+</div> <!-- Closes .container -->
+
+</section> <!-- Closes #process -->
+
+<!-- =====================================================
+     FINAL RESULT
+===================================================== -->
+
+<section id="final">
+
+<div class="container">
+
+<div class="final-card">
+
+<p class="section-label">
+FINAL RESULT
+</p>
+
+<h2>
+From Concept to Finished Package.
+</h2>
+
+<p>
+
+The completed project brings the individual
+graphics together into a unified visual
+package designed for a polished broadcast
+presentation.
+
+</p>
+
+<div class="button-row">
+
+<a href="#demoreel"
+class="btn btn-primary">
+
+&#9654; Watch Final Work
+
+</a>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECT NAVIGATION
+===================================================== -->
+
+<div class="project-navigation">
+
+<div class="container">
+
+<div class="project-nav-inner">
+
+<a
+href="Video Production Portfolio Page with 2 box.html#totop"
+class="text-link">
+
+&larr; Back to Portfolio
+
+</a>
+
+
+<a
+href="#totop"
+class="text-link">
+
+&uarr; Back to Top
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-content">
+
+      <span>
+        &copy;
+        <span id="year"></span>
+        Christopher Batas.
+        All rights reserved.
+      </span>
+
+      <span>
+
+        <a href="index.html#top">
+          Home
+        </a>
+
+        &nbsp;|&nbsp;
+
+        <a href="Video Production Portfolio Page with 2 box.html#totop">
+          Creative Portfolio
+        </a>
+
+        &nbsp;|&nbsp;
+
+        <a href="Video Production Portfolio Page with 2 box.html#contactme">
+  Contact
+</a>
+
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =====================================================
+     IMAGE LIGHTBOX POPUP
+===================================================== -->
+
+<div class="image-lightbox"
+     id="imageLightbox"
+     role="dialog"
+     aria-modal="true"
+     aria-label="Enlarged production screenshot"
+     aria-hidden="true">
+
+  <button class="lightbox-close"
+          type="button"
+          aria-label="Close image">
+    &times;
+  </button>
+
+  <img id="lightboxImage"
+       src=""
+       alt="Enlarged production screenshot">
+
+</div>
+
+<script>
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+<!-- LIGHTBOX OPEN AND CLOSE FUNCTION -->
+
+<script>
+(function () {
+
+  
+var lightbox = document.getElementById("imageLightbox");
+var lightboxImage = document.getElementById("lightboxImage");
+var closeButton = lightbox.querySelector(".lightbox-close");
+
+var previousFocus = null;
+
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImage.removeAttribute("src");
+    document.body.style.overflow = "";
+
+    if (previousFocus) {
+      previousFocus.focus();
+    }
+  }
+
+  document.querySelectorAll(".lightbox-trigger").forEach(function(link) {
+
+    link.addEventListener("click", function(event) {
+
+      event.preventDefault();
+
+      previousFocus = document.activeElement;
+
+      lightboxImage.src = link.href;
+      lightboxImage.alt = link.querySelector("img").alt;
+
+      lightbox.classList.add("active");
+      lightbox.setAttribute("aria-hidden", "false");
+
+      document.body.style.overflow = "hidden";
+
+      closeButton.focus();
+
+    });
+
+  });
+
+  lightbox.addEventListener("click", function() {
+    closeLightbox();
+  });
+
+  document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape" &&
+        lightbox.classList.contains("active")) {
+
+      closeLightbox();
+
+    }
+
+  });
+
+})();
+</script>
+
+
+</body>
+
+</html>
