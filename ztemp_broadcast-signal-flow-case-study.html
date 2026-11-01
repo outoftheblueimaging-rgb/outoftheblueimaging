@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Broadcast Signal Flow | Christopher Batas</title>
+<meta name="description" content="An AV broadcast signal-flow documentation case study by Christopher Batas.">
+
+<style>
+:root {
+  --bg:#0B0D12;
+  --panel:#151b29;
+  --text:#F2F6FF;
+  --muted:#A8B5C9;
+  --accent:#3B82F6;
+  --border:rgba(116,173,255,.22);
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  font:16px/1.65 Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(900px 500px at 15% 8%,
+    rgba(59,130,246,.18),transparent 60%),var(--bg);
+}
+a {color:#9cc4ff}
+a:hover {color:white}
+.container {width:min(1100px,calc(100% - 40px));margin:auto}
+header {
+  border-bottom:1px solid var(--border);
+  background:#0B0D12e8;
+}
+.nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+  padding:18px 0;
+}
+.brand {
+  font-weight:700;
+  letter-spacing:.04em;
+  color:white;
+  text-decoration:none;
+}
+.navlinks {display:flex;gap:20px;flex-wrap:wrap}
+.navlinks a {text-decoration:none;color:var(--muted)}
+main {padding:65px 0 90px}
+.eyebrow {
+  font-size:12px;
+  letter-spacing:.16em;
+  color:#80b3ff;
+  font-weight:700;
+  text-transform:uppercase;
+}
+h1 {
+  font-size:clamp(34px,5vw,58px);
+  line-height:1.1;
+  margin:14px 0;
+}
+h2 {font-size:25px;margin-top:0}
+p {max-width:790px}
+.lead {font-size:19px;color:var(--muted)}
+.panel {
+  background:rgba(255,255,255,.045);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:26px;
+  margin-top:28px;
+}
+.grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+.muted {color:var(--muted)}
+.tags {display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}
+.tag {
+  border:1px solid var(--border);
+  border-radius:100px;
+  padding:5px 12px;
+  color:#b9d5ff;
+  font-size:13px;
+}
+.diagram {width:100%;height:auto;display:block}
+.notice {
+  border-left:3px solid var(--accent);
+  padding-left:16px;
+  color:var(--muted);
+}
+.btn {
+  display:inline-block;
+  background:#3B82F6;
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+  padding:12px 20px;
+  border-radius:9px;
+  margin-top:12px;
+}
+.btn:hover {background:#2563eb}
+ul {padding-left:22px}
+li {margin-bottom:8px}
+footer {
+  border-top:1px solid var(--border);
+  padding:25px 0;
+  color:var(--muted);
+}
+.breakdown-back {
+  display:inline-block;
+  margin-bottom:22px;
+  color:#74ADFF;
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+.breakdown-back:hover {color:#fff}
+.breakdown-back:focus-visible {
+  outline:2px solid #74ADFF;
+  outline-offset:5px;
+}
+@media(max-width:700px) {
+  .grid {grid-template-columns:1fr}
+  main {padding-top:40px}
+  .panel {padding:18px}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">CHRISTOPHER BATAS</a>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="av-portfolio.html#technical-documentation">AV Portfolio</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+<a class="breakdown-back"
+   href="av-portfolio.html#technical-documentation">
+  &larr; Back to Technical Documentation
+</a>
+
+<div class="eyebrow">AV Portfolio / Technical Documentation</div>
+
+<h1>Broadcast Signal Flow<br>&amp; Systems Documentation</h1>
+
+<p class="lead">
+  An independently illustrated technical reference based on
+  firsthand observation and support of an existing professional
+  broadcast environment.
+</p>
+
+<div class="tags">
+  <span class="tag">Adobe Illustrator</span>
+  <span class="tag">Signal Flow</span>
+  <span class="tag">SDI / NDI</span>
+  <span class="tag">TriCaster</span>
+  <span class="tag">Audio / Video Routing</span>
+  <span class="tag">Recording &amp; Streaming</span>
+</div>
+
+<section class="panel">
+  <h2>Project Overview</h2>
+  <p>
+    I created a broadcast-room signal-flow diagram in Adobe
+    Illustrator using my own technical notes. My goal was to
+    organize a complex collection of audio, video, switching,
+    conversion, recording, and streaming systems into a
+    readable visual reference.
+  </p>
+  <p>
+    The original drawing documented a specific operational
+    environment. The illustration below is a
+    <strong>simplified conceptual example</strong>, not a
+    reproduction of its internal wiring or configuration.
+  </p>
+</section>
+
+<section class="panel">
+  <h2>Conceptual Broadcast Workflow</h2>
+
+  <svg class="diagram" viewBox="0 0 960 360"
+       role="img"
+       aria-label="Cameras and playback feed video routing and production switching, then recording and streaming. Microphones feed audio mixing and production switching.">
+    <defs>
+      <marker id="arrow" markerWidth="9" markerHeight="9"
+              refX="7" refY="4" orient="auto">
+        <path d="M0 0 L8 4 L0 8"
+              fill="none" stroke="#74ADFF"
+              stroke-width="1.8"/>
+      </marker>
+    </defs>
+
+    <g fill="#17233b" stroke="#619dff" stroke-width="2">
+      <rect x="20" y="44" width="180" height="75" rx="12"/>
+      <rect x="260" y="44" width="180" height="75" rx="12"/>
+      <rect x="500" y="44" width="180" height="75" rx="12"/>
+      <rect x="750" y="15" width="190" height="75" rx="12"/>
+      <rect x="750" y="120" width="190" height="75" rx="12"/>
+      <rect x="20" y="250" width="180" height="75" rx="12"/>
+      <rect x="260" y="250" width="180" height="75" rx="12"/>
+    </g>
+
+    <g fill="#F2F6FF" font-family="Arial"
+       font-size="19" font-weight="700" text-anchor="middle">
+      <text x="110" y="75">Cameras &amp;</text>
+      <text x="110" y="98">Playback</text>
+      <text x="350" y="76">Video Routing</text>
+      <text x="590" y="76">Production</text>
+      <text x="590" y="99">Switching</text>
+      <text x="845" y="46">Recording</text>
+      <text x="845" y="151">Streaming</text>
+      <text x="110" y="294">Microphones</text>
+      <text x="350" y="283">Audio Mixing</text>
+      <text x="350" y="306">&amp; Monitoring</text>
+    </g>
+
+    <g stroke="#74ADFF" stroke-width="3"
+       fill="none" marker-end="url(#arrow)">
+      <path d="M200 81H257"/>
+      <path d="M440 81H497"/>
+      <path d="M680 64H715V52H747"/>
+      <path d="M680 92H715V157H747"/>
+      <path d="M200 288H257"/>
+      <path d="M440 288H590V122"/>
+    </g>
+  </svg>
+
+  <p class="notice">
+    <strong>Illustrative only:</strong>
+    This generalized flow is not an exact technical schematic
+    and does not disclose private signal paths, device
+    configurations, or network topology.
+  </p>
+</section>
+
+<div class="grid">
+  <section class="panel">
+    <h2>What I Created</h2>
+    <ul>
+      <li>An original Adobe Illustrator signal-flow drawing.</li>
+      <li>Organized video, audio, and production equipment into understandable paths.</li>
+      <li>Documented routing, conversion, recording, and streaming relationships from personal notes.</li>
+      <li>Created a reference useful for my own operational understanding and troubleshooting.</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>My Role &amp; Scope</h2>
+    <p>
+      I supported and operated systems that had already been
+      installed. My contribution to this project was
+      <strong>observing, understanding, and documenting</strong>
+      their operation—not claiming responsibility for the
+      original system engineering, installation, or
+      Crestron programming.
+    </p>
+    <p class="muted">
+      Technologies represented in my source notes include
+      TriCaster, SDI, NDI, Crestron, Biamp, Softron,
+      and streaming/recording equipment.
+    </p>
+  </section>
+</div>
+
+<section class="panel">
+  <h2>Next Portfolio Addition</h2>
+  <p>
+    This case study is the first step in a collection of
+    original AV documentation. Upcoming examples include
+    theater control operations, AJA recording checklists,
+    and equipment reference guides, presented as
+    public-safe samples.
+  </p>
+</section>
+
+<a class="breakdown-back"
+   href="av-portfolio.html#technical-documentation"
+   style="margin-top:30px">
+  &larr; Back to Technical Documentation
+</a>
+
+</main>
+
+<footer>
+  <div class="container">
+    &copy; Christopher Batas · AV &amp; Broadcast Technical Portfolio
+  </div>
+</footer>
+</body>
+</html>

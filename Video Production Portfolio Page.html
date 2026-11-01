@@ -1,0 +1,1238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Video Production Portfolio | Christopher Batas</title>
+
+  <meta name="description"
+        content="Explore Christopher Batas' video editing, motion graphics, broadcast design and animation portfolio.">
+
+  <style>
+
+    /* ========================================
+       1. COLORS AND GLOBAL SETTINGS
+    ======================================== */
+
+    :root {
+      --bg: #0B0D12;
+      --bg-secondary: #111827;
+      --panel: rgba(255,255,255,0.05);
+      --text: #F2F6FF;
+      --muted: #A8B5C9;
+      --accent: #3B82F6;
+      --accent-light: #74ADFF;
+      --border: rgba(116,173,255,0.18);
+      --radius: 18px;
+      --max-width: 1150px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+
+      background:
+        radial-gradient(
+          900px 500px at 15% 5%,
+          rgba(59,130,246,0.18),
+          transparent 60%
+        ),
+        radial-gradient(
+          800px 500px at 90% 25%,
+          rgba(0,194,255,0.08),
+          transparent 60%
+        ),
+        var(--bg);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-light);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 65px 0;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      margin: 12px 0 20px;
+    }
+
+    h2 {
+      font-size: clamp(26px, 3vw, 36px);
+      margin: 10px 0 16px;
+    }
+
+    h3 {
+      font-size: 21px;
+      margin: 0 0 12px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .section-label {
+      color: var(--accent-light);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 35px;
+    }
+
+    .section-heading p:last-child {
+      font-size: 16px;
+    }
+
+
+    /* ========================================
+       2. NAVIGATION
+    ======================================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      background: rgba(11,13,18,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--accent-light);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-light);
+    }
+
+
+    /* ========================================
+       3. BUTTONS
+    ======================================== */
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+
+      border: 1px solid var(--border);
+      border-radius: 10px;
+
+      background: rgba(255,255,255,0.05);
+      color: white;
+
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+
+      transition: 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: rgba(59,130,246,0.15);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563EB, #3B82F6);
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #3B82F6, #60A5FA);
+    }
+
+
+    /* ========================================
+       4. HERO
+    ======================================== */
+
+    .hero {
+      padding: 85px 0 60px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 span {
+      color: var(--accent-light);
+    }
+
+    .hero-description {
+      max-width: 740px;
+      font-size: 18px;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .tag {
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+
+      background: rgba(59,130,246,0.06);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+
+    /* ========================================
+       5. VIDEO REEL
+    ======================================== */
+
+    .reel-card {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--panel);
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+
+      overflow: hidden;
+      border-radius: 12px;
+      background: #05070C;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .reel-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 18px 4px 2px;
+    }
+
+    .reel-caption p {
+      margin: 0;
+    }
+
+
+    /* ========================================
+       6. PROJECT CARDS
+    ======================================== */
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--panel);
+      transition: 0.25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .project-thumbnail {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(20,35,59,0.9),
+          rgba(29,78,137,0.8)
+        );
+
+      color: var(--accent-light);
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .project-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 26px;
+    }
+
+    .project-category {
+      margin: 0 0 10px;
+      color: var(--accent-light);
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .project-content p {
+      margin-bottom: 18px;
+    }
+
+    .project-link {
+      color: var(--accent-light);
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+
+    /* ========================================
+       7. CREATIVE PROCESS
+    ======================================== */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .process-card {
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--panel);
+    }
+
+    .process-number {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--accent-light);
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .process-card p {
+      margin-bottom: 0;
+    }
+
+
+    /* ========================================
+       8. SOFTWARE AND SKILLS
+    ======================================== */
+
+    .skills-card {
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--panel);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .skills-card h3 {
+      color: var(--accent-light);
+    }
+
+    .skills-card ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .skills-card li {
+      margin-bottom: 8px;
+    }
+
+
+    /* ========================================
+       9. CONTACT AND FOOTER
+    ======================================== */
+
+    .contact-card {
+      padding: 38px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(59,130,246,0.15),
+          rgba(255,255,255,0.03)
+        );
+    }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+
+    /* ========================================
+       10. MOBILE LAYOUT
+    ======================================== */
+
+    @media (max-width: 900px) {
+
+      .project-grid,
+      .process-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+
+    }
+
+    @media (max-width: 500px) {
+
+      .container {
+        width: calc(100% - 28px);
+      }
+
+      .project-content,
+      .process-card,
+      .skills-card,
+      .contact-card {
+        padding: 22px;
+      }
+
+      .button-row {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================
+     HEADER
+======================================== -->
+
+<header>
+
+  <div class="container">
+
+    <div class="navbar">
+
+      <a href="index.html" class="logo">
+        CHRISTOPHER <span>BATAS</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+
+        <a href="index.html">Home</a>
+
+        <a href="#reel">Demo Reel</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#process">Process</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#contact">Contact</a>
+
+      </nav>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- ========================================
+     HERO
+======================================== -->
+
+<section class="hero" id="home">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <p class="section-label">
+        CHRISTOPHER BATAS / CREATIVE PORTFOLIO
+      </p>
+
+      <h1>
+        Video Editing &
+        <span>Motion Design.</span>
+      </h1>
+
+      <p class="hero-description">
+
+        Creative storytelling through video editing,
+        motion graphics, animation and broadcast design.
+
+        Explore my work, from concept and production
+        through editing and final delivery.
+
+      </p>
+
+      <div class="tag-row">
+
+        <span class="tag">Video Editing</span>
+
+        <span class="tag">Motion Graphics</span>
+
+        <span class="tag">Broadcast Graphics</span>
+
+        <span class="tag">Animation</span>
+
+        <span class="tag">Post-Production</span>
+
+      </div>
+
+      <div class="button-row">
+
+        <a href="#reel" class="btn btn-primary">
+          Watch My Reel
+        </a>
+
+        <a href="#projects" class="btn">
+          Explore Projects
+        </a>
+
+        <!-- Change this if your resume page has another filename. -->
+
+        <a href="Video Editing Resume Page_B.html" class="btn">
+          View Video Resume
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ========================================
+     FEATURED DEMO REEL
+======================================== -->
+
+<section id="reel">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <p class="section-label">
+        FEATURED WORK
+      </p>
+
+      <h2>
+        Video Production Demo Reel
+      </h2>
+
+      <p>
+
+        A selection of my video editing, motion
+        graphics and broadcast design work.
+
+      </p>
+
+    </div>
+
+
+    <div class="reel-card">
+
+      <div class="video-frame">
+
+        <!--
+          REPLACE VIDEO_ID WITH YOUR YOUTUBE VIDEO ID.
+
+          Example:
+          https://www.youtube.com/embed/VIDEO_ID
+
+          If you use Vimeo, replace the entire src
+          with your Vimeo embed URL.
+        -->
+
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID"
+          title="Christopher Batas Video Production Demo Reel"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+
+
+      <div class="reel-caption">
+
+        <p>
+          Video Editing • Motion Graphics • Broadcast Design
+        </p>
+
+        <a href="Video project page.html" class="project-link">
+          Explore Featured Projects &rarr;
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ========================================
+     FEATURED PROJECTS
+======================================== -->
+
+<section id="projects">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <p class="section-label">
+        SELECTED PROJECTS
+      </p>
+
+      <h2>
+        Explore My Creative Work
+      </h2>
+
+      <p>
+
+        Browse projects across editing, motion
+        graphics, broadcast design and animation.
+
+      </p>
+
+    </div>
+
+
+    <div class="project-grid">
+
+
+      <!-- PROJECT 1: ESPORTS AND BROADCAST -->
+
+      <article class="project-card">
+
+        <div class="project-thumbnail">  <a id="esbroadcast"></a>
+
+          <!--
+            To add your own thumbnail, replace the text
+            below with:
+
+            <img src="assets/images/esports-project.jpg"
+                 alt="Esports broadcast graphics project">
+          -->
+
+         ESPORTS & BROADCAST GRAPHICS
+
+        </div>
+
+        <div class="project-content">
+
+          <p class="project-category">
+            MOTION GRAPHICS / BROADCAST
+          </p>
+
+          <h3>
+            Esports & Broadcast Graphics
+          </h3>
+
+          <p>
+
+            Broadcast-ready visual design, including
+            motion graphics, lower thirds, slates
+            and event graphics.
+
+          </p>
+
+          <!--
+            Create this project page later.
+          -->
+
+          <a href="project-esports.html"
+             class="project-link">
+
+            View Project &rarr;
+
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- PROJECT 2: VIDEO EDITING -->
+
+      <article class="project-card">
+
+        <div class="project-thumbnail"> 
+
+          VIDEO EDITING & STORYTELLING
+
+        </div>
+
+        <div class="project-content">
+
+          <p class="project-category">
+            VIDEO EDITING / POST-PRODUCTION
+          </p>
+
+          <h3>
+            Video Editing & Storytelling<a id="VideoEditing"></a> </h3>
+
+          <p>
+
+            Editing projects focused on pacing,
+            visual storytelling, sound and
+            polished final delivery.
+
+          </p>
+
+          <a href="project-video-editing.html"
+             class="project-link">
+
+            View Project &rarr;
+
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- PROJECT 3: MOTION DESIGN -->
+
+      <article class="project-card">
+
+        <div class="project-thumbnail">
+
+          MOTION DESIGN
+
+        </div>
+
+        <div class="project-content">
+
+          <p class="project-category">
+            AFTER EFFECTS / ANIMATION
+          </p>
+
+          <h3>
+            Motion Graphics & Animation
+          </h3>
+
+          <p>
+
+            Animated typography, graphic transitions,
+            compositing and visual elements designed
+            to support the story.
+
+          </p>
+
+          <a href="project-motion-design.html"
+             class="project-link">
+
+            View Project &rarr;
+
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- PROJECT 4: CREATIVE PROJECT -->
+
+      <article class="project-card">
+
+        <div class="project-thumbnail">
+
+          CREATIVE PROJECT SHOWCASE
+
+        </div>
+
+        <div class="project-content">
+
+          <p class="project-category">
+            CREATIVE PRODUCTION
+          </p>
+
+          <h3>
+            Featured Creative Project
+          </h3>
+
+          <p>
+
+            Reserve this space for a project you
+            want recruiters to see, such as a
+            promotional edit, animation or
+            complete production breakdown.
+
+          </p>
+
+          <a href="project-featured.html"
+             class="project-link">
+
+            View Project &rarr;
+
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ========================================
+     CREATIVE PROCESS
+======================================== -->
+
+<section id="process">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <p class="section-label">
+        BEHIND THE WORK
+      </p>
+
+      <h2>
+        My Creative Process
+      </h2>
+
+      <p>
+
+        A look at how I approach a project,
+        from understanding the brief to
+        preparing the final deliverables.
+
+      </p>
+
+    </div>
+
+
+    <div class="process-grid">
+
+
+      <div class="process-card">
+
+        <span class="process-number">01</span>
+
+        <h3>
+          Plan
+        </h3>
+
+        <p>
+
+          Establish the project's purpose,
+          audience, visual direction and
+          production requirements.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="process-card">
+
+        <span class="process-number">02</span>
+
+        <h3>
+          Create
+        </h3>
+
+        <p>
+
+          Develop the edit, animation and
+          graphic elements while refining
+          pacing, composition and storytelling.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="process-card">
+
+        <span class="process-number">03</span>
+
+        <h3>
+          Deliver
+        </h3>
+
+        <p>
+
+          Review the final project, prepare
+          the required exports and deliver
+          files suited to their intended
+          platforms and production workflows.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ========================================
+     SOFTWARE AND SKILLS
+======================================== -->
+
+<section id="skills">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <p class="section-label">
+        TOOLS & WORKFLOWS
+      </p>
+
+      <h2>
+        Creative Toolkit
+      </h2>
+
+      <p>
+
+        Software and production skills
+        supporting my video and motion
+        design projects.
+
+      </p>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+
+      <div class="skills-card">
+
+        <h3>
+          Editing & Design
+        </h3>
+
+        <ul>
+
+          <li>Adobe Premiere Pro</li>
+
+          <li>Adobe After Effects</li>
+
+          <li>Adobe Audition</li>
+
+          <li>Adobe Photoshop</li>
+
+          <li>Adobe Illustrator</li>
+
+          <li>Adobe Media Encoder</li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="skills-card">
+
+        <h3>
+          Animation & Production
+        </h3>
+
+        <ul>
+
+          <li>Moho Pro</li>
+
+          <li>Blender</li>
+
+          <li>Broadcast graphics</li>
+
+          <li>Video compositing</li>
+
+          <li>Audio cleanup and synchronization</li>
+
+          <li>Export and delivery workflows</li>
+
+        </ul>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ========================================
+     CONTACT / RESUME
+======================================== -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="contact-card">
+
+      <p class="section-label">
+        LET'S CONNECT
+      </p>
+
+      <h2>
+        Interested in working together?
+      </h2>
+
+      <p>
+
+        I'm available to discuss video editing,
+        motion graphics and creative production
+        opportunities.
+
+      </p>
+
+      <div class="button-row">
+
+        <!-- Update this if your resume page has another filename. -->
+
+        <a href="video-resume.html"
+           class="btn btn-primary">
+
+          View My Resume
+
+        </a>
+
+
+        <!-- Replace with your actual email address. -->
+
+        <a href="mailto:YOUR_EMAIL@example.com"
+           class="btn">
+
+          Email Me
+
+        </a>
+
+
+        <a href="index.html"
+           class="btn">
+
+          &larr; Back to Homepage
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ========================================
+     FOOTER
+======================================== -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-content">
+
+      <span>
+        &copy; <span id="year"></span>
+        Christopher Batas. All rights reserved.
+      </span>
+
+      <span>
+
+        <a href="index.html">Home</a>
+        &nbsp;|&nbsp;
+        <a href="#projects">Projects</a>
+        &nbsp;|&nbsp;
+        <a href="#contact">Contact</a>
+
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<script>
+
+  // Automatically update the copyright year.
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+
+</body>
+</html>

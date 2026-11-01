@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Motion Graphics & Animation | Christopher Batas</title>
+
+<meta name="description"
+content="Motion graphics and animation portfolio project by Christopher Batas featuring animated typography, graphic transitions, compositing and visual design.">
+
+<style>
+
+/* =========================================================
+   01. GLOBAL
+========================================================= */
+
+:root {
+  --bg: #0B0D12;
+  --panel: #15181F;
+  --panel-light: #1B2029;
+  --text: #F2F6FF;
+  --muted: #A8B5C9;
+  --accent: #3B82F6;
+  --accent-light: #74ADFF;
+  --border: rgba(116,173,255,0.18);
+  --radius: 18px;
+  --max-width: 1150px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+
+  background:
+    radial-gradient(
+      900px 500px at 15% 5%,
+      rgba(59,130,246,0.16),
+      transparent 60%
+    ),
+    var(--bg);
+}
+
+section {
+  padding: 70px 0;
+  scroll-margin-top: 90px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  width: min(var(--max-width), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+p {
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 12px 0 20px;
+  font-size: clamp(38px, 6vw, 64px);
+}
+
+h2 {
+  margin: 10px 0 18px;
+  font-size: clamp(27px, 4vw, 38px);
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 21px;
+}
+
+.section-label {
+  margin-bottom: 8px;
+  color: var(--accent-light);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   02. NAVIGATION
+========================================================= */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: rgba(11,13,18,0.92);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 17px 0;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--accent-light);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 25px;
+
+  font-size: 14px;
+}
+
+.nav-links a {
+  color: var(--muted);
+  transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-light);
+}
+
+
+/* =========================================================
+   03. BUTTONS
+========================================================= */
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 27px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 20px;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.04);
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+
+  border-color: var(--accent);
+
+  background: rgba(59,130,246,0.12);
+}
+
+.btn-primary {
+  border-color: var(--accent);
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563EB,
+      #3B82F6
+    );
+}
+
+
+/* =========================================================
+   04. HERO
+========================================================= */
+
+.project-hero {
+  padding: 90px 0 65px;
+}
+
+.project-hero-content {
+  max-width: 850px;
+}
+
+.project-hero h1 span {
+  color: var(--accent-light);
+}
+
+.hero-description {
+  max-width: 760px;
+  font-size: 18px;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.tag {
+  padding: 6px 12px;
+
+  border: 1px solid var(--border);
+  border-radius: 30px;
+
+  background: rgba(59,130,246,0.06);
+
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   05. FEATURED VIDEO
+========================================================= */
+
+.video-card {
+  padding: 18px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  background: rgba(255,255,255,0.04);
+}
+
+.video-frame {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  border-radius: 12px;
+
+  background: #05070C;
+}
+
+.video-frame iframe,
+.video-frame video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+.video-placeholder {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 40px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #13223A,
+      #1E4E84
+    );
+}
+
+.play-icon {
+  margin-bottom: 12px;
+
+  color: var(--accent-light);
+
+  font-size: 48px;
+}
+
+.video-placeholder strong {
+  font-size: 22px;
+}
+
+.video-placeholder p {
+  max-width: 500px;
+  margin-bottom: 0;
+}
+
+.video-caption {
+  padding: 15px 4px 2px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   06. PROJECT OVERVIEW
+========================================================= */
+
+.overview-grid {
+  display: grid;
+
+  grid-template-columns: 1.4fr 0.6fr;
+
+  gap: 25px;
+}
+
+.info-card {
+  padding: 30px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  background: rgba(255,255,255,0.04);
+}
+
+.info-card p:last-child {
+  margin-bottom: 0;
+}
+
+.project-details {
+  display: grid;
+  gap: 20px;
+}
+
+.detail-item {
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.detail-label {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--accent-light);
+
+  font-size: 11px;
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+.detail-value {
+  color: var(--text);
+}
+
+
+/* =========================================================
+   07. MOTION DESIGN AREAS
+========================================================= */
+
+.focus-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0,1fr));
+
+  gap: 24px;
+}
+
+.focus-card {
+  padding: 28px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  background: var(--panel);
+
+  transition: 0.25s ease;
+}
+
+.focus-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.focus-number {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: var(--accent-light);
+
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.focus-card p {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   08. CREATIVE APPROACH
+========================================================= */
+
+.process-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0,1fr));
+
+  gap: 18px;
+}
+
+.process-card {
+  padding: 27px 23px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  background: rgba(255,255,255,0.04);
+}
+
+.process-number {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: var(--accent-light);
+
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.process-card p {
+  margin-bottom: 0;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   09. SELECTED PROCESS
+========================================================= */
+
+.process-images {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0,1fr));
+
+  gap: 20px;
+}
+
+.process-image {
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  background: var(--panel);
+}
+
+.process-placeholder {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  aspect-ratio: 16 / 10;
+
+  padding: 25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #151D2A,
+      #1D3454
+    );
+
+  color: var(--accent-light);
+
+  font-size: 12px;
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  text-align: center;
+}
+
+.process-image-content {
+  padding: 18px;
+}
+
+.process-image-content strong {
+  display: block;
+
+  margin-bottom: 5px;
+}
+
+.process-image-content p {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   10. FINAL RESULT
+========================================================= */
+
+.final-card {
+  padding: 40px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(59,130,246,0.14),
+      rgba(255,255,255,0.03)
+    );
+}
+
+.final-card p {
+  max-width: 750px;
+}
+
+
+/* =========================================================
+   11. DISCLAIMER
+========================================================= */
+
+.project-disclaimer {
+  margin: 0;
+
+  color: #6F7C8F;
+
+  font-size: 11px;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   12. PROJECT NAVIGATION
+========================================================= */
+
+.project-navigation {
+  padding: 35px 0 70px;
+}
+
+.project-nav-inner {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid var(--border);
+}
+
+.text-link {
+  color: var(--accent-light);
+  font-weight: bold;
+}
+
+.text-link:hover {
+  color: white;
+}
+
+
+/* =========================================================
+   13. FOOTER
+========================================================= */
+
+footer {
+  padding: 28px 0;
+
+  border-top: 1px solid var(--border);
+
+  color: var(--muted);
+
+  font-size: 13px;
+}
+
+.footer-content {
+  display: flex;
+
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 16px;
+}
+
+
+/* =========================================================
+   14. RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .overview-grid,
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .process-images {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .container {
+    width: calc(100% - 28px);
+  }
+
+  .project-hero {
+    padding-top: 55px;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .project-nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body id="top">
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header>
+
+<div class="container">
+
+<div class="navbar">
+
+<a href="index.html" class="logo">
+CHRISTOPHER <span>BATAS</span>
+</a>
+
+<nav class="nav-links">
+
+<a href="index.html#totop">Home</a>
+
+<a href="video-production.html#totop">Portfolio</a>
+
+<a href="#projectoverview">Project</a>
+
+<a href="#creativeprocess">Process</a>
+
+<a href="#final">Final Result</a>
+
+<a href="index.html#contact">Contact</a>
+
+</nav>
+
+</div>
+
+</div>
+
+</header>
+
+
+<main>
+
+<a id="totop"></a><!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="project-hero">
+
+<div class="container">
+
+<div class="project-hero-content">
+
+<p class="section-label">
+FEATURED PROJECT / MOTION DESIGN
+</p>
+
+<h1>
+Motion Graphics &amp;
+<span>Animation.</span>
+</h1>
+
+<p class="hero-description">
+
+A motion design project focused on animated
+typography, graphic transitions, compositing
+and visual storytelling.
+
+</p>
+
+
+<div class="tag-row">
+
+<span class="tag">Motion Design</span>
+
+<span class="tag">Animation</span>
+
+<span class="tag">Typography</span>
+
+<span class="tag">Compositing</span>
+
+</div>
+
+
+<div class="button-row">
+
+<a href="#video"
+class="btn btn-primary">
+
+&#9654; Watch Project
+
+</a>
+
+<a href="video-production.html#totop"
+class="btn">
+
+&larr; Back to Portfolio
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FEATURED MOTION REEL
+===================================================== -->
+
+<section id="video">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<p class="section-label">
+FINAL WORK<a id="demo"></a> </p>
+
+<h2>
+Motion Design Showcase
+</h2>
+
+<p>
+
+Watch the completed motion piece first,
+then explore the creative thinking and
+selected development work behind it.
+
+</p>
+
+</div>
+
+
+<div class="video-card">
+
+<div class="video-frame">
+
+
+<!-- ==================================================
+
+OPTION 1 — YOUTUBE
+
+Delete the placeholder below and replace with:
+
+<iframe
+src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+title="Motion Graphics and Animation Project"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+
+OPTION 2 — LOCAL MP4
+
+<video controls preload="metadata">
+
+<source
+src="assets/videos/motion-graphics-project.mp4"
+type="video/mp4">
+
+Your browser does not support HTML video.
+
+</video>
+
+================================================== -->
+
+
+<div class="video-placeholder">
+
+<div class="play-icon">
+&#9654;
+</div>
+
+<strong>
+Motion Graphics Showcase
+</strong>
+
+<p>
+
+Your completed motion graphics or
+animation video will appear here.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="video-caption">
+
+Motion Design /
+Animation /
+Compositing
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+<a id="projectoverview"></a><!-- =====================================================
+     PROJECT OVERVIEW
+===================================================== -->
+
+<section id="project">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<p class="section-label">
+PROJECT OVERVIEW
+</p>
+
+<h2>
+The Project
+</h2>
+
+<p>
+
+A concise overview of the project's
+creative direction, my contribution
+and the final deliverable.
+
+</p>
+
+</div>
+
+
+<div class="overview-grid">
+
+
+<div class="info-card">
+
+<h3>
+Project Overview
+</h3>
+
+<p>
+
+This project explores how typography,
+graphic elements and animation can work
+together to create a cohesive visual piece.
+
+</p>
+
+<p>
+
+The focus was on creating purposeful motion
+that supports the visual direction while
+maintaining clarity, rhythm and consistency
+throughout the final animation.
+
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="project-details">
+
+
+<div class="detail-item">
+
+<span class="detail-label">
+PROJECT TYPE
+</span>
+
+<span class="detail-value">
+Motion Graphics / Animation
+</span>
+
+</div>
+
+
+<div class="detail-item">
+
+<span class="detail-label">
+MY ROLE
+</span>
+
+<span class="detail-value">
+Motion Designer / Editor
+</span>
+
+</div>
+
+
+<div class="detail-item">
+
+<span class="detail-label">
+TOOLS
+</span>
+
+<span class="detail-value">
+After Effects / Premiere Pro / Photoshop / Illustrator
+</span>
+
+</div>
+
+
+<div class="detail-item">
+
+<span class="detail-label">
+DELIVERABLES
+</span>
+
+<span class="detail-value">
+Motion Graphics / Animation / Final Video
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+<a id="motiondesign"></a><!-- =====================================================
+     MOTION DESIGN FOCUS
+===================================================== -->
+
+<section id="motion">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<p class="section-label">
+MOTION DESIGN
+</p>
+
+<h2>
+Building the Visual Language
+</h2>
+
+<p>
+
+The project combines several areas of
+motion design to create a unified
+final presentation.
+
+</p>
+
+</div>
+
+
+<div class="focus-grid">
+
+
+<div class="focus-card">
+
+<span class="focus-number">
+01
+</span>
+
+<h3>
+Typography</h3>
+
+<p>
+
+Using type as an active visual element
+while maintaining readability and
+supporting the overall design.
+
+</p>
+
+</div>
+
+
+<div class="focus-card">
+
+<span class="focus-number">
+02
+</span>
+
+<h3>
+Graphic Transitions</h3>
+
+<p>
+
+Creating visual transitions that connect
+moments and maintain continuity
+throughout the piece.
+
+</p>
+
+</div>
+
+
+<div class="focus-card">
+
+<span class="focus-number">
+03
+</span>
+
+<h3>
+Animation</h3>
+
+<p>
+
+Using movement, timing and visual hierarchy
+to bring static design elements to life.
+
+</p>
+
+</div>
+
+
+<div class="focus-card">
+
+<span class="focus-number">
+04
+</span>
+
+<h3>
+Compositing</h3>
+
+<p>
+
+Combining multiple visual elements into
+a polished and cohesive final image.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+<a id="creativeprocess"></a><!-- =====================================================
+     CREATIVE APPROACH
+===================================================== -->
+
+<section id="approach">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<p class="section-label">
+CREATIVE PROCESS
+</p>
+
+<h2>
+Project Approach
+</h2>
+
+<p>
+
+A high-level look at the development process
+without exposing project files, detailed
+settings or proprietary techniques.
+
+</p>
+
+</div>
+
+
+<div class="process-grid">
+
+
+<div class="process-card">
+
+<span class="process-number">
+01
+</span>
+
+<h3>
+Direction
+</h3>
+
+<p>
+
+Establishing the overall visual direction,
+tone and goals for the motion piece.
+
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<span class="process-number">
+02
+</span>
+
+<h3>
+Design
+</h3>
+
+<p>
+
+Developing typography, composition and
+graphic elements into a consistent
+visual system.
+
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<span class="process-number">
+03
+</span>
+
+<h3>
+Animation
+</h3>
+
+<p>
+
+Bringing the selected visual elements
+into motion with attention to
+timing and rhythm.
+
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<span class="process-number">
+04
+</span>
+
+<h3>
+Finishing
+</h3>
+
+<p>
+
+Refining the overall presentation and
+preparing the completed piece for
+final delivery.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+<a id="behindthemotion"></a><!-- =====================================================
+     SELECTED PROCESS
+===================================================== -->
+
+<section id="process">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<p class="section-label">
+BEHIND THE MOTION
+</p>
+
+<h2>
+Selected Process
+</h2>
+
+<p>
+
+Selected development views that provide
+context for the project while keeping
+detailed techniques and project
+settings private.
+
+</p>
+
+</div>
+
+
+<div class="process-images">
+
+
+<!-- PROCESS IMAGE 1 -->
+
+<div class="process-image">
+
+<div class="process-placeholder">
+
+STYLE FRAME / DESIGN DIRECTION
+
+</div>
+
+<div class="process-image-content">
+
+<strong>
+Visual Direction
+</strong>
+
+<p>
+
+A selected style frame demonstrating
+the visual direction established
+for the project.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PROCESS IMAGE 2 -->
+
+<div class="process-image">
+
+<div class="process-placeholder">
+
+MOTION DEVELOPMENT
+
+</div>
+
+<div class="process-image-content">
+
+<strong>
+Motion Development
+</strong>
+
+<p>
+
+A controlled look at the animation
+during development without exposing
+detailed settings.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PROCESS IMAGE 3 -->
+
+<div class="process-image">
+
+<div class="process-placeholder">
+
+COMPOSITING / FINAL FRAME
+
+</div>
+
+<div class="process-image-content">
+
+<strong>
+Final Polish
+</strong>
+
+<p>
+
+A selected finishing view showing
+the visual elements coming together
+into the completed piece.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+<a id="finalresult"></a><!-- =====================================================
+     FINAL RESULT
+===================================================== -->
+
+<section id="final">
+
+<div class="container">
+
+<div class="final-card">
+
+<p class="section-label">
+FINAL RESULT
+</p>
+
+<h2>
+From Static Design to Motion.
+</h2>
+
+<p>
+
+The completed project brings typography,
+graphic design, animation and compositing
+together into a cohesive motion piece.
+
+</p>
+
+
+<div class="button-row">
+
+<a href="#video"
+class="btn btn-primary">
+
+&#9654; Watch Final Work
+
+</a>
+
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     OPTIONAL PROJECT DISCLAIMER
+
+     If this project uses footage, characters, artwork
+     or other source material from an existing game,
+     keep this section and customize the wording.
+
+     If the project is entirely your own original work,
+     you can delete this entire block.
+===================================================== -->
+
+<div class="container">
+
+<p class="project-disclaimer">
+
+Personal portfolio project. Any third-party
+source material remains the property of its
+respective rights holders. This project is
+not affiliated with or endorsed by those
+rights holders.
+
+</p>
+
+</div>
+
+
+<!-- =====================================================
+     PAGE NAVIGATION
+===================================================== -->
+
+<div class="project-navigation">
+
+<div class="container">
+
+<div class="project-nav-inner">
+
+
+<a href="Video Production Portfolio Page with 3 box.html#totop"
+class="text-link">
+
+&larr; Back to Portfolio
+
+</a>
+
+
+<a href="#totop"
+class="text-link">
+
+&uarr; Back to Top
+
+</a>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-content">
+
+<span>
+
+&copy;
+<span id="year"></span>
+Christopher Batas.
+All rights reserved .
+
+</span>
+
+
+<span>
+
+<a href="index.html">
+Home
+</a>
+
+&nbsp;|&nbsp;
+
+<a href="video-production.html">
+Portfolio
+</a>
+
+&nbsp;|&nbsp;
+
+<a href="index.html#contact">
+Contact
+</a>
+
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+
+</body>
+
+</html>
