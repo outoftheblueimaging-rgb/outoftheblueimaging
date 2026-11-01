@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJA Recorder Operations &amp; Quality Control | Christopher Batas</title>
+  <meta name="description" content="AJA recorder operations and recording quality-control documentation case study by Christopher Batas.">
+
+  <style>
+    /* =========================================
+       1. WEBSITE COLORS — MATCH INDEX.HTML
+    ========================================= */
+
+    :root {
+      --bg: #0B0D12;
+      --bg-secondary: #111827;
+      --panel: rgba(255,255,255,0.05);
+      --panel-hover: rgba(255,255,255,0.08);
+      --text: #F2F6FF;
+      --muted: #A8B5C9;
+      --accent: #3B82F6;
+      --accent-light: #74ADFF;
+      --border: rgba(116,173,255,0.18);
+      --shadow: 0 18px 50px rgba(0,0,0,0.35);
+      --radius: 18px;
+      --max-width: 1150px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background:
+        radial-gradient(
+          900px 500px at 15% 10%,
+          rgba(59,130,246,0.18),
+          transparent 60%
+        ),
+        radial-gradient(
+          800px 500px at 85% 20%,
+          rgba(0,194,255,0.10),
+          transparent 55%
+        ),
+        var(--bg);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-light);
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    /* =========================================
+       2. HEADER — MATCH HOMEPAGE
+    ========================================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,13,18,0.90);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--accent-light);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-light);
+    }
+
+    /* =========================================
+       3. CASE STUDY LAYOUT
+    ========================================= */
+
+    main {
+      padding: 65px 0 90px;
+    }
+
+    .case-intro {
+      max-width: 900px;
+    }
+
+    .section-label {
+      color: var(--accent-light);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 56px);
+      margin: 15px 0 20px;
+    }
+
+    h2 {
+      font-size: 25px;
+      margin: 0 0 20px;
+    }
+
+    h3 {
+      font-size: 19px;
+      margin: 0 0 12px;
+    }
+
+    .lead {
+      font-size: 19px;
+      max-width: 850px;
+    }
+
+    .panel {
+      padding: 30px;
+      margin-top: 28px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 30px;
+      border: 1px solid var(--border);
+      background: rgba(59,130,246,0.06);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    ul, ol {
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .notice {
+      padding: 16px 20px;
+      margin-top: 20px;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      background: rgba(59,130,246,0.07);
+      color: var(--muted);
+    }
+
+    /* =========================================
+       4. RECORDING WORKFLOW
+    ========================================= */
+
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .step {
+      padding: 20px 14px;
+      background: rgba(59,130,246,0.09);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent-light);
+    }
+
+    .step span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================================
+       5. BOXED BACK BUTTONS
+    ========================================= */
+
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 15px;
+      border: 1px solid rgba(116,173,255,0.35);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.045);
+      color: var(--accent-light);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: 0.25s ease;
+    }
+
+    .back-button:hover {
+      background: rgba(59,130,246,0.15);
+      border-color: var(--accent);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .back-button:focus-visible,
+    .nav-links a:focus-visible,
+    .logo:focus-visible {
+      outline: 3px solid var(--accent-light);
+      outline-offset: 4px;
+    }
+
+    .back-top {
+      margin-bottom: 28px;
+    }
+
+    .back-bottom {
+      margin-top: 35px;
+    }
+
+    /* =========================================
+       6. FOOTER
+    ========================================= */
+
+    footer {
+      padding: 30px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* =========================================
+       7. MOBILE RESPONSIVE
+    ========================================= */
+
+    @media (max-width: 900px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .workflow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding-top: 40px;
+      }
+
+      .panel {
+        padding: 22px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        width: calc(100% - 28px);
+      }
+
+      .logo {
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .nav-links {
+        gap: 10px 16px;
+        font-size: 12px;
+      }
+
+      .workflow {
+        grid-template-columns: 1fr;
+      }
+
+      .back-button {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .back-button {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body id="totop">
+
+  <!-- =========================================
+       HEADER
+  ========================================= -->
+
+  <header>
+    <div class="container">
+      <div class="navbar">
+
+        <a href="index.html#totop" class="logo">
+          CHRISTOPHER <span>BATAS</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html#totop">Home</a>
+          <a href="av-portfolio.html#totop">AV Portfolio</a>
+          <a href="av-portfolio.html#technical-documentation">Documentation</a>
+          <a href="AV Technician Resume Page_B.html#totop">Resume</a>
+          <a href="av-portfolio.html#contact">Contact</a>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================
+       MAIN CONTENT
+  ========================================= -->
+
+  <main class="container">
+
+    <a class="back-button back-top"
+       href="av-portfolio.html#technical-documentation">
+      &larr; Back to Technical Documentation
+    </a>
+
+    <div class="case-intro">
+
+      <p class="section-label">
+        AV PORTFOLIO / TECHNICAL DOCUMENTATION
+      </p>
+
+      <h1>
+        AJA Recorder Operations<br>
+        &amp; Quality Control
+      </h1>
+
+      <p class="lead">
+        A practical recording checklist created to
+        support consistent capture, clean audio,
+        test playback and careful media handling
+        during scheduled gameplay recordings.
+      </p>
+
+      <div class="tags">
+        <span class="tag">AJA Recorders</span>
+        <span class="tag">HDMI Capture</span>
+        <span class="tag">Recording QC</span>
+        <span class="tag">ProRes 422 LT</span>
+        <span class="tag">Media Handling</span>
+        <span class="tag">Technical Documentation</span>
+      </div>
+
+    </div>
+
+    <!-- PROJECT OVERVIEW -->
+
+    <section class="panel">
+
+      <h2>Project Overview</h2>
+
+      <p>
+        I authored an AJA recorder checklist for
+        a gameplay recording workflow involving observers.
+        The document consolidated PC preparation,
+        recorder configuration, pre-recording tests,
+        playback verification, scheduled recording
+        procedures and media handling into one
+        repeatable reference.
+      </p>
+
+      <p>
+        Its purpose was to reduce avoidable recording
+        mistakes and make the operating process
+        easier to follow.
+      </p>
+
+      <div class="notice">
+        <strong>Public portfolio adaptation:</strong>
+        The steps below summarize my original checklist.
+        They are not a universal setup guide for every
+        AJA model or production environment.
+      </div>
+
+    </section>
+
+    <!-- RECORDING WORKFLOW -->
+
+    <section class="panel">
+
+      <h2>Recording Workflow at a Glance</h2>
+
+      <div class="workflow">
+
+        <div class="step">
+          <strong>01 / Prepare</strong>
+          <span>
+            Check observer PCs and eliminate
+            unwanted audio.
+          </span>
+        </div>
+
+        <div class="step">
+          <strong>02 / Configure</strong>
+          <span>
+            Verify recorder settings and select
+            the correct media slot.
+          </span>
+        </div>
+
+        <div class="step">
+          <strong>03 / Validate</strong>
+          <span>
+            Run test recordings and review playback.
+          </span>
+        </div>
+
+        <div class="step">
+          <strong>04 / Record</strong>
+          <span>
+            Capture matches and safely finish
+            media operations.
+          </span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONFIGURATION AND QC -->
+
+    <div class="grid">
+
+      <section class="panel">
+
+        <h2>Configuration Reference</h2>
+
+        <p>
+          Settings specified in the original checklist
+          for this particular workflow:
+        </p>
+
+        <ul>
+          <li><strong>Video source:</strong> HDMI</li>
+          <li><strong>Audio source:</strong> HDMI</li>
+          <li><strong>Recording format:</strong> 1920 × 1080, 60 fps, ProRes 422 LT</li>
+          <li><strong>File container:</strong> .MOV</li>
+          <li><strong>Media file system:</strong> exFAT</li>
+        </ul>
+
+        <div class="notice">
+          These are project-specific documented settings,
+          not recommendations for every recorder.
+        </div>
+
+      </section>
+
+      <section class="panel">
+
+        <h2>Pre-Recording Quality Checks</h2>
+
+        <ul>
+          <li>
+            Disable PC notifications and unwanted music
+            that could contaminate captured audio.
+          </li>
+
+          <li>
+            Confirm recorder settings before formatting media.
+          </li>
+
+          <li>
+            Check the selected card slot before recording
+            or formatting.
+          </li>
+
+          <li>
+            Monitor through headphones connected to
+            the AJA recorder rather than the gameplay PC.
+          </li>
+
+          <li>
+            Confirm the intended gameplay monitor or
+            source using the recorder display.
+          </li>
+
+          <li>
+            Make a test recording and check its playback
+            before scheduled capture.
+          </li>
+        </ul>
+
+      </section>
+
+    </div>
+
+    <!-- LIVE RECORDING -->
+
+    <section class="panel">
+
+      <h2>Live Recording &amp; Playback Procedures</h2>
+
+      <div class="grid">
+
+        <div>
+
+          <h3>During the Schedule</h3>
+
+          <ul>
+            <li>
+              Start recording five minutes before
+              the scheduled game time to provide a buffer.
+            </li>
+
+            <li>
+              Stop recordings between matches or during
+              intermission, as outlined in the original procedure.
+            </li>
+
+            <li>
+              Stop recording after the final match
+              at the end of the day.
+            </li>
+          </ul>
+
+        </div>
+
+        <div>
+
+          <h3>Testing Playback</h3>
+
+          <ol>
+            <li>Stop the test recording.</li>
+            <li>Press Play to review the recorded clip.</li>
+            <li>Return to the live input view before resuming recording.</li>
+          </ol>
+
+          <p>
+            The original checklist describes using
+            the Stop button twice to return to live
+            view on the equipment used.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- MEDIA HANDLING -->
+
+    <section class="panel">
+
+      <h2>Media Handling &amp; Risk Reduction</h2>
+
+      <p>
+        My checklist emphasized selecting the intended
+        card slot, verifying that recording and playback
+        had stopped, and waiting for the media slot
+        indicator to turn off before ejecting the card.
+      </p>
+
+      <p>
+        It also documented where to find the recorder's
+        media and format controls. Formatting erases media,
+        so this public case study intentionally does not
+        present the original steps as a general-purpose
+        instruction to format cards.
+      </p>
+
+    </section>
+
+    <!-- MY CONTRIBUTION -->
+
+    <section class="panel">
+
+      <h2>My Contribution</h2>
+
+      <p>
+        <strong>
+          I independently created the operating checklist
+        </strong>
+        based on the recording workflow I supported.
+        The documentation captured settings, operator
+        checks, test-playback steps and media-handling
+        precautions in an accessible format.
+      </p>
+
+      <p>
+        My contribution was in operating, supporting
+        and documenting the existing recording process,
+        not designing or engineering the underlying
+        AV installation.
+      </p>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section class="panel">
+
+      <h2>Skills Demonstrated</h2>
+
+      <div class="grid">
+
+        <div>
+
+          <h3>Broadcast Operations</h3>
+
+          <p>
+            Recorder configuration checks, signal and
+            audio validation, test playback, scheduled
+            capture and recording continuity.
+          </p>
+
+        </div>
+
+        <div>
+
+          <h3>Documentation &amp; Quality Control</h3>
+
+          <p>
+            Turning repeatable production tasks into
+            a clear checklist, highlighting common
+            mistakes and protecting recorded media.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONFIDENTIALITY -->
+
+    <section class="panel">
+
+      <h2>Confidentiality &amp; Scope</h2>
+
+      <p>
+        This public-facing example summarizes my
+        original AJA recorder checklist without
+        exposing private event footage, internal
+        system details or potentially sensitive
+        operational information.
+      </p>
+
+    </section>
+
+    <!-- BOTTOM BACK BUTTON -->
+
+    <a class="back-button back-bottom"
+       href="av-portfolio.html#technical-documentation">
+      &larr; Back to Technical Documentation
+    </a>
+
+  </main>
+
+  <!-- =========================================
+       FOOTER
+  ========================================= -->
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-content">
+
+        <span>
+          &copy; <span id="year"></span>
+          Christopher Batas. All rights reserved.
+        </span>
+
+        <span>
+          <a href="index.html#totop">Home</a>
+          &nbsp;|&nbsp;
+          <a href="av-portfolio.html#totop">AV Portfolio</a>
+          &nbsp;|&nbsp;
+          <a href="av-portfolio.html#contact">Contact</a>
+        </span>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>

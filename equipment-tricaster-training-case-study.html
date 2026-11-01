@@ -1,0 +1,822 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipment Documentation &amp; TriCaster Training | Christopher Batas</title>
+  <meta name="description" content="AV equipment reference documentation and TriCaster broadcast operations training by Christopher Batas.">
+
+  <style>
+    /* =========================================
+       1. WEBSITE COLORS — MATCH INDEX.HTML
+    ========================================= */
+
+    :root {
+      --bg: #0B0D12;
+      --bg-secondary: #111827;
+      --panel: rgba(255,255,255,0.05);
+      --panel-hover: rgba(255,255,255,0.08);
+      --text: #F2F6FF;
+      --muted: #A8B5C9;
+      --accent: #3B82F6;
+      --accent-light: #74ADFF;
+      --border: rgba(116,173,255,0.18);
+      --shadow: 0 18px 50px rgba(0,0,0,0.35);
+      --radius: 18px;
+      --max-width: 1150px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background:
+        radial-gradient(
+          900px 500px at 15% 10%,
+          rgba(59,130,246,0.18),
+          transparent 60%
+        ),
+        radial-gradient(
+          800px 500px at 85% 20%,
+          rgba(0,194,255,0.10),
+          transparent 55%
+        ),
+        var(--bg);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-light);
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    /* =========================================
+       2. HEADER — MATCH HOMEPAGE
+    ========================================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,13,18,0.90);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--accent-light);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-light);
+    }
+
+    /* =========================================
+       3. CASE STUDY LAYOUT
+    ========================================= */
+
+    main {
+      padding: 65px 0 90px;
+    }
+
+    .case-intro {
+      max-width: 900px;
+    }
+
+    .section-label {
+      color: var(--accent-light);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 56px);
+      margin: 15px 0 20px;
+    }
+
+    h2 {
+      font-size: 25px;
+      margin: 0 0 20px;
+    }
+
+    h3 {
+      font-size: 19px;
+      margin: 0 0 12px;
+    }
+
+    .lead {
+      font-size: 19px;
+      max-width: 850px;
+    }
+
+    .panel {
+      padding: 30px;
+      margin-top: 28px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 30px;
+      border: 1px solid var(--border);
+      background: rgba(59,130,246,0.06);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    ul {
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .notice {
+      padding: 16px 20px;
+      margin-top: 20px;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      background: rgba(59,130,246,0.07);
+      color: var(--muted);
+    }
+
+    /* =========================================
+       4. REFERENCE WORKFLOW
+    ========================================= */
+
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .step {
+      padding: 20px 14px;
+      background: rgba(59,130,246,0.09);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent-light);
+    }
+
+    .step span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================================
+       5. BOXED BACK BUTTONS
+    ========================================= */
+
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 15px;
+      border: 1px solid rgba(116,173,255,0.35);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.045);
+      color: var(--accent-light);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: 0.25s ease;
+    }
+
+    .back-button:hover {
+      background: rgba(59,130,246,0.15);
+      border-color: var(--accent);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .back-button:focus-visible,
+    .nav-links a:focus-visible,
+    .logo:focus-visible {
+      outline: 3px solid var(--accent-light);
+      outline-offset: 4px;
+    }
+
+    .back-top {
+      margin-bottom: 28px;
+    }
+
+    .back-bottom {
+      margin-top: 35px;
+    }
+
+    /* =========================================
+       6. FOOTER
+    ========================================= */
+
+    footer {
+      padding: 30px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* =========================================
+       7. MOBILE RESPONSIVE
+    ========================================= */
+
+    @media (max-width: 900px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .workflow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding-top: 40px;
+      }
+
+      .panel {
+        padding: 22px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        width: calc(100% - 28px);
+      }
+
+      .logo {
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .nav-links {
+        gap: 10px 16px;
+        font-size: 12px;
+      }
+
+      .workflow {
+        grid-template-columns: 1fr;
+      }
+
+      .back-button {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .back-button {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body id="totop">
+
+  <!-- =========================================
+       HEADER
+  ========================================= -->
+
+  <header>
+    <div class="container">
+      <div class="navbar">
+
+        <a href="index.html#totop" class="logo">
+          CHRISTOPHER <span>BATAS</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html#totop">Home</a>
+          <a href="av-portfolio.html#totop">AV Portfolio</a>
+          <a href="av-portfolio.html#technical-documentation">Documentation</a>
+          <a href="AV Technician Resume Page_B.html#totop">Resume</a>
+          <a href="av-portfolio.html#contact">Contact</a>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================
+       MAIN CONTENT
+  ========================================= -->
+
+  <main class="container">
+
+    <a class="back-button back-top"
+       href="av-portfolio.html#technical-documentation">
+      &larr; Back to Technical Documentation
+    </a>
+
+    <div class="case-intro">
+
+      <p class="section-label">
+        AV PORTFOLIO / TECHNICAL DOCUMENTATION
+      </p>
+
+      <h1>
+        Equipment Documentation<br>
+        &amp; TriCaster Training
+      </h1>
+
+      <p class="lead">
+        Practical equipment reference notes,
+        broadcast-system familiarity and continuing
+        training supporting professional AV and
+        live-production operations.
+      </p>
+
+      <div class="tags">
+        <span class="tag">TriCaster</span>
+        <span class="tag">Broadcast Operations</span>
+        <span class="tag">AV Equipment</span>
+        <span class="tag">SDI &amp; NDI</span>
+        <span class="tag">Technical Reference</span>
+        <span class="tag">Professional Training</span>
+      </div>
+
+    </div>
+
+    <!-- PROJECT OVERVIEW -->
+
+    <section class="panel">
+
+      <h2>Project Overview</h2>
+
+      <p>
+        I assembled equipment explanation notes
+        covering technologies encountered in AV
+        and broadcast environments. The reference
+        brings together short descriptions of
+        control systems, audio processors, switchers,
+        encoders, routing panels, monitoring tools
+        and signal formats.
+      </p>
+
+      <p>
+        Alongside these notes, I completed
+        <strong>
+          Viz University's Introduction to Vision
+          Mixing with TriCaster
+        </strong>
+        training diploma in
+        <strong>August 2024</strong>.
+        My practical experience includes supporting
+        and operating TriCaster-based live-production
+        workflows.
+      </p>
+
+      <div class="notice">
+        <strong>Scope:</strong>
+        These notes reflect learning and operational
+        reference material. They do not represent
+        original design, installation or programming
+        of the equipment described.
+      </div>
+
+    </section>
+
+    <!-- REFERENCE WORKFLOW -->
+
+    <section class="panel">
+
+      <h2>How I Organized the Reference</h2>
+
+      <div class="workflow">
+
+        <div class="step">
+          <strong>01 / Identify</strong>
+          <span>
+            Record the equipment or technology name.
+          </span>
+        </div>
+
+        <div class="step">
+          <strong>02 / Explain</strong>
+          <span>
+            Summarize its role in an AV workflow.
+          </span>
+        </div>
+
+        <div class="step">
+          <strong>03 / Connect</strong>
+          <span>
+            Relate the device to signal or control concepts.
+          </span>
+        </div>
+
+        <div class="step">
+          <strong>04 / Review</strong>
+          <span>
+            Use notes to reinforce operational familiarity.
+          </span>
+        </div>
+
+      </div>
+
+      <p>
+        This is a conceptual summary of how the
+        reference is useful, not a claim that it
+        was a formal engineering or training manual.
+      </p>
+
+    </section>
+
+    <!-- EQUIPMENT REFERENCE -->
+
+    <div class="grid">
+
+      <section class="panel">
+
+        <h2>Control &amp; Audio Systems</h2>
+
+        <ul>
+          <li>
+            <strong>Crestron:</strong>
+            Centralized room-control concepts,
+            including processors and user interfaces.
+          </li>
+
+          <li>
+            <strong>Biamp Tesira:</strong>
+            Digital audio processing and
+            configurable audio I/O.
+          </li>
+
+          <li>
+            <strong>Extron switching:</strong>
+            Selecting among source signals
+            for distribution.
+          </li>
+
+          <li>
+            <strong>Sierra Video Aspen RCP:</strong>
+            Router control-panel familiarity.
+          </li>
+        </ul>
+
+      </section>
+
+      <section class="panel">
+
+        <h2>Video &amp; Broadcast Equipment</h2>
+
+        <ul>
+          <li>
+            <strong>AJA BRIDGE NDI 3G:</strong>
+            SDI and NDI signal-conversion concepts.
+          </li>
+
+          <li>
+            <strong>Vaddio AV Bridge Mini:</strong>
+            AV-to-USB conferencing workflows.
+          </li>
+
+          <li>
+            <strong>Matrox Maevex 6122:</strong>
+            Encoding, streaming and recording concepts.
+          </li>
+
+          <li>
+            <strong>AMP1A-106:</strong>
+            Rack-mounted audio monitoring.
+          </li>
+        </ul>
+
+      </section>
+
+    </div>
+
+    <!-- SIGNAL AND STREAMING CONCEPTS -->
+
+    <section class="panel">
+
+      <h2>Signal &amp; Streaming Concepts</h2>
+
+      <div class="grid">
+
+        <div>
+
+          <h3>Video Transport</h3>
+
+          <p>
+            <strong>SDI</strong> — Digital video
+            and audio transport used in
+            broadcast workflows.
+          </p>
+
+          <p>
+            <strong>NDI</strong> — Network-based
+            video connectivity between
+            compatible devices.
+          </p>
+
+        </div>
+
+        <div>
+
+          <h3>Network &amp; Streaming</h3>
+
+          <p>
+            <strong>SRT</strong> — Transport for
+            reliable, low-latency video over
+            variable networks.
+          </p>
+
+          <p>
+            <strong>HLS</strong> — HTTP-based
+            streaming delivery.
+          </p>
+
+          <p>
+            <strong>DHCP</strong> — Automatic
+            network IP-address assignment.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="notice">
+        Descriptions are simplified public-facing
+        summaries of topics in my equipment notes,
+        not detailed product specifications.
+      </div>
+
+    </section>
+
+    <!-- TRICASTER TRAINING -->
+
+    <section class="panel">
+
+      <h2>TriCaster Training &amp; Applied Experience</h2>
+
+      <div class="grid">
+
+        <div>
+
+          <h3>Formal Learning</h3>
+
+          <p>
+            <strong>Viz University</strong>
+          </p>
+
+          <p>
+            Introduction to Vision Mixing with TriCaster
+          </p>
+
+          <p>
+            <strong>Completed: August 2024</strong>
+          </p>
+
+          <p>
+            Training diploma earned as part of
+            continued development in broadcast
+            production.
+          </p>
+
+        </div>
+
+        <div>
+
+          <h3>On-the-Job Operations</h3>
+
+          <ul>
+            <li>
+              Supported live video switching
+              and source selection.
+            </li>
+
+            <li>
+              Worked with lower thirds, slates
+              and graphics playback.
+            </li>
+
+            <li>
+              Supported recording and livestream workflows.
+            </li>
+
+            <li>
+              Assisted with troubleshooting
+              and production readiness.
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- MY CONTRIBUTION -->
+
+    <section class="panel">
+
+      <h2>My Contribution</h2>
+
+      <p>
+        I prepared equipment-reference notes
+        to strengthen my understanding of the
+        systems I worked around and completed
+        dedicated TriCaster training.
+      </p>
+
+      <p>
+        My production experience focused on
+        <strong>
+          operating, supporting and troubleshooting
+          existing systems
+        </strong>,
+        with coordination and escalation when
+        deeper engineering work was required.
+      </p>
+
+    </section>
+
+    <!-- WHY THIS MATTERS -->
+
+    <section class="panel">
+
+      <h2>Why This Matters</h2>
+
+      <p>
+        Effective AV support involves more than
+        knowing which button to press. It requires
+        understanding the role of each device,
+        recognizing signal-flow relationships,
+        communicating technical issues clearly
+        and maintaining reliable show operations.
+      </p>
+
+      <p>
+        These reference notes and the TriCaster
+        training demonstrate my commitment to
+        developing that operational understanding.
+      </p>
+
+    </section>
+
+    <!-- CONFIDENTIALITY -->
+
+    <section class="panel">
+
+      <h2>Portfolio &amp; Confidentiality Note</h2>
+
+      <p>
+        This case study presents generalized
+        equipment descriptions and my training
+        history. It excludes internal network
+        details, proprietary system configurations
+        and confidential production material.
+      </p>
+
+    </section>
+
+    <!-- BOTTOM BACK BUTTON -->
+
+    <a class="back-button back-bottom"
+       href="av-portfolio.html#technical-documentation">
+      &larr; Back to Technical Documentation
+    </a>
+
+  </main>
+
+  <!-- =========================================
+       FOOTER
+  ========================================= -->
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-content">
+
+        <span>
+          &copy; <span id="year"></span>
+          Christopher Batas. All rights reserved.
+        </span>
+
+        <span>
+          <a href="index.html#totop">Home</a>
+          &nbsp;|&nbsp;
+          <a href="av-portfolio.html#totop">AV Portfolio</a>
+          &nbsp;|&nbsp;
+          <a href="av-portfolio.html#contact">Contact</a>
+        </span>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
