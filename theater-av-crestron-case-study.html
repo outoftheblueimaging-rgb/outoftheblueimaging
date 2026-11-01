@@ -392,6 +392,23 @@
       }
     }
 
+
+    /* Public-facing photo gallery — no external dependencies */
+    .photo-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; margin-top:24px; }
+    .photo-card { margin:0; min-width:0; }
+    .photo-trigger { display:block; width:100%; padding:0; cursor:zoom-in; border:1px solid var(--border); border-radius:14px; overflow:hidden; background:#111827; color:var(--text); text-align:left; }
+    .photo-trigger:hover, .photo-trigger:focus-visible { border-color:var(--accent-light); outline-offset:3px; }
+    .photo-trigger img { display:block; width:100%; height:275px; object-fit:contain; background:#101722; }
+    .photo-card figcaption { padding:13px 2px 0; color:var(--muted); font-size:14px; }
+    .photo-card figcaption strong { display:block; color:var(--text); font-size:16px; margin-bottom:4px; }
+    .zoom-note { font-size:12px; color:var(--accent-light); display:block; padding:9px 13px; }
+    .lightbox { display:none; position:fixed; inset:0; z-index:1000; padding:65px 20px 20px; background:rgba(2,6,15,.96); align-items:center; justify-content:center; cursor:zoom-out; }
+    .lightbox.is-open { display:flex; }
+    .lightbox img { display:block; max-width:96vw; max-height:calc(100vh - 100px); width:auto; height:auto; object-fit:contain; }
+    .lightbox-close { position:absolute; top:16px; right:20px; padding:9px 15px; background:#17253d; border:1px solid var(--accent-light); border-radius:9px; color:#fff; cursor:pointer; font-size:15px; }
+    body.lightbox-active { overflow:hidden; }
+    @media (max-width:700px) { .photo-grid { grid-template-columns:1fr; } .photo-trigger img { height:auto; max-height:330px; } }
+
   </style>
 </head>
 
@@ -422,7 +439,7 @@
             Documentation
           </a>
 
-          <a href="AV Technician Resume Page_B.html#totop">
+          <a href="AV Technician Resume Page_B.html">
             Resume
           </a>
 
@@ -461,7 +478,8 @@
       <p class="lead">
         Practical room-operation instructions covering
         presentation source selection, lighting,
-        microphones and everyday theater AV support.
+        PTZ camera checks, Shure wireless microphone support,
+        connectivity troubleshooting, and hands-on theater AV operations.
       </p>
 
       <div class="tags">
@@ -469,6 +487,9 @@
         <span class="tag">Crestron Controls</span>
         <span class="tag">Presentation Support</span>
         <span class="tag">Technical Documentation</span>
+        <span class="tag">AV Troubleshooting</span>
+        <span class="tag">PTZ Camera Support</span>
+        <span class="tag">Shure Wireless Microphones</span>
       </div>
 
     </div>
@@ -485,12 +506,17 @@
         selecting presentation sources, using room
         controls, preparing microphones and adjusting
         lighting for a supported event or presentation.
+        My theater support also included checking PTZ camera operation
+        and verifying wireless microphone channel assignments on Shure receivers.
+        I also performed basic troubleshooting of AV connectivity,
+        rack cabling, and hardware resets to restore room functionality.
       </p>
 
       <p class="notice">
         <strong>Scope:</strong>
-        My contribution was operational support and
-        user-facing documentation for existing equipment.
+        My contribution included hands-on operational support,
+        basic connectivity troubleshooting, and user-facing documentation
+        for existing equipment.
         I did not design, install or program the
         Crestron control system.
       </p>
@@ -536,8 +562,8 @@
         <div class="step">
           <strong>04 / Support</strong>
           <span>
-            Monitor the session and address
-            operational issues.
+            Troubleshoot connectivity and equipment issues,
+            and restore operation when possible.
           </span>
         </div>
 
@@ -580,16 +606,16 @@
 
           <ul>
             <li>
-              Assist with microphone readiness
-              and basic audio checks.
+              Check wireless microphone readiness, verify
+              channel assignments on Shure receivers, and perform basic audio checks.
             </li>
             <li>
               Operate available room lighting controls
               as needed.
             </li>
             <li>
-              Identify issues and coordinate escalation
-              when appropriate.
+              Check PTZ camera operation and video signal availability;
+              identify issues and coordinate escalation when appropriate.
             </li>
           </ul>
 
@@ -597,6 +623,74 @@
 
       </div>
 
+    </section>
+
+
+    <!-- HANDS-ON TROUBLESHOOTING -->
+    <section class="panel" id="troubleshooting">
+      <h2>Hands-On AV &amp; Connectivity Troubleshooting</h2>
+      <p>
+        In addition to operating the room controls, I performed basic
+        troubleshooting when presentation equipment or network-connected
+        AV devices were not communicating as expected.
+      </p>
+      <div class="grid">
+        <div>
+          <h3>Rack Cabling &amp; Network Connections</h3>
+          <ul>
+            <li>Checked physical connections and performed rack-level patch-cable changes to help restore connectivity or connect equipment to active network ports.</li>
+            <li>Investigated basic connectivity issues affecting supported AV equipment and escalated problems when needed.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Hardware Resets &amp; Signal Handshakes</h3>
+          <ul>
+            <li>Performed hardware power cycles and system restarts as part of basic troubleshooting.</li>
+            <li>Checked whether connected displays, presentation sources, and AV hardware re-established communication and signal handshakes after a reset.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid" style="margin-top:25px;">
+        <div>
+          <h3>PTZ Camera Checks &amp; Video Verification</h3>
+          <ul>
+            <li>Checked PTZ camera functionality in theater spaces as part of room readiness and event support.</li>
+            <li>Verified camera video availability and checked connections when a camera feed was not working as expected.</li>
+            <li>Helped isolate camera-related operational issues and escalated faults beyond basic troubleshooting.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Shure Wireless Microphone &amp; Audio Checks</h3>
+          <ul>
+            <li>Verified that wireless microphones were assigned to the intended channels on Shure receivers.</li>
+            <li>Checked microphone operation and audio signal availability during theater preparation.</li>
+            <li>Troubleshot basic microphone and receiver issues to help maintain dependable event audio.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="notice"><strong>Scope:</strong> These tasks involved supporting and troubleshooting existing systems, not configuring enterprise network infrastructure or programming Crestron controls.</p>
+    </section>
+
+    <!-- PUBLIC-FACING CONTROL PANEL PHOTOGRAPHS -->
+    <section class="panel" id="control-panel-examples">
+      <h2>System Examples &amp; Documentation</h2>
+      <p>These photographs show the existing touchscreens I supported during theater operations. Identifying room details have been concealed for this public portfolio.</p>
+      <div class="photo-grid">
+        <figure class="photo-card">
+          <button type="button" class="photo-trigger" data-zoom="Assets/Images/Theater-AV/presentation-control-panel-public.png" aria-label="Enlarge presentation control panel photograph">
+            <img src="Assets/Images/Theater-AV/presentation-control-panel-public.png" alt="Crestron presentation touchscreen showing computer and HDMI source options, camera access, microphone volume, speaker volume, and ceiling microphone mute" loading="lazy">
+            <span class="zoom-note">Click to enlarge</span>
+          </button>
+          <figcaption><strong>Presentation &amp; Room Controls</strong>Source selection, camera access, microphone and speaker levels, and ceiling-microphone mute controls.</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <button type="button" class="photo-trigger" data-zoom="Assets/Images/Theater-AV/lighting-control-panel-public.png" aria-label="Enlarge lighting control panel photograph">
+            <img src="Assets/Images/Theater-AV/lighting-control-panel-public.png" alt="Theater lighting touchscreen with presenter, custom, stage, and house lighting presets" loading="lazy">
+            <span class="zoom-note">Click to enlarge</span>
+          </button>
+          <figcaption><strong>Lighting Presets</strong>Existing presenter, stage, house, and custom presets used to support different room setups.</figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- DOCUMENTATION -->
@@ -620,6 +714,11 @@
 
     </section>
 
+    <section class="panel">
+      <h2>Documentation Sample</h2>
+      <p>I developed an internal instructional draft with annotated screenshots covering presentation inputs, room audio, lighting presets, microphone preparation, and basic support procedures. The full internal document is intentionally not published here because it includes location-specific equipment details and operating instructions.</p>
+    </section>
+
     <!-- MY ROLE -->
 
     <section class="panel">
@@ -627,9 +726,11 @@
       <h2>My Role &amp; Scope</h2>
 
       <p>
-        I worked with existing AV systems in an
-        operational and support capacity and independently
-        prepared explanatory documentation.
+        I operated and supported existing AV systems, performed
+        basic rack cabling and connectivity troubleshooting,
+        checked PTZ cameras and Shure wireless microphone receiver channels,
+        and used hardware resets to address communication issues.
+        I also independently prepared explanatory documentation.
       </p>
 
       <p>
@@ -651,8 +752,15 @@
         <span class="tag">AV Room Readiness</span>
         <span class="tag">Crestron User Controls</span>
         <span class="tag">Microphone Support</span>
+        <span class="tag">Shure Receiver Channel Checks</span>
+        <span class="tag">PTZ Camera Troubleshooting</span>
+        <span class="tag">Camera Signal Verification</span>
         <span class="tag">Lighting Operation</span>
         <span class="tag">Technical Writing</span>
+        <span class="tag">Rack Patch Cabling</span>
+        <span class="tag">Basic Network Connectivity</span>
+        <span class="tag">Hardware Power Cycling</span>
+        <span class="tag">Signal Handshake Troubleshooting</span>
       </div>
 
     </section>
@@ -713,5 +821,41 @@
       new Date().getFullYear();
   </script>
 
+
+  <div class="lightbox" id="image-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged control panel image" aria-hidden="true">
+    <button type="button" class="lightbox-close" id="lightbox-close">Close ×</button>
+    <img id="lightbox-image" alt="">
+  </div>
+  <script>
+    (function () {
+      var lightbox = document.getElementById('image-lightbox');
+      var image = document.getElementById('lightbox-image');
+      var closeButton = document.getElementById('lightbox-close');
+      var lastTrigger = null;
+      function closeZoom() {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('lightbox-active');
+        image.removeAttribute('src');
+        if (lastTrigger) lastTrigger.focus();
+      }
+      Array.prototype.forEach.call(document.querySelectorAll('[data-zoom]'), function (trigger) {
+        trigger.addEventListener('click', function () {
+          lastTrigger = trigger;
+          image.src = trigger.getAttribute('data-zoom');
+          image.alt = trigger.querySelector('img').alt;
+          lightbox.classList.add('is-open');
+          lightbox.setAttribute('aria-hidden', 'false');
+          document.body.classList.add('lightbox-active');
+          closeButton.focus();
+        });
+      });
+      lightbox.addEventListener('click', closeZoom);
+      closeButton.addEventListener('click', function (event) { event.stopPropagation(); closeZoom(); });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeZoom();
+      });
+    }());
+  </script>
 </body>
 </html>

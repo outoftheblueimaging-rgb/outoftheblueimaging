@@ -1,13 +1,13 @@
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AJA Recorder Operations &amp; Quality Control | Christopher Batas</title>
-  <meta name="description" content="AJA recorder operations and recording quality-control documentation case study by Christopher Batas.">
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AJA Recorder Operations &amp; Quality Control | Christopher Batas</title>
+<meta content="AJA recorder operations and recording quality-control documentation case study by Christopher Batas." name="description"/>
+<style>
     /* =========================================
        1. WEBSITE COLORS — MATCH INDEX.HTML
     ========================================= */
@@ -373,82 +373,73 @@
         transition: none;
       }
     }
+
+    /* Public-facing documentation sample (adapted from original checklist) */
+    .doc-preview { margin-top: 22px; padding: 28px; border-radius: 14px;
+      background: #111c2e; border: 1px solid rgba(116,173,255,.32); }
+    .doc-preview-header { display:flex; justify-content:space-between; align-items:center;
+      flex-wrap:wrap; gap:12px; padding-bottom:16px; border-bottom:1px solid var(--border); }
+    .doc-preview-header strong { color:var(--accent-light); letter-spacing:.04em; }
+    .doc-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin-top:20px; }
+    .doc-card { background:rgba(255,255,255,.035); border:1px solid var(--border);
+      border-radius:12px; padding:18px; }
+    .doc-card h3 { color:var(--text); font-size:17px; }
+    .doc-card ul { margin-bottom:0; }
+    .doc-note {font-size:13px; margin-top:18px;}
+    @media(max-width:700px){.doc-grid{grid-template-columns:1fr}.doc-preview{padding:18px}}
   </style>
-</head>
-
+<style>
+.equipment-figure{max-width:720px;margin:22px auto 8px;text-align:center}.equipment-figure img{width:100%;height:auto;border-radius:14px;cursor:zoom-in;background:#fff;padding:14px}.equipment-figure figcaption{font-size:.9rem;color:var(--muted);margin-top:10px}.equipment-figure button{border:0;background:transparent;padding:0;width:100%;cursor:zoom-in}.image-overlay{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;z-index:9999;padding:24px;cursor:zoom-out}.image-overlay.open{display:flex}.image-overlay img{max-width:95vw;max-height:90vh;object-fit:contain;background:white;border-radius:8px}.image-overlay .close-hint{position:absolute;top:12px;right:22px;color:white;font-size:14px}
+</style></head>
 <body id="totop">
-
-  <!-- =========================================
+<!-- =========================================
        HEADER
   ========================================= -->
-
-  <header>
-    <div class="container">
-      <div class="navbar">
-
-        <a href="index.html#totop" class="logo">
+<header>
+<div class="container">
+<div class="navbar">
+<a class="logo" href="index.html#totop">
           CHRISTOPHER <span>BATAS</span>
-        </a>
-
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="index.html#totop">Home</a>
-          <a href="av-portfolio.html#totop">AV Portfolio</a>
-          <a href="av-portfolio.html#technical-documentation">Documentation</a>
-          <a href="AV Technician Resume Page_B.html#totop">Resume</a>
-          <a href="av-portfolio.html#contact">Contact</a>
-        </nav>
-
-      </div>
-    </div>
-  </header>
-
-  <!-- =========================================
+</a>
+<nav aria-label="Main navigation" class="nav-links">
+<a href="index.html#totop">Home</a>
+<a href="av-portfolio.html#totop">AV Portfolio</a>
+<a href="av-portfolio.html#technical-documentation">Documentation</a>
+<a href="AV Technician Resume Page_B.html">Resume</a>
+<a href="av-portfolio.html#contact">Contact</a>
+</nav>
+</div>
+</div>
+</header>
+<!-- =========================================
        MAIN CONTENT
   ========================================= -->
-
-  <main class="container">
-
-    <a class="back-button back-top"
-       href="av-portfolio.html#technical-documentation">
-      &larr; Back to Technical Documentation
+<main class="container">
+<a class="back-button back-top" href="av-portfolio.html#technical-documentation">
+      ← Back to Technical Documentation
     </a>
-
-    <div class="case-intro">
-
-      <p class="section-label">
+<div class="case-intro">
+<p class="section-label">
         AV PORTFOLIO / TECHNICAL DOCUMENTATION
       </p>
-
-      <h1>
-        AJA Recorder Operations<br>
+<h1>
+        AJA Recorder Operations<br/>
         &amp; Quality Control
       </h1>
-
-      <p class="lead">
-        A practical recording checklist created to
-        support consistent capture, clean audio,
-        test playback and careful media handling
-        during scheduled gameplay recordings.
-      </p>
-
-      <div class="tags">
-        <span class="tag">AJA Recorders</span>
-        <span class="tag">HDMI Capture</span>
-        <span class="tag">Recording QC</span>
-        <span class="tag">ProRes 422 LT</span>
-        <span class="tag">Media Handling</span>
-        <span class="tag">Technical Documentation</span>
-      </div>
-
-    </div>
-
-    <!-- PROJECT OVERVIEW -->
-
-    <section class="panel">
-
-      <h2>Project Overview</h2>
-
-      <p>
+<p class="lead">Hands-on AJA Ki Pro Ultra 12G operation and troubleshooting for gameplay feeds captured from observer PCs, supported by an original recording quality-control checklist.</p>
+<div class="tags"><span class="tag">Ki Pro Ultra 12G</span>
+<span class="tag">AJA Recorders</span>
+<span class="tag">HDMI Capture</span>
+<span class="tag">Recording QC</span>
+<span class="tag">ProRes 422 LT</span>
+<span class="tag">Media Handling</span>
+<span class="tag">Technical Documentation</span>
+</div>
+</div><section class="panel" id="equipment-spotlight"><h2>Equipment Spotlight — AJA Ki Pro Ultra 12G</h2><p>Operated AJA Ki Pro Ultra 12G recorders to capture gameplay video and audio feeds from observer PCs during scheduled recording sessions. My workflow included HDMI input configuration, 1080p/60 fps ProRes 422 LT recording checks, media selection and formatting, test recordings, playback review, and safe media removal.</p><figure class="equipment-figure"><button aria-label="Enlarge AJA Ki Pro Ultra 12G reference image" id="recorderZoom" type="button"><img alt="AJA Ki Pro Ultra 12G recorder front panel, reference product image" loading="lazy" src="Assets/Images/aja-ki-pro-ultra-12g-reference.png"/></button><figcaption>AJA Ki Pro Ultra 12G — reference product image supplied from a retailer listing; not a photograph of my production setup. Click to enlarge.</figcaption></figure><p><strong>Workflow clarification:</strong> These recorders captured observer PC gameplay feeds, not direct camera feeds. PTZ camera and Shure wireless microphone troubleshooting were separate theater and AV support responsibilities.</p></section>
+<!-- PROJECT OVERVIEW -->
+<section class="panel">
+<h2>Project Overview</h2>
+<p>
         I authored an AJA recorder checklist for
         a gameplay recording workflow involving observers.
         The document consolidated PC preparation,
@@ -457,216 +448,229 @@
         procedures and media handling into one
         repeatable reference.
       </p>
-
-      <p>
+<p>
         Its purpose was to reduce avoidable recording
         mistakes and make the operating process
         easier to follow.
       </p>
-
-      <div class="notice">
-        <strong>Public portfolio adaptation:</strong>
+<div class="notice">
+<strong>Public portfolio adaptation:</strong>
         The steps below summarize my original checklist.
         They are not a universal setup guide for every
         AJA model or production environment.
       </div>
-
-    </section>
-
-    <!-- RECORDING WORKFLOW -->
-
-    <section class="panel">
-
-      <h2>Recording Workflow at a Glance</h2>
-
-      <div class="workflow">
-
-        <div class="step">
-          <strong>01 / Prepare</strong>
-          <span>
+</section>
+<!-- RECORDING WORKFLOW -->
+<section class="panel">
+<h2>Recording Workflow at a Glance</h2>
+<div class="workflow">
+<div class="step">
+<strong>01 / Prepare</strong>
+<span>
             Check observer PCs and eliminate
             unwanted audio.
           </span>
-        </div>
-
-        <div class="step">
-          <strong>02 / Configure</strong>
-          <span>
+</div>
+<div class="step">
+<strong>02 / Configure</strong>
+<span>
             Verify recorder settings and select
             the correct media slot.
           </span>
-        </div>
-
-        <div class="step">
-          <strong>03 / Validate</strong>
-          <span>
+</div>
+<div class="step">
+<strong>03 / Validate</strong>
+<span>
             Run test recordings and review playback.
           </span>
-        </div>
-
-        <div class="step">
-          <strong>04 / Record</strong>
-          <span>
+</div>
+<div class="step">
+<strong>04 / Record</strong>
+<span>
             Capture matches and safely finish
             media operations.
           </span>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- CONFIGURATION AND QC -->
-
-    <div class="grid">
-
-      <section class="panel">
-
-        <h2>Configuration Reference</h2>
-
-        <p>
+</div>
+</div>
+</section>
+<!-- PUBLIC-FACING SAMPLE OF ORIGINAL AJA CHECKLIST -->
+<section class="panel" id="documentation-sample">
+<h2>Original Documentation — Public-Facing Sample</h2>
+<p>I created a practical operator checklist for a scheduled gameplay recording workflow. This condensed presentation preserves the technical substance of my original instructions while omitting internal project identifiers.</p>
+<div aria-label="Adapted AJA recorder operations checklist" class="doc-preview" role="group">
+<div class="doc-preview-header">
+<strong>AJA RECORDER / OPERATOR CHECKLIST</strong>
+<span class="tag">Adapted documentation sample</span>
+</div>
+<div class="doc-grid">
+<div class="doc-card">
+<h3>01 / Prepare &amp; Configure</h3>
+<ul>
+<li>Disable PC notifications and unwanted background audio.</li>
+<li>Verify HDMI video and audio sources.</li>
+<li>Confirm 1920 × 1080 / 60 fps, ProRes 422 LT and MOV recording settings.</li>
+<li>Confirm the intended media slot before any media operation.</li>
+</ul>
+</div>
+<div class="doc-card">
+<h3>02 / Validate</h3>
+<ul>
+<li>Monitor audio using headphones connected to the recorder.</li>
+<li>Check the intended video source on the recorder display.</li>
+<li>Capture a test recording and review audio/video playback.</li>
+<li>Return to live input monitoring before the session.</li>
+</ul>
+</div>
+<div class="doc-card">
+<h3>03 / Record</h3>
+<ul>
+<li>Begin capture ahead of the scheduled start for a buffer.</li>
+<li>Manage recordings between matches and intermissions.</li>
+<li>Verify the final recording has stopped at the end of the session.</li>
+</ul>
+</div>
+<div class="doc-card">
+<h3>04 / Protect Media</h3>
+<ul>
+<li>Confirm recording and playback are stopped before unmounting.</li>
+<li>Wait for the card-slot activity light to turn off before removal.</li>
+<li>Treat formatting as destructive; confirm the selected media first.</li>
+</ul>
+</div>
+</div>
+<p class="doc-note">Portfolio adaptation of an original operational checklist. Settings and procedures were specific to the equipment and workflow supported, not universal AJA instructions.</p>
+</div>
+</section>
+<section class="panel" id="equipment-troubleshooting">
+<h2>AV Equipment Troubleshooting &amp; Signal Verification</h2>
+<p>In the gameplay recording workflow, I checked observer PC video/audio signals, recorder inputs, recording media, and playback. I also performed camera, PTZ, and Shure microphone troubleshooting in separate theater and AV spaces.</p>
+<div class="grid">
+<div>
+<h3>Gameplay Video &amp; Recording</h3>
+<ul>
+<li>Inspected, reseated and swapped video signal cables, including HDMI/SDI where applicable to the supported AV equipment.</li>
+<li>Verified observer PC gameplay feeds reached the intended AJA recorder inputs.</li>
+<li>Restarted equipment as needed and checked signal restoration.</li>
+<li>Verified media status, recorder settings and successful test playback.</li>
+</ul>
+</div>
+<div>
+<h3>Separate Theater / AV Support</h3>
+<ul>
+<li>Verified wireless microphones were assigned to the correct channels on Shure receivers.</li>
+<li>Checked microphone audio and signal routing when troubleshooting capture issues.</li>
+<li>Checked microphone audio in theater/AV spaces and reviewed AJA gameplay recordings for clean audio in the recording workflow.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- CONFIGURATION AND QC -->
+<div class="grid">
+<section class="panel">
+<h2>Configuration Reference</h2>
+<p>
           Settings specified in the original checklist
           for this particular workflow:
         </p>
-
-        <ul>
-          <li><strong>Video source:</strong> HDMI</li>
-          <li><strong>Audio source:</strong> HDMI</li>
-          <li><strong>Recording format:</strong> 1920 × 1080, 60 fps, ProRes 422 LT</li>
-          <li><strong>File container:</strong> .MOV</li>
-          <li><strong>Media file system:</strong> exFAT</li>
-        </ul>
-
-        <div class="notice">
+<ul>
+<li><strong>Video source:</strong> HDMI</li>
+<li><strong>Audio source:</strong> HDMI</li>
+<li><strong>Recording format:</strong> 1920 × 1080, 60 fps, ProRes 422 LT</li>
+<li><strong>File container:</strong> .MOV</li>
+<li><strong>Media file system:</strong> exFAT</li>
+</ul>
+<div class="notice">
           These are project-specific documented settings,
           not recommendations for every recorder.
         </div>
-
-      </section>
-
-      <section class="panel">
-
-        <h2>Pre-Recording Quality Checks</h2>
-
-        <ul>
-          <li>
+</section>
+<section class="panel">
+<h2>Pre-Recording Quality Checks</h2>
+<ul>
+<li>
             Disable PC notifications and unwanted music
             that could contaminate captured audio.
           </li>
-
-          <li>
+<li>
             Confirm recorder settings before formatting media.
           </li>
-
-          <li>
+<li>
             Check the selected card slot before recording
             or formatting.
           </li>
-
-          <li>
+<li>
             Monitor through headphones connected to
             the AJA recorder rather than the gameplay PC.
           </li>
-
-          <li>
+<li>
             Confirm the intended gameplay monitor or
             source using the recorder display.
           </li>
-
-          <li>
+<li>
             Make a test recording and check its playback
             before scheduled capture.
           </li>
-        </ul>
-
-      </section>
-
-    </div>
-
-    <!-- LIVE RECORDING -->
-
-    <section class="panel">
-
-      <h2>Live Recording &amp; Playback Procedures</h2>
-
-      <div class="grid">
-
-        <div>
-
-          <h3>During the Schedule</h3>
-
-          <ul>
-            <li>
+</ul>
+</section>
+</div>
+<!-- LIVE RECORDING -->
+<section class="panel">
+<h2>Live Recording &amp; Playback Procedures</h2>
+<div class="grid">
+<div>
+<h3>During the Schedule</h3>
+<ul>
+<li>
               Start recording five minutes before
               the scheduled game time to provide a buffer.
             </li>
-
-            <li>
+<li>
               Stop recordings between matches or during
               intermission, as outlined in the original procedure.
             </li>
-
-            <li>
+<li>
               Stop recording after the final match
               at the end of the day.
             </li>
-          </ul>
-
-        </div>
-
-        <div>
-
-          <h3>Testing Playback</h3>
-
-          <ol>
-            <li>Stop the test recording.</li>
-            <li>Press Play to review the recorded clip.</li>
-            <li>Return to the live input view before resuming recording.</li>
-          </ol>
-
-          <p>
+</ul>
+</div>
+<div>
+<h3>Testing Playback</h3>
+<ol>
+<li>Stop the test recording.</li>
+<li>Press Play to review the recorded clip.</li>
+<li>Return to the live input view before resuming recording.</li>
+</ol>
+<p>
             The original checklist describes using
             the Stop button twice to return to live
             view on the equipment used.
           </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- MEDIA HANDLING -->
-
-    <section class="panel">
-
-      <h2>Media Handling &amp; Risk Reduction</h2>
-
-      <p>
+</div>
+</div>
+</section>
+<!-- MEDIA HANDLING -->
+<section class="panel">
+<h2>Media Handling &amp; Risk Reduction</h2>
+<p>
         My checklist emphasized selecting the intended
         card slot, verifying that recording and playback
         had stopped, and waiting for the media slot
         indicator to turn off before ejecting the card.
       </p>
-
-      <p>
+<p>
         It also documented where to find the recorder's
         media and format controls. Formatting erases media,
         so this public case study intentionally does not
         present the original steps as a general-purpose
         instruction to format cards.
       </p>
-
-    </section>
-
-    <!-- MY CONTRIBUTION -->
-
-    <section class="panel">
-
-      <h2>My Contribution</h2>
-
-      <p>
-        <strong>
+</section>
+<!-- MY CONTRIBUTION -->
+<section class="panel">
+<h2>My Contribution</h2>
+<p>
+<strong>
           I independently created the operating checklist
         </strong>
         based on the recording workflow I supported.
@@ -674,108 +678,74 @@
         checks, test-playback steps and media-handling
         precautions in an accessible format.
       </p>
-
-      <p>
+<p>
         My contribution was in operating, supporting
         and documenting the existing recording process,
         not designing or engineering the underlying
         AV installation.
       </p>
-
-    </section>
-
-    <!-- SKILLS -->
-
-    <section class="panel">
-
-      <h2>Skills Demonstrated</h2>
-
-      <div class="grid">
-
-        <div>
-
-          <h3>Broadcast Operations</h3>
-
-          <p>
+</section>
+<!-- SKILLS -->
+<section class="panel">
+<h2>Skills Demonstrated</h2>
+<div class="grid">
+<div>
+<h3>Broadcast Operations</h3>
+<p>
             Recorder configuration checks, signal and
             audio validation, test playback, scheduled
             capture and recording continuity.
           </p>
-
-        </div>
-
-        <div>
-
-          <h3>Documentation &amp; Quality Control</h3>
-
-          <p>
+</div>
+<div>
+<h3>Documentation &amp; Quality Control</h3>
+<p>
             Turning repeatable production tasks into
             a clear checklist, highlighting common
             mistakes and protecting recorded media.
           </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- CONFIDENTIALITY -->
-
-    <section class="panel">
-
-      <h2>Confidentiality &amp; Scope</h2>
-
-      <p>
+</div>
+</div>
+</section>
+<!-- CONFIDENTIALITY -->
+<section class="panel">
+<h2>Confidentiality &amp; Scope</h2>
+<p>
         This public-facing example summarizes my
         original AJA recorder checklist without
         exposing private event footage, internal
         system details or potentially sensitive
         operational information.
       </p>
-
-    </section>
-
-    <!-- BOTTOM BACK BUTTON -->
-
-    <a class="back-button back-bottom"
-       href="av-portfolio.html#technical-documentation">
-      &larr; Back to Technical Documentation
+</section>
+<!-- BOTTOM BACK BUTTON -->
+<a class="back-button back-bottom" href="av-portfolio.html#technical-documentation">
+      ← Back to Technical Documentation
     </a>
-
-  </main>
-
-  <!-- =========================================
+</main>
+<!-- =========================================
        FOOTER
   ========================================= -->
-
-  <footer>
-    <div class="container">
-
-      <div class="footer-content">
-
-        <span>
-          &copy; <span id="year"></span>
+<footer>
+<div class="container">
+<div class="footer-content">
+<span>
+          © <span id="year"></span>
           Christopher Batas. All rights reserved.
         </span>
-
-        <span>
-          <a href="index.html#totop">Home</a>
-          &nbsp;|&nbsp;
+<span>
+<a href="index.html#totop">Home</a>
+           | 
           <a href="av-portfolio.html#totop">AV Portfolio</a>
-          &nbsp;|&nbsp;
+           | 
           <a href="av-portfolio.html#contact">Contact</a>
-        </span>
-
-      </div>
-
-    </div>
-  </footer>
-
-  <script>
+</span>
+</div>
+</div>
+</footer>
+<script>
     document.getElementById("year").textContent =
       new Date().getFullYear();
   </script>
-
-</body>
+<div aria-label="Enlarged recorder image" aria-modal="true" class="image-overlay" id="recorderOverlay" role="dialog" tabindex="-1"><span class="close-hint">Click anywhere or press Esc to close</span><img alt="Enlarged AJA Ki Pro Ultra 12G recorder" src="aja-ki-pro-ultra-12g-reference.png"/></div><script>(function(){var btn=document.getElementById('recorderZoom'),overlay=document.getElementById('recorderOverlay');if(!btn||!overlay)return;btn.addEventListener('click',function(){overlay.classList.add('open');overlay.focus()});overlay.addEventListener('click',function(){overlay.classList.remove('open');btn.focus()});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('open')){overlay.classList.remove('open');btn.focus()}})})();</script></body>
 </html>

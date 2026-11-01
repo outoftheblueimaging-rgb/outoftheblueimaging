@@ -675,6 +675,48 @@
     .breakdown-back:hover {color:#FFFFFF}
     .breakdown-back:focus-visible {outline:2px solid #74ADFF;outline-offset:5px}
 
+
+    /* PHASE 3: APPROVED TECHNICAL DOCUMENTATION THUMBNAILS */
+    .documentation-card {
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform .25s ease, border-color .25s ease;
+    }
+    .documentation-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+    .documentation-thumbnail {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #081527;
+      border-bottom: 1px solid var(--border);
+    }
+    .documentation-thumbnail img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .3s ease;
+    }
+    .documentation-thumbnail:hover img { transform: scale(1.025); }
+    .documentation-card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .documentation-card-body .example-link { margin-top: auto; padding-top: 10px; }
+    .documentation-thumbnail:focus-visible,
+    .documentation-card .example-link:focus-visible {
+      outline: 3px solid var(--accent-light);
+      outline-offset: -3px;
+    }
+
   </style>
 
 </head>
@@ -1372,42 +1414,48 @@
       </div>
       <div class="documentation-grid">
         <article class="documentation-card">
-          <p class="project-category">AV SIGNAL FLOW / ADOBE ILLUSTRATOR</p>
-          <h4>Broadcast Signal Flow</h4>
-          <p>Created a visual reference of video and audio signal paths, including routing, conversion, switching, recording and streaming workflows.</p>
-          <a class="example-link" href="broadcast-signal-flow-case-study.html">View Case Study &rarr;</a>
-        </article>
-        
-<article class="documentation-card">
-  <p class="project-category">
-    ROOM OPERATIONS / TECHNICAL GUIDES
-  </p>
-
-  <h4>Theater AV &amp; Crestron Controls</h4>
-
-  <p>
-    Authored instructional documentation covering
-    presentation source selection, lighting controls,
-    microphones and room operation procedures.
-  </p>
-
-  <a class="example-link"
-     href="theater-av-crestron-case-study.html">
-    View Case Study &rarr;
-  </a>
-</article>
-
-        <article class="documentation-card">
-          <p class="project-category">RECORDING / QUALITY CONTROL</p>
-          <h4>AJA Recorder Operations Checklist</h4>
-          <p>Developed a repeatable recording checklist covering input settings, audio checks, test recordings, media selection and safe media handling.</p>
-          <a class="example-link" href="aja-recorder-operations-case-study.html">View Case Study &rarr;</a>
+          <a class="documentation-thumbnail" href="broadcast-signal-flow-case-study.html" aria-label="View Broadcast Signal Flow case study">
+            <img src="Assets/Images/Thumbnails/signal-flow-thumbnail.jpg" alt="Signal Flow technical documentation thumbnail" loading="lazy" width="813" height="452">
+          </a>
+          <div class="documentation-card-body">
+            <p class="project-category">AV SIGNAL FLOW / ADOBE ILLUSTRATOR</p>
+            <h4>Broadcast Signal Flow</h4>
+            <p>Created a visual reference of video and audio signal paths, including routing, conversion, switching, recording and streaming workflows.</p>
+            <a class="example-link" href="broadcast-signal-flow-case-study.html">View Case Study &rarr;</a>
+          </div>
         </article>
         <article class="documentation-card">
-          <p class="project-category">TECHNICAL REFERENCE / TRAINING</p>
-          <h4>Equipment Documentation &amp; TriCaster Training</h4>
-          <p>Prepared AV equipment reference notes and completed Viz University’s Introduction to Vision Mixing with TriCaster training diploma (August 2024).</p>
-          <a class="example-link" href="equipment-tricaster-training-case-study.html">View Case Study &rarr;</a>
+          <a class="documentation-thumbnail" href="theater-av-crestron-case-study.html" aria-label="View Theater AV & Crestron Controls case study">
+            <img src="Assets/Images/Thumbnails/theater-av-crestron-thumbnail.jpg" alt="Theater AV and Crestron controls thumbnail" loading="lazy" width="813" height="452">
+          </a>
+          <div class="documentation-card-body">
+            <p class="project-category">ROOM OPERATIONS / TECHNICAL GUIDES</p>
+            <h4>Theater AV &amp; Crestron Controls</h4>
+            <p>Authored instructional documentation covering presentation source selection, lighting controls, microphones and room operation procedures.</p>
+            <a class="example-link" href="theater-av-crestron-case-study.html">View Case Study &rarr;</a>
+          </div>
+        </article>
+        <article class="documentation-card">
+          <a class="documentation-thumbnail" href="aja-recorder-operations-case-study.html" aria-label="View AJA Recorder Operations Checklist case study">
+            <img src="Assets/Images/Thumbnails/aja-recorder-thumbnail.jpg" alt="AJA recorder operations thumbnail" loading="lazy" width="813" height="452">
+          </a>
+          <div class="documentation-card-body">
+            <p class="project-category">RECORDING / QUALITY CONTROL</p>
+            <h4>AJA Recorder Operations Checklist</h4>
+            <p>Developed a repeatable recording checklist covering input settings, audio checks, test recordings, media selection and safe media handling.</p>
+            <a class="example-link" href="aja-recorder-operations-case-study.html">View Case Study &rarr;</a>
+          </div>
+        </article>
+        <article class="documentation-card">
+          <a class="documentation-thumbnail" href="equipment-tricaster-training-case-study.html" aria-label="View Equipment Documentation & TriCaster Training case study">
+            <img src="Assets/Images/Thumbnails/tricaster-training-thumbnail.jpg" alt="Equipment and TriCaster training thumbnail" loading="lazy" width="813" height="452">
+          </a>
+          <div class="documentation-card-body">
+            <p class="project-category">TECHNICAL REFERENCE / TRAINING</p>
+            <h4>Equipment Documentation &amp; TriCaster Training</h4>
+            <p>Prepared AV equipment reference notes and completed Viz University’s Introduction to Vision Mixing with TriCaster training diploma (August 2024).</p>
+            <a class="example-link" href="equipment-tricaster-training-case-study.html">View Case Study &rarr;</a>
+          </div>
         </article>
       </div>
       <div class="example-note"><p><strong>My Contribution:</strong> I independently authored the original notes, instructional pages, recording checklist and Illustrator signal-flow diagram. These samples demonstrate documentation and operational knowledge, not a claim that I engineered or programmed the installed AV systems.</p></div>
