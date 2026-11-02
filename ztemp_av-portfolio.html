@@ -675,6 +675,48 @@
     .breakdown-back:hover {color:#FFFFFF}
     .breakdown-back:focus-visible {outline:2px solid #74ADFF;outline-offset:5px}
 
+
+    /* PHASE 3: APPROVED TECHNICAL DOCUMENTATION THUMBNAILS */
+    .documentation-card {
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform .25s ease, border-color .25s ease;
+    }
+    .documentation-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+    .documentation-thumbnail {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #081527;
+      border-bottom: 1px solid var(--border);
+    }
+    .documentation-thumbnail img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .3s ease;
+    }
+    .documentation-thumbnail:hover img { transform: scale(1.025); }
+    .documentation-card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .documentation-card-body .example-link { margin-top: auto; padding-top: 10px; }
+    .documentation-thumbnail:focus-visible,
+    .documentation-card .example-link:focus-visible {
+      outline: 3px solid var(--accent-light);
+      outline-offset: -3px;
+    }
+
   </style>
 
 </head>
@@ -710,7 +752,7 @@
 
         <a href="AV Technician Resume Page_B.html">Resume</a>
 
-        <a href="#contactme">Contact</a>
+        <a href="#contact">Contact</a>
 
       </nav>
 
@@ -962,9 +1004,7 @@
 
         <ul>
 
-          <li>TriCaster operation</li>
-
-          <li>Live video source switching</li>
+         <li>Backup TriCaster operation and basic video source switching</li>
 
           <li>Lower thirds, slates and graphics playback</li>
 
@@ -1082,11 +1122,7 @@
         Experience in Practice
       </h2>
 
-      <p>
-        Selected approved examples showing how my AV,
-        broadcast, audio, lighting and technical support
-        experience applies in professional production environments.
-      </p>
+      <p><strong>About the Visuals:</strong> Images in this section are AI-generated illustrations representing the types of AV equipment and production environments I've supported. Actual workplace photographs are not displayed due to company confidentiality and photography restrictions.</p>
 
     </div>
 
@@ -1107,11 +1143,7 @@
           Supporting Live Events from Setup to Show
         </h3>
 
-        <p>
-          Use approved event photos or short clips to show
-          production spaces, equipment preparation and your
-          role supporting meetings, town halls or livestreams.
-        </p>
+    <p>Supported corporate town halls, executive presentations, livestreams, and live productions at Riot Games, including events involving the CEO and C-suite leadership. Worked alongside executives, event organizers, and production teams to prepare, operate, and troubleshoot AV equipment, helping ensure reliable event execution.</p>
 
       </div>
 
@@ -1123,9 +1155,10 @@
             Event / Production Setup
           </div>
 
-          <div class="evidence-placeholder">
-            ADD APPROVED EVENT OR STAGE PHOTO HERE
-          </div>
+         <img
+  src="Assets/images/corporate-av-event-setup.png"
+  alt="Illustration of corporate event stage and AV production setup"
+  loading="lazy">
 
         </div>
 
@@ -1136,9 +1169,11 @@
             Control / Support Position
           </div>
 
-          <div class="evidence-placeholder">
-            ADD APPROVED CONTROL OR AV SUPPORT PHOTO HERE
-          </div>
+                <img
+  src="Assets/images/corporate-av-control-position.png"
+  alt="Illustration of corporate event stage and AV production setup"
+  loading="lazy">
+
 
         </div>
 
@@ -1146,12 +1181,7 @@
 
       <div class="example-note">
 
-        <p>
-          <strong>My Role:</strong>
-          Event setup, equipment preparation, camera and monitor
-          support, livestream/recording support and coordination
-          with event and production teams.
-        </p>
+        <p><strong>My Role:</strong> Supported corporate events and live productions through AV equipment setup, pre-event testing, camera and display support, livestream and recording operations, technical troubleshooting, and coordination with event and production teams.</p>
 
       </div>
       <a class="breakdown-back" href="#avExperience">↑ Back to Experience Cards</a>
@@ -1175,11 +1205,13 @@
           Live Switching, Graphics &amp; Broadcast Support
         </h3>
 
-        <p>
-          Show approved examples of the production environment,
-          graphics operation or broadcast output without exposing
-          confidential routing, network or system information.
-        </p>
+<p>
+  Supported live broadcast productions through graphics
+  preparation and playback, production workstation setup,
+  and recording workflows. Worked alongside Technical
+  Directors and production teams, providing graphics
+  operation and backup TriCaster support during live events.
+</p>
 
       </div>
 
@@ -1191,9 +1223,10 @@
             Broadcast / Control Environment
           </div>
 
-          <div class="evidence-placeholder">
-            ADD APPROVED TRICASTER OR CONTROL ROOM PHOTO HERE
-          </div>
+<img
+  src="Assets/images/02left-broadcast-control.png"
+  alt="AI-generated illustration of a broadcast control workstation with TriCaster-style equipment and multiview monitors"
+  loading="lazy">
 
         </div>
 
@@ -1204,9 +1237,10 @@
             Graphics / Broadcast Output
           </div>
 
-          <div class="evidence-placeholder">
-            ADD APPROVED GRAPHICS OR BROADCAST FRAME HERE
-          </div>
+<img
+  src="Assets/images/02right-broadcast-control.png"
+  alt="AI-generated illustration of a live broadcast graphics workstation displaying lower thirds and production overlays"
+  loading="lazy">
 
         </div>
 
@@ -1214,12 +1248,17 @@
 
       <div class="example-note">
 
-        <p>
-          <strong>My Role:</strong>
-          TriCaster operation, live source switching, lower thirds,
-          slates and graphics playback, recording and livestream
-          support using broadcast workflows including NDI and SDI.
-        </p>
+  <p>
+    <strong>My Role:</strong>
+    Primarily supported live productions through broadcast
+    graphics preparation, asset management, lower thirds,
+    slates, and graphics playback. Assisted Technical
+    Directors with production setup and served as a backup
+    TriCaster operator, performing basic switching tasks
+    when needed. Also supported recording and livestream
+    workflows involving NDI and SDI.
+  </p>
+
 
       </div>
       <a class="breakdown-back" href="#avExperience">↑ Back to Experience Cards</a>
@@ -1243,10 +1282,14 @@
           Preparing the Production Environment
         </h3>
 
-        <p>
-          Use approved setup and finished-look photos to demonstrate
-          audio and lighting support for event or studio environments.
-        </p>
+      <p>
+  Supported professional audio and lighting systems
+  for corporate events and studio productions.
+  Worked alongside audio engineers and production teams
+  to prepare equipment, establish hardware connections,
+  troubleshoot technical issues, and operate lighting
+  systems for live events.
+</p>
 
       </div>
 
@@ -1258,9 +1301,10 @@
             Equipment / Setup
           </div>
 
-          <div class="evidence-placeholder">
-            ADD APPROVED AUDIO OR LIGHTING SETUP PHOTO HERE
-          </div>
+          <img
+  src="Assets/images/03Left-audio-lighting.png"
+  alt="AI-generated illustration of professional audio mixing equipment, microphones, and lighting controls"
+  loading="lazy">
 
         </div>
 
@@ -1271,24 +1315,29 @@
             Finished Production Look
           </div>
 
-          <div class="evidence-placeholder">
-            ADD APPROVED EVENT OR STUDIO LIGHTING PHOTO HERE
-          </div>
+          <img
+  src="Assets/images/03Right-audo-lighting.png"
+  alt="AI-generated illustration of a corporate event stage with professional production lighting"
+  loading="lazy">
 
         </div>
 
       </div>
 
-      <div class="example-note">
-
-        <p>
-          <strong>My Role:</strong>
-          Audio mixer and microphone setup, monitoring and
-          troubleshooting, ETC ColorSource and Aputure lighting,
-          plus DMX programming and patching.
-        </p>
-
-      </div>
+<div class="example-note">
+  <p>
+    <strong>My Role:</strong>
+    Supported corporate events and studio productions
+    through audio and lighting equipment setup and operation.
+    Prepared Midas audio consoles, connected XLR, Ethernet,
+    and IEC cabling, and assisted the A1 Audio Engineer
+    with hardware troubleshooting and signal connectivity.
+    Supported Ethernet cross-connections through equipment
+    racks to establish console communication. Operated
+    ETC ColorSource and Aputure lighting equipment,
+    including DMX programming and fixture patching.
+  </p>
+</div>
       <a class="breakdown-back" href="#avExperience">↑ Back to Experience Cards</a>
 
     </div>
@@ -1310,11 +1359,14 @@
           Production Readiness &amp; Technical Support
         </h3>
 
-        <p>
-          Show high-level examples of equipment readiness,
-          room preparation or testing while keeping internal
-          system details and sensitive information private.
-        </p>
+      <p>
+  Supported corporate AV and broadcast environments
+  through preventative maintenance, equipment testing,
+  signal troubleshooting, and production room preparation.
+  Worked alongside AV, broadcast, and IT teams to
+  identify technical issues and maintain reliable
+  systems for live events.
+</p>
 
       </div>
 
@@ -1326,9 +1378,10 @@
             Equipment Readiness
           </div>
 
-          <div class="evidence-placeholder">
-            ADD APPROVED EQUIPMENT OR ROOM CHECK PHOTO HERE
-          </div>
+          <img
+  src="Assets/images/04left production.png"
+  alt="AI-generated illustration of AV equipment racks, video monitors, and technical testing equipment"
+  loading="lazy">
 
         </div>
 
@@ -1339,24 +1392,27 @@
             Production Space Ready
           </div>
 
-          <div class="evidence-placeholder">
-            ADD APPROVED READY-FOR-EVENT PHOTO HERE
-          </div>
+          <img
+  src="Assets/images/04Right production.png"
+  alt="AI-generated illustration of a prepared corporate broadcast production room with cameras, monitors, and lighting"
+  loading="lazy">
 
         </div>
 
       </div>
 
-      <div class="example-note">
-
-        <p>
-          <strong>My Role:</strong>
-          Pre-event equipment checks, broadcast room and system
-          testing, audio/video troubleshooting, production equipment
-          readiness and escalation or coordination with AV and IT teams.
-        </p>
-
-      </div>
+  <div class="example-note">
+  <p>
+    <strong>My Role:</strong>
+    Performed pre-event equipment checks, broadcast
+    room testing, and preventative maintenance.
+    Troubleshot audio and video signal issues,
+    inspected equipment connections, and prepared
+    production workstations for live events.
+    Coordinated with AV, broadcast, and IT teams
+    to identify and escalate technical problems.
+  </p>
+</div>
       <a class="breakdown-back" href="#avExperience">↑ Back to Experience Cards</a>
 
     </div>
@@ -1372,58 +1428,52 @@
       </div>
       <div class="documentation-grid">
         <article class="documentation-card">
-          <p class="project-category">AV SIGNAL FLOW / ADOBE ILLUSTRATOR</p>
-          <h4>Broadcast Signal Flow</h4>
-          <p>Created a visual reference of video and audio signal paths, including routing, conversion, switching, recording and streaming workflows.</p>
-          <a class="example-link" href="broadcast-signal-flow-case-study.html">View Case Study &rarr;</a>
-        </article>
-        
-<article class="documentation-card">
-  <p class="project-category">
-    ROOM OPERATIONS / TECHNICAL GUIDES
-  </p>
-
-  <h4>Theater AV &amp; Crestron Controls</h4>
-
-  <p>
-    Authored instructional documentation covering
-    presentation source selection, lighting controls,
-    microphones and room operation procedures.
-  </p>
-
-  <a class="example-link"
-     href="theater-av-crestron-case-study.html">
-    View Case Study &rarr;
-  </a>
-</article>
-
-        <article class="documentation-card">
-          <p class="project-category">RECORDING / QUALITY CONTROL</p>
-          <h4>AJA Recorder Operations Checklist</h4>
-          <p>Developed a repeatable recording checklist covering input settings, audio checks, test recordings, media selection and safe media handling.</p>
-          <span class="project-note">Public Case Study In Preparation</span>
+          <a class="documentation-thumbnail" href="broadcast-signal-flow-case-study.html" aria-label="View Broadcast Signal Flow case study">
+            <img src="Assets/Images/Thumbnails/signal-flow-thumbnail.jpg" alt="Signal Flow technical documentation thumbnail" loading="lazy" width="813" height="452">
+          </a>
+          <div class="documentation-card-body">
+            <p class="project-category">AV SIGNAL FLOW / ADOBE ILLUSTRATOR</p>
+            <h4>Broadcast Signal Flow</h4>
+            <p>Created a visual reference of video and audio signal paths, including routing, conversion, switching, recording and streaming workflows.</p>
+            <a class="example-link" href="broadcast-signal-flow-case-study.html">View Case Study &rarr;</a>
+          </div>
         </article>
         <article class="documentation-card">
-          <p class="project-category">TECHNICAL REFERENCE / TRAINING</p>
-          <h4>Equipment Documentation &amp; TriCaster Training</h4>
-          <p>Prepared AV equipment reference notes and completed Viz University’s Introduction to Vision Mixing with TriCaster training diploma (August 2024).</p>
-          <span class="project-note">Supporting Samples In Preparation</span>
+          <a class="documentation-thumbnail" href="theater-av-crestron-case-study.html" aria-label="View Theater AV & Crestron Controls case study">
+            <img src="Assets/Images/Thumbnails/theater-av-crestron-thumbnail.jpg" alt="Theater AV and Crestron controls thumbnail" loading="lazy" width="813" height="452">
+          </a>
+          <div class="documentation-card-body">
+            <p class="project-category">ROOM OPERATIONS / TECHNICAL GUIDES</p>
+            <h4>Theater AV &amp; Crestron Controls</h4>
+            <p>Authored instructional documentation covering presentation source selection, lighting controls, microphones and room operation procedures.</p>
+            <a class="example-link" href="theater-av-crestron-case-study.html">View Case Study &rarr;</a>
+          </div>
+        </article>
+        <article class="documentation-card">
+          <a class="documentation-thumbnail" href="aja-recorder-operations-case-study.html" aria-label="View AJA Recorder Operations Checklist case study">
+            <img src="Assets/Images/Thumbnails/aja-recorder-thumbnail.jpg" alt="AJA recorder operations thumbnail" loading="lazy" width="813" height="452">
+          </a>
+          <div class="documentation-card-body">
+            <p class="project-category">RECORDING / QUALITY CONTROL</p>
+            <h4>AJA Recorder Operations Checklist</h4>
+            <p>Developed a repeatable recording checklist covering input settings, audio checks, test recordings, media selection and safe media handling.</p>
+            <a class="example-link" href="aja-recorder-operations-case-study.html">View Case Study &rarr;</a>
+          </div>
+        </article>
+        <article class="documentation-card">
+          <a class="documentation-thumbnail" href="equipment-tricaster-training-case-study.html" aria-label="View Equipment Documentation & TriCaster Training case study">
+            <img src="Assets/Images/Thumbnails/tricaster-training-thumbnail.jpg" alt="Equipment and TriCaster training thumbnail" loading="lazy" width="813" height="452">
+          </a>
+          <div class="documentation-card-body">
+            <p class="project-category">TECHNICAL REFERENCE / TRAINING</p>
+            <h4>Equipment Documentation &amp; TriCaster Training</h4>
+            <p>Prepared AV equipment reference notes and completed Viz University’s Introduction to Vision Mixing with TriCaster training diploma (August 2024).</p>
+            <a class="example-link" href="equipment-tricaster-training-case-study.html">View Case Study &rarr;</a>
+          </div>
         </article>
       </div>
       <div class="example-note"><p><strong>My Contribution:</strong> I independently authored the original notes, instructional pages, recording checklist and Illustrator signal-flow diagram. These samples demonstrate documentation and operational knowledge, not a claim that I engineered or programmed the installed AV systems.</p></div>
       <a class="breakdown-back" href="#avExperience">↑ Back to Experience Cards</a>
-    </div>
-
-    <div class="privacy-note">
-
-      <p>
-        <strong>Portfolio note:</strong>
-        Only approved, non-confidential production material should
-        be displayed here. Internal network information, credentials,
-        private event content and sensitive system documentation
-        should remain excluded.
-      </p>
-
     </div>
 
   </div>
@@ -1530,7 +1580,7 @@
     <div class="contact-card">
 
       <p class="section-label">
-        <a id="contactme"></a>LET'S CONNECT </p>
+        LET'S CONNECT </p>
 
       <h2>
         Let's Talk Production.
@@ -1554,13 +1604,17 @@
 
         </a>
 
-        <!-- Replace with your actual email address. -->
+        <!-- Gmail compose plus standard email app fallback. -->
 
-        <a href="mailto:chris.batas.manglapus@gmail.com"
-           class="btn">
+        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=chris.batas.manglapus%40gmail.com"
+           class="btn" target="_blank" rel="noopener noreferrer">
 
-          Email Me
+          Email Me via Gmail
 
+        </a>
+
+        <a href="mailto:chris.batas.manglapus@gmail.com" class="btn">
+          Use Email App
         </a>
 
         <a href="#totop"
@@ -1604,7 +1658,7 @@
         &nbsp;|&nbsp;
         <a href="#Demoreel">Demo Reel</a>
         &nbsp;|&nbsp;
-        <a href="#contactme">Contact</a>
+        <a href="#contact">Contact</a>
 
       </span>
 
